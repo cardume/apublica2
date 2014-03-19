@@ -1,0 +1,17 @@
+/*
+Theme Name: Pública 2.0
+Theme URI: http://www.apublica.org/
+Version: 0.0.1
+Template: Divi
+Description: Divi child theme made for Agência Pública
+Author: Cardume
+Author URI: http://www.cardume.art.br
+*/
+
+/*
+ * Header
+ */
+
+#main-header {
+	background: #111;
+}
