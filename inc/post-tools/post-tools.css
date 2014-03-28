@@ -1,0 +1,89 @@
+#publica-post-tools {
+	position: fixed;
+	top: 170px;
+	left: 0;
+}
+
+#publica-post-tools .toggle-tools {
+	background: #aaa;
+	display: block;
+	border-radius: 0 5px 5px 0;
+	padding: 10px;
+	color: #fff;
+	text-align:right;
+	width: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+#publica-post-tools:hover .toggle-tools,
+#publica-post-tools.active .toggle-tools {
+	background: #e15a2d;
+}
+
+#publica-post-tools .tool-list {
+	display: none;
+}
+
+#publica-post-tools.active .tool-list {
+	display: block;
+	background: #f5f5f5;
+	border: 1px solid #cfcfcf;
+	border-radius: 0 0 5px 5px;
+	float: right;
+	margin-top: -5px;
+	padding-top: 5px;
+}
+
+#publica-post-tools.active .tool-list .tool-item {
+	position: relative;
+	text-align: right;
+	padding: 10px;
+}
+
+#publica-post-tools.active .tool-list .tool-item .tool-content-container {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	padding-left: 10px;
+	display: none;
+}
+
+#publica-post-tools.active .tool-list .tool-item:hover .tool-content-container {
+	display: block;
+}
+
+#publica-post-tools.active .tool-list .tool-item .tool-content-container .tool-content {
+	padding: 10px;
+	background: #f5f5f5;
+	border: 1px solid #cfcfcf;
+	border-radius: 3px;
+	position: relative;
+}
+
+#publica-post-tools.active .tool-list .tool-item .tool-content-container .tool-content:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -4px;
+	top: 50%;
+	margin-top: -3px;
+	width: 6px;
+	height: 6px;
+	background: #f5f5f5;
+	border: 1px solid #cfcfcf;
+	-webkit-transform: rotate(45deg);
+}
+
+#publica-post-tools.active .tool-list .tool-item .tool-content-container .tool-content:after {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: 5px;
+	bottom: 5px;
+	margin-top: -3px;
+	width: 10px;
+	background: #f5f5f5;
+}

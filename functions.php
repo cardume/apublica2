@@ -70,3 +70,5 @@ function et_pb_publica() {
 	return '<p>Hellllooo</p>';
 }
 add_shortcode('et_pb_publica', 'et_pb_publica');
+
+include_once(STYLESHEETPATH . '/inc/post-tools/post-tools.php');
