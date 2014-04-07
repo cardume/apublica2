@@ -8,6 +8,56 @@ Author: Cardume
 Author URI: http://www.cardume.art.br
 */
 
+
+/*
+ * fontface
+ */
+
+ @font-face {
+    font-family: 'museo300';
+    src: url('fonts/museo-300-webfont.eot');
+    src: url('fonts/museo-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-300-webfont.woff') format('woff'),
+         url('fonts/museo-300-webfont.ttf') format('truetype'),
+         url('fonts/museo-300-webfont.svg#museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo500';
+    src: url('fonts/museo-500-webfont.eot');
+    src: url('fonts/museo-500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-500-webfont.woff') format('woff'),
+         url('fonts/museo-500-webfont.ttf') format('truetype'),
+         url('fonts/museo-500-webfont.svg#museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo700';
+    src: url('fonts/museo-700-webfont.eot');
+    src: url('fonts/museo-700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo-700-webfont.woff') format('woff'),
+         url('fonts/museo-700-webfont.ttf') format('truetype'),
+         url('fonts/museo-700-webfont.svg#museo700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+ * Universal
+ */
+
+h1, h2, h3, h4, h5{
+	font-family: 'museo500', 'Times new roman', Serif;
+}
+
+
 /*
  * Header
  */
@@ -72,3 +122,4 @@ nav#top-menu li.current-menu-item > a {
 	margin-top: 35px;
 	margin-left: 15px;
 }
+
