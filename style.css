@@ -120,6 +120,19 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 .et_pb_all_tabs { padding: 24px 30px; background: #EFEFEF; }
 
 
+
+/* * Page * */
+
+.header-full { background-color: #FFBF00; }
+
+.breadcrumb{ width: 1080px; margin: 0 auto; }
+
+.breadcrumb p {padding: 5px 0 0; font-family: 'Lato', sans-serif; }
+
+.breadcrumb h1 { padding: 0 0 20px; font-size: 40px; font-family: 'Lato', sans-serif; font-weight: 100;}
+
+.breadcrumb a { text-decoration: none; color: #888;}
+
 /* * Blog * */
 
 .et_pb_blog_grid h2 { font-size: 24px; font-weight: 700; }
