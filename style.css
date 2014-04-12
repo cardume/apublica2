@@ -96,6 +96,13 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 #et_top_search { margin-top: 35px; margin-left: 15px; }
 
 
+
+/* Sidebar */
+
+.et_pb_widget h4.widgettitle { font-weight: normal; }
+
+
+
 /* Body */
 
 
