@@ -64,6 +64,10 @@ h1, h2, h3, h4, h5, h6{ font-family: 'museo500', 'Times new roman', Serif; }
 
 p { font-family: Georgia, "Times New Roman", Times, serif; }
 
+::selection { background: #FFBF00; /* Safari */	}
+
+::-moz-selection { 	background: #FFBF00; /* Firefox */ }
+
 
 
 
@@ -128,7 +132,7 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 
 .breadcrumb{ width: 1080px; margin: 0 auto; }
 
-.breadcrumb p {padding: 5px 0 0; font-family: 'Lato', sans-serif; }
+.breadcrumb p {padding: 5px 0 0; font-family: 'Lato', sans-serif; font-size: 12px; }
 
 .breadcrumb h1 { padding: 0 0 20px; font-size: 40px; font-family: 'Lato', sans-serif; font-weight: 300;}
 
@@ -160,9 +164,11 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 
 /* * Post - Full * */
 
-.et_full_width_page { font-family:Georgia, "Times New Roman", Times, serif; font-size:20px; line-height:160%; text-align:left; }
+.et_full_width_page { font-family:Georgia, "Times New Roman", Times, serif; font-size:20px; text-align:left; }
 
 .et_full_width_page #left-area { margin-top: 30px; }
+
+.et_full_width_page #left-area p { color: #000; line-height:160%;}
 
 .et_full_width_page #left-area h1 { font-size: 50px; text-align: center; }
 
