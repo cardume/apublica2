@@ -9,14 +9,15 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 	<div class="header-full">
 		<div class="breadcrumb">
 			<p> <a href="<?php site_URL() ?>">home/ </a></p>
-			<?php
-				$category = get_the_category();
-				if ( $category ) {
-					$catlink = get_category_link( $category[0]->cat_ID );
-					echo ('<a href="'.esc_url($catlink).'">'.esc_html($category[0]->cat_name).'</a> ');
-				}
-				echo get_the_title();
-			?>
+			<h1><?php
+					$category = get_the_category();
+					if ( $category ) {
+						$catlink = get_category_link( $category[0]->cat_ID );
+						echo ('<a href="'.esc_url($catlink).'">'.esc_html($category[0]->cat_name).'</a> ');
+					}
+					echo get_the_title();
+				?>
+			</h1>
 		</div>
 	</div>
 <?php endif; ?>
