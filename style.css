@@ -159,6 +159,8 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 
 .et_pb_post .post-meta { font-size: 12px; font-weight: bold; }
 
+.et_pb_post a[rel~="category"] { color: #E15A2D !important; font-weight: 700;}
+
 
 
 
