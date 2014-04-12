@@ -121,6 +121,7 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 
 
 
+
 /* * Page * */
 
 .header-full { background-color: #FFBF00; }
@@ -133,6 +134,24 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 
 .breadcrumb a { text-decoration: none; color: #888;}
 
+
+
+
 /* * Blog * */
 
+.et_pb_blog_grid_wrapper {position: relative;}
+
+.et_pb_blog_grid_wrapper:before { content: ''; top: 0; position: absolute; left: 350px; width: 1px; height: 99%; background-color: #D8D8D8; }
+
+.et_pb_blog_grid_wrapper:after { content: ''; top: 0; position: absolute; left: 730px; width: 1px; height: 99%; background-color: #D8D8D8; }
+
+.et_pb_blog_grid .et_pb_post { border: 0; position: relative;	}
+
+.et_pb_blog_grid .et_pb_post:after {  content: ''; bottom: 0; position: absolute; left: -23px; width: 371px; height: 1px; background-color: #D8D8D8;}
+
 .et_pb_blog_grid h2 { font-size: 24px; font-weight: 700; }
+
+.et_pb_post p, .et_pb_post .post-meta { font-family: 'Lato', sans-serif; font-weight: 500; }
+
+.et_pb_post .post-meta { font-size: 12px; font-weight: bold; }
+
