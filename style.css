@@ -99,12 +99,20 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 /* Body */
 
 
+
 /* * Home * */
-.et_pb_tabs_controls li { padding: 5px 0 25px; width: 25%;	background-color: #FFF; border: 0; text-align: center; }
 
-.et_pb_tabs_controls li.et_pb_tab_active { 	padding: 5px 0 25px; color:#E15A2D; }
+.et_pb_tabs {border: 0;	}
+
+.et_pb_tabs_controls li { font-family: 'museo500', 'Times new roman', Serif; font-size: 18px; font-weight: normal; padding: 5px 0 25px; width: 25%;	background-color: #FFF; border: 0; text-align: center; }
+
+.et_pb_tabs_controls li.et_pb_tab_active { 	padding: 5px 0 25px; color: #BBBBBB !important; bottom: 0;}
+
+.et_pb_tabs_controls li.et_pb_tab_active a { color:#E15A2D !important; }
+
+.et_pb_all_tabs { padding: 24px 30px; background: #EFEFEF; }
 
 
-/* Blog */
+/* * Blog * */
 
 .et_pb_blog_grid h2 { font-size: 24px; font-weight: 700; }
