@@ -130,9 +130,9 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 
 .breadcrumb p {padding: 5px 0 0; font-family: 'Lato', sans-serif; }
 
-.breadcrumb h1 { padding: 0 0 20px; font-size: 40px; font-family: 'Lato', sans-serif; font-weight: 100;}
+.breadcrumb h1 { padding: 0 0 20px; font-size: 40px; font-family: 'Lato', sans-serif; font-weight: 300;}
 
-.breadcrumb a { text-decoration: none; color: #888;}
+.breadcrumb a { font-weight: 700; text-decoration: none; color: rgba(68, 68, 68, 0.5);}
 
 
 
@@ -154,4 +154,19 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 .et_pb_post p, .et_pb_post .post-meta { font-family: 'Lato', sans-serif; font-weight: 500; }
 
 .et_pb_post .post-meta { font-size: 12px; font-weight: bold; }
+
+
+
+
+/* * Post - Full * */
+
+.et_full_width_page { font-family:Georgia, "Times New Roman", Times, serif; font-size:20px; line-height:160%; text-align:left; }
+
+.et_full_width_page #left-area { margin-top: 30px; }
+
+.et_full_width_page #left-area h1 { font-size: 50px; text-align: center; }
+
+.et_full_width_page #left-area .post-meta { font-family: 'Lato', sans-serif; font-weight: 400;  font-size: 14px; text-align: center; }
+
+
 
