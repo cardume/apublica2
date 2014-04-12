@@ -3,7 +3,7 @@
 <div id="main-content">
 	<div class="header-full">
 		<div class="breadcrumb">
-			<p><span><a href="<?php site_URL() ?>">home/ </a></span>
+			<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
 				<?php
 					$category = get_the_category();
 					if ( $category ) {

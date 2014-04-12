@@ -89,7 +89,7 @@ nav#top-menu { padding: 0; }
 
 nav#top-menu li { padding-right: 1px; }
 
-nav#top-menu li > a { padding: 30px 10px; display:block; font-size: 12px; line-height: 22px; text-transform: lowercase; font-weight: 600; }
+nav#top-menu li > a { padding: 30px 10px; display:block; font-size: 14x; line-height: 22px; text-transform: lowercase; font-weight: 600; }
 
 nav#top-menu li > a:hover { color: #aaa; }
 
