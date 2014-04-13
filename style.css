@@ -115,9 +115,11 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 
 .et_pb_tabs_controls li { font-family: 'museo500', 'Times new roman', Serif; font-size: 18px; font-weight: normal; padding: 5px 0 25px; width: 25%;	background-color: #FFF; border: 0; text-align: center; }
 
-.et_pb_tabs_controls li.et_pb_tab_active { 	padding: 5px 0 25px; color: #BBBBBB !important; bottom: 0;}
+.et_pb_tabs_controls li.et_pb_tab_active { 	padding: 5px 0 25px; color: #BBBBBB !important; bottom: 0; position: relative;}
 
-.et_pb_tabs_controls li.et_pb_tab_active a { color:#E15A2D !important; }
+.et_pb_tabs_controls li.et_pb_tab_active a { color:#E15A2D !important; width: 270px;}
+
+.et_pb_tabs_controls li.et_pb_tab_active:after { content:url(images/arrow-up.png); position: absolute; bottom: 9px; right: 125px; width: 20px; height: 10px; }
 
 .et_pb_all_tabs { padding: 24px 30px; background: #EFEFEF; }
 
