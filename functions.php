@@ -8,7 +8,6 @@ function publica_styles() {
 
 	wp_enqueue_style('divi-style', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style('publica-main', get_stylesheet_uri(), array('divi-style'));
-	wp_enqueue_style('publica-main', get_stylesheet_uri(), array('custom-editor-style'));
 
 }
 add_action('wp_enqueue_scripts', 'publica_styles');

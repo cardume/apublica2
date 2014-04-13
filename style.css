@@ -178,3 +178,11 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 /* * Quem Somos * */
 
 .et_pb_toggle h3.et_pb_toggle_title { font-family: 'Lato', sans-serif; font-weight: 700; }
+
+
+
+
+/* Custom Styles in tinyMCE editor */
+
+.big-heading {	font-size: 	100px !important; 	text-transform: uppercase !important; 	color: 	#fff !important; 	
+				text-shadow: 1px 1px 2px #888, -1px -1px 2px #888 !important ;  letter-spacing: 3px; }
