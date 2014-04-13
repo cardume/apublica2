@@ -62,8 +62,6 @@ font-style: normal;
 
 h1, h2, h3, h4, h5, h6{ font-family: 'museo500', 'Times new roman', Serif; }
 
-p { font-family: Georgia, "Times New Roman", Times, serif; }
-
 ::selection { background: #FFBF00; /* Safari */	}
 
 ::-moz-selection { 	background: #FFBF00; /* Firefox */ }
@@ -166,15 +164,17 @@ nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-w
 
 /* * Post - Full * */
 
-.et_full_width_page { font-family:Georgia, "Times New Roman", Times, serif; font-size:20px; text-align:left; }
+.et_full_width_page { font-size:20px; text-align:left; }
 
 .et_full_width_page #left-area { margin-top: 30px; }
 
-.et_full_width_page #left-area p { color: #000; line-height:160%;}
+.et_full_width_page #left-area p { font-family:Georgia, "Times New Roman", Times, serif; color: #000; line-height:160%;}
 
 .et_full_width_page #left-area h1 { font-size: 50px; text-align: center; }
 
 .et_full_width_page #left-area .post-meta { font-family: 'Lato', sans-serif; font-weight: 400;  font-size: 14px; text-align: center; }
 
 
+/* * Quem Somos * */
 
+.et_pb_toggle h3.et_pb_toggle_title { font-family: 'Lato', sans-serif; font-weight: 700; }

@@ -8,6 +8,7 @@ function publica_styles() {
 
 	wp_enqueue_style('divi-style', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style('publica-main', get_stylesheet_uri(), array('divi-style'));
+	wp_enqueue_style('publica-main', get_stylesheet_uri(), array('custom-editor-style'));
 
 }
 add_action('wp_enqueue_scripts', 'publica_styles');
@@ -72,3 +73,46 @@ function et_pb_publica() {
 add_shortcode('et_pb_publica', 'et_pb_publica');
 
 include_once(STYLESHEETPATH . '/inc/post-tools/post-tools.php');
+
+
+
+// custom Styles in tiny MCE editor
+
+add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
+
+function my_mce_buttons_2( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init' );
+
+function my_mce_before_init( $settings ) {
+
+    $style_formats = array(
+    	array(
+    		'title' => 'Big Heading',
+    		'block' => 'h1',
+    		'classes' => 'big-heading'
+    	),
+        array(
+        	'title' => 'Quem somos title',
+        	'block' => 'h1',
+        	'classes' => 'quem-somos-title',
+        	'wrapper' => true
+        ),
+        array(
+        	'title' => 'Bold Red Text',
+        	'inline' => 'span',
+        	'styles' => array(
+        		'color' => '#f00',
+        		'fontWeight' => 'bold'
+        	)
+        )
+    );
+
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+
+}
