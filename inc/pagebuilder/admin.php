@@ -74,6 +74,19 @@ function publica_page_builder() {
 	</script>
 	<?php
 	/*
+	 * PUBLICA SUMMARY
+	 */
+	?>
+	<script type="text/template" id="et-builder-et_pb_publica_summary-module-template">
+		<h3 class="et-pb-settings-heading">Publica Summary Module Settings</h3>
+		<div class="et-pb-main-settings">
+
+			<?php publica_page_builder_regular_inputs(); ?>
+
+		</div>
+	</script>
+	<?php
+	/*
 	 * PUBLICA SLIDER
 	 */
 	?>
@@ -109,25 +122,12 @@ function publica_page_builder() {
 		</div>
 	</script>
 	<?php
-	/*
-	 * PUBLICA SUMMARY
-	 */
-	?>
-	<script type="text/template" id="et-builder-et_pb_publica_summary-module-template">
-		<h3 class="et-pb-settings-heading">Publica Summary Module Settings</h3>
-		<div class="et-pb-main-settings">
-
-			<?php publica_page_builder_regular_inputs(); ?>
-
-		</div>
-	</script>
-	<?php
 	/* 
 	 * PUBLICA SINGLE SLIDE
 	 */
 	?>
 	<script type="text/template" id="et-builder-advanced-setting-et_pb_publica_slide-title">
-		<%= typeof( et_pb_heading ) !== 'undefined' && typeof( et_pb_heading ) === 'string' ?  et_pb_heading : 'New Slide' %>
+		<%= typeof( et_pb_heading ) !== 'undefined' && typeof( et_pb_heading ) === 'string' ?  et_pb_heading : 'Post: ' + et_pb_post_id %>
 	</script>
 	<script type="text/template" id="et-builder-advanced-setting-et_pb_publica_slide">
 		<h3 class="et-pb-settings-heading">Slide Settings</h3>

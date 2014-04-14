@@ -197,6 +197,42 @@ function et_pb_publica($atts) {
 }
 add_shortcode('et_pb_publica', 'et_pb_publica');
 
+function et_pb_publica_summary($atts) {
+
+	extract(shortcode_atts(array(
+		'module_id' => '',
+		'module_class' => ''
+	), $atts));
+
+	ob_start();
+
+	?>
+
+	<div class="et_pb_row">
+		<div class="summary-nav">
+			<a href="#" data-summary="most-recent">Mais recentes</a>
+			<a href="#" data-summary="most-recent">Mais compartilhadas</a>
+			<a href="#" data-summary="most-recent">Vídeos</a>
+			<a href="#" data-summary="most-recent">Temas do momento</a>
+		</div>
+	</div>
+
+	<?php
+
+	$content = ob_get_contents();
+	ob_end_clean();
+
+	$output = sprintf('<div%1$s class="%2$s publica-summary clearfix">%3$s</div>',
+		('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
+		('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
+		('' !== $content ? $content : '')
+	);
+
+	return $output;
+
+}
+add_shortcode('et_pb_publica_summary', 'et_pb_publica_summary');
+
 function et_pb_publica_slider($atts, $content = '') {
 
 	extract(shortcode_atts(array(
