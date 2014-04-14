@@ -98,6 +98,94 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 #et_top_search { margin-top: 35px; margin-left: 15px; }
 
 
+/* Slider */
+
+.publica-slider .active-content {
+     width: 70%;
+     float: left;
+}
+
+.publica-slider .active-content .slide-content {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     background-size:cover;
+}
+
+.publica-slider .active-content .slide-content .main-link {
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+}
+
+.publica-slider .active-content .slide-content p {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding: 20px 30px;
+     color: #f0f0f0;
+     background: rgba(0,0,0,0.6);
+     font-family: "Lato";
+     font-weight: 200;
+     text-transform: lowercase;
+     font-size: 24px;
+     line-height: 120%;
+     text-align: center;
+}
+
+.publica-slider .active-content .slide-content p a {
+     color: #fff;
+}
+
+.publica-slider .slides {
+     width: 30%;
+     float: left;
+}
+
+.publica-slider .slides .slide-item {
+     padding: 40px 20px;
+     cursor: pointer;
+     background: #eee;
+     border-bottom: 1px solid #ccc;
+}
+
+.publica-slider .slides .slide-item:hover h2 {
+     color: #111;
+}
+
+.publica-slider .slides .slide-item h2 {
+     color: #666;
+}
+
+.publica-slider .slides .slide-item.active {
+     background: #e15a2d;
+     position: relative;
+}
+
+.publica-slider .slides .slide-item.active:before {
+     content: '';
+     width: 20px;
+     height: 20px;
+     -webkit-transform: rotate(45deg);
+     position: absolute;
+     top: 50%;
+     margin-top: -10px;
+     left: -10px;
+     background: #e15a2d;
+}
+
+.publica-slider .slides .slide-item.active h2,
+.publica-slider .slides .slide-item.active p {
+     color: #fff;
+}
+
+.publica-slider .slides .slide-item .slide-content {
+     display: none;
+}
+
 
 /* Sidebar */
 

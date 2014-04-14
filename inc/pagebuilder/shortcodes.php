@@ -181,10 +181,9 @@ function et_pb_publica_blog( $atts ) {
 function et_pb_publica($atts) {
 
 	extract(shortcode_atts(array(
-			'module_id' => '',
-			'module_class' => ''
-		), $atts
-	));
+		'module_id' => '',
+		'module_class' => ''
+	), $atts));
 
 	$content = '<p>Hello</p>';
 
@@ -201,15 +200,14 @@ add_shortcode('et_pb_publica', 'et_pb_publica');
 function et_pb_publica_slider($atts, $content = '') {
 
 	extract(shortcode_atts(array(
-			'module_id' => '',
-			'module_class' => '',
-			'background_color' => '#111111'
-		), $atts
-	));
+		'module_id' => '',
+		'module_class' => '',
+		'background_color' => '#111111'
+	), $atts));
 
 	$content = do_shortcode(et_pb_fix_shortcodes($content));
 
-	$output = sprintf('<div%1$s class="%2$s" style="%4$s">%3$s</div>',
+	$output = sprintf('<div%1$s class="%2$s publica-slider clearfix" style="%4$s"><div class=""><div class="active-content">&nbsp;</div><div class="slides">%3$s</div></div></div>',
 		('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
 		('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
 		('' !== $content ? $content : ''),
@@ -223,12 +221,61 @@ add_shortcode('et_pb_publica_slider', 'et_pb_publica_slider');
 function et_pb_publica_slide($atts) {
 
 	extract(shortcode_atts(array(
-			'post_id' => false,
-			'heading' => ''
-		), $atts
-	));
+		'post_id' => false,
+		'heading' => '',
+		'assunto' => '',
+		'description' => '',
+		'url' => '',
+		'background_image' => ''
+	), $atts));
 
-	return $heading;
+	if($post_id) {
+		global $post;
+		$post = get_post($post_id);
+		if($post) {
+
+			setup_postdata($post);
+
+			$assunto_term = get_the_terms($post->ID, 'assunto');
+			if($assunto_term)
+				$assunto_term = $assunto_term[0];
+
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url = '';
+			if($thumb_id) {
+				$thumb_url = wp_get_attachment_image_src($thumb_id, 'medium', true);
+				if($thumb_url)
+				$thumb_url = $thumb_url[0];
+			}
+
+			$heading = $heading ? $heading: get_the_title();
+			$assunto = $assunto ? $assunto : ($assunto_term ? $assunto_term->term_title : '');
+			$description = $description ? $description : get_the_excerpt();
+			$url = $url ? $url : get_permalink();
+			$background_image = $background_image ? $background_image : $thumb_url;
+
+			wp_reset_postdata();
+		}
+	}
+
+	ob_start();
+	?>
+	<div class="slide-item">
+
+		<h2><?php echo $heading; ?></h2>
+		<p class="assunto"><?php echo $assunto; ?></p>
+
+		<div class="slide-content" <?php if($background_image) echo 'style="background-image:url(' . $background_image . ');"'; ?>>
+			<a class="main-link" href="<?php echo $url; ?>" title="<?php echo $heading; ?>"></a>
+			<p class="description"><a href="<?php echo $url; ?>"><?php echo $description; ?></a></p>
+		</div>
+
+	</div>
+	<?php
+	$output = ob_get_contents();
+	ob_end_clean();
+
+	return $output;
 
 }
 add_shortcode('et_pb_publica_slide', 'et_pb_publica_slide');

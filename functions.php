@@ -27,13 +27,14 @@ require_once(STYLESHEETPATH . '/inc/acf-fields.php');
  * Publica setup
  */
 
-function publica_styles() {
+function publica_scripts() {
 
 	wp_enqueue_style('divi-style', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style('publica-main', get_stylesheet_uri(), array('divi-style'));
+	wp_enqueue_script('publica-pagebuilder', get_stylesheet_directory_uri() . '/inc/pagebuilder/custom.js', array('jquery'));
 
 }
-add_action('wp_enqueue_scripts', 'publica_styles');
+add_action('wp_enqueue_scripts', 'publica_scripts');
 
 function publica_admin_styles() {
 	wp_enqueue_style('publica-admin', get_stylesheet_directory_uri() . '/admin.css');

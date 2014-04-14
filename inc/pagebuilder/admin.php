@@ -128,30 +128,12 @@ function publica_page_builder() {
 					<p class="description">Use a post ID to preset the values bellow. They can be overwritten by filling other inputs.</p>
 				</div> <!-- .et-pb-option-container -->
 			</div> <!-- .et-pb-option -->
-			<div class="et-pb-option">
-				<label for="et_pb_heading">Heading: </label>
-				<div class="et-pb-option-container">
-					<input id="et_pb_heading" type="text" class="regular-text" value="<%= typeof( et_pb_heading ) !== 'undefined' ?  et_pb_heading : '' %>" />
 
-					<p class="description">Define the title text for your slide.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
-			<div class="et-pb-option">
-				<label for="et_pb_assunto">Assunto: </label>
-				<div class="et-pb-option-container">
-					<input id="et_pb_assunto" type="text" class="regular-text" value="<%= typeof( et_pb_assunto ) !== 'undefined' ?  et_pb_assunto : '' %>" />
+			<?php publica_page_builder_regular_text('heading', 'Heading', 'Define the title text for your slide'); ?>
+			<?php publica_page_builder_regular_text('assunto', 'Assunto', 'Escreva um assunto referente a esse conteúdo.'); ?>
+			<?php publica_page_builder_regular_text('description', 'Description', 'Write a small description for the slide.'); ?>
+			<?php publica_page_builder_regular_text('url', 'URL', 'Define the slide URL.'); ?>
 
-					<p class="description">Defina o assunto referente a esse conteúdo.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
-			<div class="et-pb-option">
-				<label for="et_pb_description">Description: </label>
-				<div class="et-pb-option-container">
-					<input id="et_pb_description" type="text" class="regular-text" value="<%= typeof( et_pb_description ) !== 'undefined' ?  et_pb_description : '' %>" />
-
-					<p class="description">Write a small description for the slide.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
 			<div class="et-pb-option">
 				<label for="et_pb_background_image">Background Image: </label>
 
