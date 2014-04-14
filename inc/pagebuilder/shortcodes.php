@@ -211,9 +211,18 @@ function et_pb_publica_summary($atts) {
 	<div class="et_pb_row">
 		<div class="summary-nav">
 			<a href="#" data-summary="most-recent">Mais recentes</a>
-			<a href="#" data-summary="most-recent">Mais compartilhadas</a>
-			<a href="#" data-summary="most-recent">Vídeos</a>
-			<a href="#" data-summary="most-recent">Temas do momento</a>
+			<a href="#" data-summary="most-shared">Mais compartilhadas</a>
+			<a href="#" data-summary="videos">Vídeos</a>
+			<a href="#" data-summary="currents">Temas do momento</a>
+		</div>
+	</div>
+	<div class="summary-content-container">
+		<div class="et_pb_row">
+			<div class="summary-content">
+				<div class="summary-content-item" data-summary="most-recent">
+					<?php publica_summary_item(get_posts(array('posts_per_page' => 5))); ?>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -232,6 +241,54 @@ function et_pb_publica_summary($atts) {
 
 }
 add_shortcode('et_pb_publica_summary', 'et_pb_publica_summary');
+
+function publica_summary_item($posts) {
+
+	global $post;
+
+	$i = 0;
+
+	foreach($posts as $post) {
+
+		setup_postdata($post);
+
+		if($i == 0) {
+			?>
+			<div class="et_pb_column et_pb_column_1_2">
+			<?php
+		} elseif($i == 1 || $i == 3) {
+			if($i == 1) {
+				?>
+				</div>
+				<?php
+			}
+			?>
+			<div class="et_pb_column et_pb_column_1_4">
+			<?php
+		}
+
+		?>
+
+			<article <?php post_class(); ?>>
+				<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+				<?php the_post_thumbnail(); ?>
+			</article>
+
+		<?php
+
+		if($i == 2 || $i == 4) {
+			?>
+			</div>
+			<?php
+		}
+
+		wp_reset_postdata();
+
+		$i++;
+
+	}
+
+}
 
 function et_pb_publica_slider($atts, $content = '') {
 

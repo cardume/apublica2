@@ -88,7 +88,7 @@ nav#top-menu-nav { padding: 0; }
 
 nav#top-menu-nav li { padding-right: 1px; }
 
-nav#top-menu-nav li > a { padding: 30px 10px; display:block; font-size: 14x; line-height: 22px; text-transform: lowercase; font-weight: 600; }
+nav#top-menu-nav li > a { padding: 30px 10px; display:block; font-size: 14px; line-height: 22px; text-transform: lowercase; font-weight: 600; }
 
 nav#top-menu-nav li > a:hover { color: #aaa; }
 
@@ -191,6 +191,57 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
      display: none;
 }
 
+/* Content summary */
+
+.publica-summary {
+     margin: 40px 0 0;
+}
+
+.publica-summary .summary-nav {
+     display: table;
+     width: 100%;
+}
+
+.publica-summary .summary-nav a {
+     display: table-cell;
+     width: 1%;
+     text-align: center;
+     text-transform: lowercase;
+     font-family: "museo700";
+     font-size: 16px;
+     padding: 0 0 20px 0;
+     color: #999;
+     position: relative;
+}
+
+.publica-summary .summary-nav a:hover,
+.publica-summary .summary-nav a.active {
+     color: #e15a2d;
+}
+
+
+.publica-summary .summary-nav a.active:before {
+     content: '';
+     width: 16px;
+     height: 16px;
+     position: absolute;
+     bottom: -8px;
+     left: 50%;
+     margin-left: -8px;
+     -webkit-transform: rotate(45deg);
+     background: #efefef;
+}
+
+.publica-summary .summary-content-container {
+     background: #efefef;
+     padding: 20px 0;
+}
+
+.publica-summary .summary-content-container .et_pb_column_1_2 {
+     margin-right: 30px;
+     padding-right: 30px;
+     border-right: 1px solid #ccc;
+}
 
 /* Sidebar */
 
@@ -221,7 +272,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 /* * Page * */
 
-.header-full { background-color: #FFBF00; position: relative; }
+.header-full { background-color: #FFBF00; position: relative; background-size: cover; }
 
 .header-img { position: relative; }
 

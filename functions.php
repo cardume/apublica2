@@ -74,6 +74,18 @@ add_action('init', 'publica_assunto_tax');
 include_once(STYLESHEETPATH . '/inc/pagebuilder/admin.php');
 include_once(STYLESHEETPATH . '/inc/pagebuilder/shortcodes.php');
 
+// Shares
+include_once(STYLESHEETPATH . '/inc/shares.php');
+
+// Update shares on post view
+function publica_update_shares() {
+	if(is_single()) {
+		global $post;
+		publica_get_shares($post->ID);
+	}
+}
+add_action('wp_head', 'publica_update_shares');
+
 // Post Tools
 include_once(STYLESHEETPATH . '/inc/post-tools/post-tools.php');
 

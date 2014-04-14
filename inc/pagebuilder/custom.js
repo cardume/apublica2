@@ -9,7 +9,7 @@
 		var $slider;
 
 		$(document).ready(function() {
-			
+
 			$slider = $('.publica-slider');
 
 			if($slider.length) {
@@ -32,7 +32,56 @@
 
 				}).resize();
 
+				setTimeout(function() {
+					setTimeout(function() {
+						$(window).resize();
+					}, 500);
+				}, 300);
+
 			}
+
+		});
+
+	})();
+
+	/*
+	 * Publica summary
+	 */
+
+	(function() {
+
+		var $summary,
+			$itemsContent = {};
+
+		$(document).ready(function() {
+
+			$summary = $('.publica-summary');
+
+			if($summary.length) {
+
+				$summary.find('.summary-content-item').each(function() {
+
+					$itemsContent[$(this).data('summary')] = $(this).clone();
+
+					$(this).remove();
+
+				});
+
+			}
+
+			$summary.on('click', '.summary-nav a', function() {
+
+				$summary.find('.summary-nav a').removeClass('active');
+
+				$(this).addClass('active');
+
+				$summary.find('.summary-content').empty().append($itemsContent[$(this).data('summary')]);
+
+				return false;
+
+			});
+
+			$summary.find('.summary-nav a:first-child').click();
 
 		});
 
