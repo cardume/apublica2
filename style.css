@@ -83,15 +83,15 @@ h1, h2, h3, h4, h5, h6{ font-family: 'museo500', 'Times new roman', Serif; }
 
 .et-fixed-header nav#top-menu li > a { padding: 15px 10px; }
 
-nav#top-menu { padding: 0; }
+nav#top-menu-nav { padding: 0; }
 
-nav#top-menu li { padding-right: 1px; }
+nav#top-menu-nav li { padding-right: 1px; }
 
-nav#top-menu li > a { padding: 30px 10px; display:block; font-size: 14x; line-height: 22px; text-transform: lowercase; font-weight: 600; }
+nav#top-menu-nav li > a { padding: 30px 10px; display:block; font-size: 14x; line-height: 22px; text-transform: lowercase; font-weight: 600; }
 
-nav#top-menu li > a:hover { color: #aaa; }
+nav#top-menu-nav li > a:hover { color: #aaa; }
 
-nav#top-menu li.current-menu-item > a { background: #e15a2d; color: #fff; font-weight: 600; }
+nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; font-weight: 600; }
 
 .et-fixed-header #et_top_search { margin-top: 27px; }
 

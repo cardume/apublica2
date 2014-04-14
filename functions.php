@@ -12,6 +12,11 @@ function publica_styles() {
 }
 add_action('wp_enqueue_scripts', 'publica_styles');
 
+function publica_admin_styles() {
+	wp_enqueue_style('publica-admin', get_stylesheet_directory_uri() . '/admin.css');
+}
+add_action('admin_init', 'publica_admin_styles');
+
 function publica_assunto_tax() {
 	// Add new taxonomy, make it hierarchical (like categories)
 	$labels = array(
@@ -41,36 +46,11 @@ function publica_assunto_tax() {
 }
 add_action('init', 'publica_assunto_tax');
 
+// Page builder
+include_once(STYLESHEETPATH . '/inc/pagebuilder/admin.php');
+include_once(STYLESHEETPATH . '/inc/pagebuilder/shortcodes.php');
 
-function publica_page_builder() {
-	?>
-		<script type="text/template" id="et-builder-et_pb_publica-module-template">
-		<h3 class="et-pb-settings-heading">Blog Module Settings</h3>
-
-		<div class="et-pb-main-settings">
-			<div class="et-pb-option">
-				<label for="et_pb_fullwidth">Layout: </label>
-				<div class="et-pb-option-container">
-					<select name="et_pb_fullwidth" id="et_pb_fullwidth">
-						<option value="on"<%= typeof( et_pb_fullwidth ) !== 'undefined' && 'on' === et_pb_fullwidth ?  ' selected="selected"' : '' %>>Fullwidth</option>
-						<option value="off"<%= typeof( et_pb_fullwidth ) !== 'undefined' && 'off' === et_pb_fullwidth ?  ' selected="selected"' : '' %>>Grid</option>
-					</select>
-
-					<p class="description">Toggle between the various blog layout types.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
-		</div>
-	</script>
-	<?php
-
-}
-//add_action('et_pb_after_page_builder', 'publica_page_builder');
-
-function et_pb_publica() {
-	return '<p>Hellllooo</p>';
-}
-add_shortcode('et_pb_publica', 'et_pb_publica');
-
+// Post Tools
 include_once(STYLESHEETPATH . '/inc/post-tools/post-tools.php');
 
 
