@@ -249,7 +249,7 @@ function et_pb_publica_slide($atts) {
 			}
 
 			$heading = $heading ? $heading: get_the_title();
-			$assunto = $assunto ? $assunto : ($assunto_term ? $assunto_term->term_title : '');
+			$assunto = $assunto ? $assunto : ($assunto_term ? $assunto_term->name : '');
 			$description = $description ? $description : get_the_excerpt();
 			$url = $url ? $url : get_permalink();
 			$background_image = $background_image ? $background_image : $thumb_url;
