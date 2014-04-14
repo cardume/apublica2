@@ -1,6 +1,179 @@
 <?php
 
 /*
+ * PUBLICA OVERWRITTEN SHORTCODES
+ * O código abaixo é um exemplo de uma sobreposição de módulo do Page Builder do Divi
+ * Os módulos são shortcodes configurados a partir dos seus parâmetros. Info sobre shortcodes: http://codex.wordpress.org/Shortcode_API
+ * Abaixo estou copiando o shortcode do módulo "Blog" em uma nova função.
+ * Todos os shortcodes dos módulos podem ser encontrados no arquivo functions.php do Divi
+ */
+
+function publica_overwrite_shortcodes() {
+
+	// Remove shortcode original cadastrado pelo Divi
+	remove_shortcode('et_pb_blog');
+
+	// Recadastra shortcode com nova função
+	add_shortcode('et_pb_blog', 'et_pb_publica_blog');
+
+}
+
+// Sobreposição declarada no hook "init"
+add_action('init', 'publica_overwrite_shortcodes');
+
+// O shortcode (visualização do módulo blog)
+function et_pb_publica_blog( $atts ) {
+
+	// O extract recebe os parâmetros enviados via shortcodes e os atribui em variáveis.
+	// Por exemplo, o primeiro item do array abaixo é declarado na variável $module_id
+	extract( shortcode_atts( array(
+			'module_id' => '',
+			'module_class' => '',
+			'fullwidth' => 'on',
+			'posts_number' => 10,
+			'include_categories' => '',
+			'meta_date' => 'M j, Y',
+			'show_thumbnail' => 'on',
+			'show_content' => 'off',
+			'show_author' => 'on',
+			'show_date' => 'on',
+			'show_categories' => 'on',
+			'show_pagination' => 'on',
+			'background_layout' => 'light',
+		), $atts
+	) );
+
+	$container_is_closed = false;
+
+	if ( 'on' !== $fullwidth )
+		wp_enqueue_script( 'jquery-masonry' );
+
+	$args = array( 'posts_per_page' => (int) $posts_number );
+
+	$paged = is_front_page() ? get_query_var( 'page' ) : get_query_var( 'paged' );
+
+	if ( '' !== $include_categories )
+		$args['cat'] = $include_categories;
+
+	if ( ! is_search() ) {
+		$args['paged'] = $paged;
+	}
+
+	ob_start();
+
+	query_posts( $args );
+
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post(); ?>
+
+			<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
+
+		<?php
+			$thumb = '';
+
+			$width = 'on' === $fullwidth ? 1080 : 400;
+			$width = (int) apply_filters( 'et_pb_blog_image_width', $width );
+
+			$height = 'on' === $fullwidth ? 675 : 250;
+			$height = (int) apply_filters( 'et_pb_blog_image_height', $height );
+			$classtext = 'on' === $fullwidth ? 'et_pb_post_main_image' : '';
+			$titletext = get_the_title();
+			$thumbnail = get_thumbnail( $width, $height, $classtext, $titletext, $titletext, false, 'Blogimage' );
+			$thumb = $thumbnail["thumb"];
+
+			if ( '' !== $thumb && 'on' === $show_thumbnail ) :
+				if ( 'on' !== $fullwidth ) echo '<div class="et_pb_image_container">'; ?>
+				<a href="<?php the_permalink(); ?>">
+					<?php print_thumbnail( $thumb, $thumbnail["use_timthumb"], $titletext, $width, $height ); ?>
+				</a>
+		<?php
+				if ( 'on' !== $fullwidth ) echo '</div> <!-- .et_pb_image_container -->';
+			endif;
+		?>
+
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+			<?php
+				if ( 'on' === $show_author || 'on' === $show_date || 'on' === $show_tags ) {
+					printf( '<p class="post-meta">%1$s %2$s %3$s</p>',
+						(
+							'on' === $show_author
+								? sprintf( __( 'by %s |', 'Divi' ), et_get_the_author_posts_link() )
+								: ''
+						),
+						(
+							'on' === $show_date
+								? sprintf( __( '%s |', 'Divi' ), get_the_date( $meta_date ) )
+								: ''
+						),
+						(
+							'on' === $show_categories
+								? get_the_category_list(', ')
+								: ''
+						)
+					);
+				}
+
+				if ( 'on' === $show_content ) {
+					global $more;
+					$more = null;
+
+					the_content( __( 'read more...', 'Divi' ) );
+				} else {
+					the_excerpt();
+				}
+			?>
+
+			</article> <!-- .et_pb_post -->
+<?php	}
+
+		if ( 'on' === $show_pagination && ! is_search() ) {
+			echo '</div> <!-- .et_pb_posts -->';
+
+			$container_is_closed = true;
+
+			if ( function_exists( 'wp_pagenavi' ) )
+				wp_pagenavi();
+			else
+				get_template_part( 'includes/navigation', 'index' );
+		}
+
+		wp_reset_query();
+	} else {
+		get_template_part( 'includes/no-results', 'index' );
+	}
+
+	$posts = ob_get_contents();
+
+	ob_end_clean();
+
+	$class = " et_pb_bg_layout_{$background_layout}";
+
+	$output = sprintf(
+		'<div%5$s class="%1$s%3$s%6$s">
+			%2$s
+		%4$s',
+		( 'on' === $fullwidth ? 'et_pb_posts' : 'et_pb_blog_grid clearfix' ),
+		$posts,
+		esc_attr( $class ),
+		( ! $container_is_closed ? '</div> <!-- .et_pb_posts -->' : '' ),
+		( '' !== $module_id ? sprintf( ' id="%1$s"', esc_attr( $module_id ) ) : '' ),
+		( '' !== $module_class ? sprintf( ' %1$s', esc_attr( $module_class ) ) : '' )
+	);
+
+	if ( 'on' !== $fullwidth )
+		$output = sprintf( '<div class="et_pb_blog_grid_wrapper">%1$s</div>', $output );
+
+	return $output;
+}
+
+
+/*
+ * Fim do exemplo
+ */
+
+/*
  * PUBLICA PAGE BUILDER
  * Shortcodes
  */
