@@ -295,7 +295,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .comment-area h2 { font-size: 30px; color: #BABABA;  } 
 
-.comment-area p { font-family: 'Lato', sans-serif; font-weight: 500; font-size: 14px; }
+.comment-area p { font-family: 'Lato', sans-serif !important; font-weight: 500; font-size: 14px; }
 
 
 
