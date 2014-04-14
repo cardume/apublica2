@@ -44,6 +44,8 @@
 					?>
 					</div> <!-- .entry-content -->
 
+					
+
 					<?php
 					if ( et_get_option('divi_468_enable') == 'on' ){
 						echo '<div class="et-single-post-ad">';
@@ -64,6 +66,16 @@
 				<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
 			<?php endwhile; ?>
 			</div> <!-- #left-area -->
+		<div class="comment-area">
+			<div class="et_pb_row">
+				<div class="et_pb_column et_pb_column_1_2">
+					<div class="disqus-comments">disqus</div>
+				</div>
+				<div class="et_pb_column et_pb_column_1_2">
+					<div class="facebook-comments">facebook</div>
+				</div>
+			</div>
+		</div>
 
 			<?php get_sidebar(); ?>
 		</div> <!-- #content-area -->
