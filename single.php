@@ -44,16 +44,6 @@
 					?>
 					</div> <!-- .entry-content -->
 
-					<?php
-					if ( et_get_option('divi_468_enable') == 'on' ){
-						echo '<div class="et-single-post-ad">';
-						if ( et_get_option('divi_468_adsense') <> '' ) echo( et_get_option('divi_468_adsense') );
-						else { ?>
-							<a href="<?php echo esc_url(et_get_option('divi_468_url')); ?>"><img src="<?php echo esc_attr(et_get_option('divi_468_image')); ?>" alt="468 ad" class="foursixeight" /></a>
-				<?php 	}
-						echo '</div> <!-- .et-single-post-ad -->';
-					}
-				?>
 
 					<?php
 						if ( comments_open() && 'on' == et_get_option( 'divi_show_postcomments', 'on' ) )
@@ -64,7 +54,6 @@
 				<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
 			<?php endwhile; ?>
 			</div> <!-- #left-area -->
-
 			<?php get_sidebar(); ?>
 		</div> <!-- #content-area -->
 	</div> <!-- .container -->
