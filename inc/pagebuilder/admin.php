@@ -127,7 +127,7 @@ function publica_page_builder() {
 	 */
 	?>
 	<script type="text/template" id="et-builder-advanced-setting-et_pb_publica_slide-title">
-		<%= typeof( et_pb_heading ) !== 'undefined' && typeof( et_pb_heading ) === 'string' ?  et_pb_heading : 'Post: ' + et_pb_post_id %>
+		<%= typeof( et_pb_heading ) !== 'undefined' && typeof( et_pb_heading ) === 'string' ?  et_pb_heading : (typeof(et_pb_post_id) !== 'undefined' ? 'Post: ' + et_pb_post_id : 'New slide') %>
 	</script>
 	<script type="text/template" id="et-builder-advanced-setting-et_pb_publica_slide">
 		<h3 class="et-pb-settings-heading">Slide Settings</h3>
