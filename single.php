@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+	<?php get_header(); ?>
 
 <div id="main-content">
 	<div class="header-full">
@@ -20,26 +20,21 @@
 			<div id="left-area">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
-
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
 					<h1><?php the_title(); ?></h1>
-
-				<?php
-					et_divi_post_meta();
-
-					$thumb = '';
-
-					$width = (int) apply_filters( 'et_pb_index_blog_image_width', 1080 );
-
-					$height = (int) apply_filters( 'et_pb_index_blog_image_height', 9999 );
-					$classtext = 'et_featured_image';
-					$titletext = get_the_title();
-					$thumbnail = get_thumbnail( $width, $height, $classtext, $titletext, $titletext, false, 'Blogimage' );
-					$thumb = $thumbnail["thumb"];
-
-					if ( 'on' === et_get_option( 'divi_thumbnails', 'on' ) && '' !== $thumb )
-						print_thumbnail( $thumb, $thumbnail["use_timthumb"], $titletext, $width, $height );
-				?>
+					<?php et_divi_post_meta(); ?>
+				</article>
+			</div>
+		</div>
+	</div>
+	<div class="excerpt-full"> 
+		<div class="excerpt">
+			<?php the_excerpt(); ?>
+		</div>
+	</div>
+	<div class="container single-post-container">
+			<div class="clearfix">
+				<div id="left-area">
 
 					<div class="entry-content">
 					<?php

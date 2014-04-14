@@ -66,6 +66,7 @@ h1, h2, h3, h4, h5, h6{ font-family: 'museo500', 'Times new roman', Serif; }
 
 ::-moz-selection { 	background: #FFBF00; /* Firefox */ }
 
+.container { position: relative; }
 
 
 
@@ -271,6 +272,24 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 .et_full_width_page #left-area h1 { font-size: 50px; text-align: center; }
 
 .et_full_width_page #left-area .post-meta { font-family: 'Lato', sans-serif; font-weight: 400;  font-size: 14px; text-align: center; }
+
+
+
+/* * Single * */
+
+.single .et_pb_post { margin-bottom: 0;}
+
+.single .post { border-bottom: 0; padding-bottom: 0;}
+
+.single-post-container {padding-top: 10px !important;}
+
+.excerpt-full{ width: 100%; left: 0; background-color: #EFEFEF; margin: 0;  }
+
+.excerpt { width:  680px; margin: 0 auto; padding: 30px 200px;}
+
+.excerpt p { font-family: 'Lato', sans-serif; font-weight: 300; text-align: center; line-height: 32px; font-size: 22px; }
+
+
 
 
 /* * Quem Somos * */
