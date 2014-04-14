@@ -5,6 +5,48 @@
  * ADMIN
  */
 
+/* 
+ * PRE DEFINED INPUTS
+ */
+
+function publica_page_builder_regular_text($id, $title, $description) {
+	?>
+	<div class="et-pb-option">
+		<label for="et_pb_<?php echo $id; ?>"><?php echo $title; ?>: </label>
+
+		<div class="et-pb-option-container">
+			<input id="et_pb_<?php echo $id; ?>" type="text" class="regular-text" value="<%= typeof( et_pb_<?php echo $id; ?> ) !== 'undefined' ?  et_pb_<?php echo $id; ?> : '' %>" />
+			<?php if($description) : ?>
+				<p class="description"><?php echo $description; ?></p>
+			<?php endif; ?>
+		</div> <!-- .et-pb-option-container -->
+	</div> <!-- .et-pb-option -->
+	<?php
+}
+
+function publica_page_builder_admin_label() {
+	?>
+	<div class="et-pb-option">
+		<label for="admin_label">Admin Label: </label>
+
+		<div class="et-pb-option-container">
+			<input id="admin_label" type="text" class="regular-text" value="<%= typeof( admin_label ) !== 'undefined' ?  admin_label : '' %>" />
+			<p class="description">This will change the label of the module in the builder for easy identification.</p>
+		</div> <!-- .et-pb-option-container -->
+	</div> <!-- .et-pb-option -->
+	<?php
+}
+
+function publica_page_builder_regular_inputs() {
+	publica_page_builder_admin_label();
+	publica_page_builder_regular_text('module_id', 'CSS ID', 'Enter an optional CSS ID to be used for this module. An ID can be used to create custom CSS styling, or to create links to particular sections of your page.');
+	publica_page_builder_regular_text('module_css', 'CSS Class', 'Enter optional CSS classes to be used for this module. A CSS class can be used to create custom CSS styling. You can add multiple classes, separated with a space.');
+}
+
+/*
+ * BUILDER
+ */
+
 function publica_page_builder() {
 	/*
 	 * PUBLICA MODULE
@@ -25,23 +67,9 @@ function publica_page_builder() {
 					<p class="description">Toggle between the various blog layout types.</p>
 				</div> <!-- .et-pb-option-container -->
 			</div> <!-- .et-pb-option -->
-			<div class="et-pb-option">
-				<label for="et_pb_module_id">CSS ID: </label>
 
-				<div class="et-pb-option-container">
-					<input id="et_pb_module_id" type="text" class="regular-text" value="<%= typeof( et_pb_module_id ) !== 'undefined' ?  et_pb_module_id : '' %>" />
-					<p class="description">Enter an optional CSS ID to be used for this module. An ID can be used to create custom CSS styling, or to create links to particular sections of your page.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
+			<?php publica_page_builder_regular_inputs(); ?>
 
-			<div class="et-pb-option">
-				<label for="et_pb_module_class">CSS Class: </label>
-
-				<div class="et-pb-option-container">
-					<input id="et_pb_module_class" type="text" class="regular-text" value="<%= typeof( et_pb_module_class ) !== 'undefined' ?  et_pb_module_class : '' %>" />
-					<p class="description">Enter optional CSS classes to be used for this module. A CSS class can be used to create custom CSS styling. You can add multiple classes, separated with a space.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
 		</div>
 	</script>
 	<?php
@@ -75,31 +103,9 @@ function publica_page_builder() {
 
 				</div> <!-- .et-pb-option-container -->
 			</div> <!-- .et-pb-option -->
-			<div class="et-pb-option">
-				<label for="admin_label">Admin Label: </label>
 
-				<div class="et-pb-option-container">
-					<input id="admin_label" type="text" class="regular-text" value="<%= typeof( admin_label ) !== 'undefined' ?  admin_label : '' %>" />
-					<p class="description">This will change the label of the module in the builder for easy identification.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
-			<div class="et-pb-option">
-				<label for="et_pb_module_id">CSS ID: </label>
+			<?php publica_page_builder_regular_inputs(); ?>
 
-				<div class="et-pb-option-container">
-					<input id="et_pb_module_id" type="text" class="regular-text" value="<%= typeof( et_pb_module_id ) !== 'undefined' ?  et_pb_module_id : '' %>" />
-					<p class="description">Enter an optional CSS ID to be used for this module. An ID can be used to create custom CSS styling, or to create links to particular sections of your page.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
-
-			<div class="et-pb-option">
-				<label for="et_pb_module_class">CSS Class: </label>
-
-				<div class="et-pb-option-container">
-					<input id="et_pb_module_class" type="text" class="regular-text" value="<%= typeof( et_pb_module_class ) !== 'undefined' ?  et_pb_module_class : '' %>" />
-					<p class="description">Enter optional CSS classes to be used for this module. A CSS class can be used to create custom CSS styling. You can add multiple classes, separated with a space.</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
 		</div>
 	</script>
 	<?php
@@ -115,7 +121,7 @@ function publica_page_builder() {
 
 		<div class="et-pb-main-settings">
 			<div class="et-pb-option">
-				<label for="et_pb_heading">Post ID: </label>
+				<label for="et_pb_post_id">Post ID: </label>
 				<div class="et-pb-option-container">
 					<input id="et_pb_post_id" type="text" class="regular-text" value="<%= typeof( et_pb_post_id ) !== 'undefined' ?  et_pb_post_id : '' %>" />
 
@@ -128,6 +134,31 @@ function publica_page_builder() {
 					<input id="et_pb_heading" type="text" class="regular-text" value="<%= typeof( et_pb_heading ) !== 'undefined' ?  et_pb_heading : '' %>" />
 
 					<p class="description">Define the title text for your slide.</p>
+				</div> <!-- .et-pb-option-container -->
+			</div> <!-- .et-pb-option -->
+			<div class="et-pb-option">
+				<label for="et_pb_assunto">Assunto: </label>
+				<div class="et-pb-option-container">
+					<input id="et_pb_assunto" type="text" class="regular-text" value="<%= typeof( et_pb_assunto ) !== 'undefined' ?  et_pb_assunto : '' %>" />
+
+					<p class="description">Defina o assunto referente a esse conteúdo.</p>
+				</div> <!-- .et-pb-option-container -->
+			</div> <!-- .et-pb-option -->
+			<div class="et-pb-option">
+				<label for="et_pb_description">Description: </label>
+				<div class="et-pb-option-container">
+					<input id="et_pb_description" type="text" class="regular-text" value="<%= typeof( et_pb_description ) !== 'undefined' ?  et_pb_description : '' %>" />
+
+					<p class="description">Write a small description for the slide.</p>
+				</div> <!-- .et-pb-option-container -->
+			</div> <!-- .et-pb-option -->
+			<div class="et-pb-option">
+				<label for="et_pb_background_image">Background Image: </label>
+
+				<div class="et-pb-option-container">
+					<input id="et_pb_background_image" type="text" class="regular-text et-pb-upload-field" value="<%= typeof( et_pb_background_image ) !== 'undefined' ?  et_pb_background_image : '' %>" />
+					<input type='button' class='button button-upload et-pb-upload-button' value='Upload an image' data-choose="Choose a Background Image" data-update="Set As Background" data-type="image" />
+					<p class="description">If defined, this image will be used as the background for this module. To remove a background image, simply delete the URL from the settings field.</p>
 				</div> <!-- .et-pb-option-container -->
 			</div> <!-- .et-pb-option -->
 		</div>
