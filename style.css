@@ -170,6 +170,10 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
      width: 20px;
      height: 20px;
      -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+     transform: rotate(45deg);
      position: absolute;
      top: 50%;
      margin-top: -10px;
