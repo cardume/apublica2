@@ -131,3 +131,28 @@ function my_mce_before_init( $settings ) {
     return $settings;
 
 }
+
+
+/* 
+ * Remove ET settings box from post
+ */
+if(is_admin()) {
+	function publica_remove_meta_boxes() {
+		remove_meta_box('et_settings_meta_box', 'post', 'side');
+	}
+	add_action('do_meta_boxes', 'publica_remove_meta_boxes');
+}
+
+// Fix post save to use fullwidth layout
+
+function publica_post_fixed_layout($metadata, $object_id, $meta_key, $single) {
+
+	if($meta_key == '_et_pb_page_layout') {
+		$post = get_post($object_id);
+		if($post && $post->post_type == 'post') {
+			return 'et_full_width_page';
+		}
+	}
+	return $metadata;
+}
+add_filter('get_post_metadata', 'publica_post_fixed_layout', 10, 4);
