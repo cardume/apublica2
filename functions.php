@@ -131,3 +131,8 @@ function my_mce_before_init( $settings ) {
     return $settings;
 
 }
+
+register_nav_menus( array(
+	'footer_menu_1' => 'Menu do footer 1',
+	'footer_menu_2' => 'Menu do footer 2'
+) );
