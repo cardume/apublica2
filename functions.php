@@ -29,9 +29,13 @@ require_once(STYLESHEETPATH . '/inc/acf-fields.php');
 
 function publica_scripts() {
 
+	wp_register_script('fitvids', get_stylesheet_directory_uri() . '/lib/jquery.fitvids.js', array('jquery'));
+
 	wp_enqueue_style('divi-style', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style('publica-main', get_stylesheet_uri(), array('divi-style'));
-	wp_enqueue_script('publica-pagebuilder', get_stylesheet_directory_uri() . '/inc/pagebuilder/custom.js', array('jquery'));
+	wp_enqueue_script('publica-pagebuilder', get_stylesheet_directory_uri() . '/inc/pagebuilder/custom.js', array('jquery', 'fitvids'));
+
+	wp_enqueue_script('publica-main', get_stylesheet_directory_uri() . '/js/main.js', array('jquery', 'fitvids'));
 
 }
 add_action('wp_enqueue_scripts', 'publica_scripts');
