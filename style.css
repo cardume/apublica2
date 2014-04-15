@@ -456,7 +456,23 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .excerpt { width:  680px; margin: 0 auto; padding: 30px 300px;}
 
-.excerpt p { font-family: 'Lato', sans-serif; font-weight: 300; text-align: center; line-height: 32px; font-size: 22px; }
+
+
+
+/* * Page * */
+
+.single-page-text { font-size:22px; line-height:150%; text-align:left; width: 860px; margin-left: 0 auto;}
+
+.single-page-text p, .excerpt p { font-family: 'Lato', sans-serif; font-weight: 300; text-align: center; line-height: 32px; font-size: 22px; }
+
+
+
+
+/* * Quem Somos * */
+
+.et_pb_toggle h3.et_pb_toggle_title { font-family: 'Lato', sans-serif; font-weight: 700; }
+
+
 
 
 /* * Comments * */
@@ -468,11 +484,6 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 .comment-area p { font-family: 'Lato', sans-serif !important; font-weight: 500; font-size: 14px; }
 
 
-
-
-/* * Quem Somos * */
-
-.et_pb_toggle h3.et_pb_toggle_title { font-family: 'Lato', sans-serif; font-weight: 700; }
 
 
 /* * Footer * */
@@ -521,10 +532,11 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 
 
-
-
-
 /* Custom Styles in tinyMCE editor */
 
 .big-heading {	font-size: 	100px !important; 	text-transform: uppercase !important; 	color: 	#fff !important; 	
 				text-shadow: 1px 1px 2px #888, -1px -1px 2px #888 !important ;  letter-spacing: 3px; }
+
+
+/* * Specific page styles * */
+
