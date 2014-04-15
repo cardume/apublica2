@@ -15,8 +15,8 @@
 
 	</div>
 	<div class="et_pb_column et_pb_column_1_4 footer-search">14</div>
-	<div class="et_pb_column et_pb_column_1_4 footer-column">a</div>
-	<div class="et_pb_column et_pb_column_1_4 footer-column">b</div>
+	<div class="et_pb_column et_pb_column_1_4 footer-column"><?php wp_nav_menu( array('menu' => 'Footer menu 1' )); ?></div>
+	<div class="et_pb_column et_pb_column_1_4 footer-column"><?php wp_nav_menu( array('menu' => 'Footer menu 2' )); ?></div>
 	<div class="et_pb_column et_pb_column_1_4 footer-column">
 		<ul id="et-social-icons">
 			<?php if ( 'on' === et_get_option( 'divi_show_facebook_icon', 'on' ) ) : ?>

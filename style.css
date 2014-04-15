@@ -368,15 +368,19 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .footer-column ul { list-style: none; }
 
-.footer-column ul li { font-size:24px; letter-spacing:1pt;  text-align:left; line-height:130%;}
+.footer-column ul li { text-align:left;}
 
-.footer-column ul li a { color: #FFF;}
+.footer-column ul li a { color: #FFF; font-family:Georgia, "Times New Roman", Times, serif; font-size: 20px; font-weight: normal; padding: 5px 0 25px; }
 
 #et-social-icons { float: none; text-align: center; margin-top: 0; }
 
+#et-social-icons li { margin: 10px; }
+
+#et-social-icons li a { font-size: 30px }
+
 .et-social-icon a { color: #fff; font-size: 30px; }
 
-#et-social-icons li { margin: 10px;}
+
 
 
 
