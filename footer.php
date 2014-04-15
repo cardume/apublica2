@@ -14,7 +14,17 @@
 			</a>
 
 	</div>
-	<div class="et_pb_column et_pb_column_1_4 footer-search">14</div>
+	<div class="et_pb_column et_pb_column_1_4 footer-search">
+		<form role="search" method="get" class="et-search-form-footer" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<?php
+				printf( '<input type="search" class="et-search-field" placeholder="%1$s" value="%2$s" name="s" title="%3$s" />',
+					esc_attr_x( 'Search &hellip;', 'placeholder', 'Divi' ),
+					get_search_query(),
+					esc_attr_x( 'Search for:', 'label', 'Divi' )
+				);
+			?>
+			</form>
+	</div>
 	<div class="et_pb_column et_pb_column_1_4 footer-column"><?php wp_nav_menu( array('menu' => 'Footer menu 1' )); ?></div>
 	<div class="et_pb_column et_pb_column_1_4 footer-column"><?php wp_nav_menu( array('menu' => 'Footer menu 2' )); ?></div>
 	<div class="et_pb_column et_pb_column_1_4 footer-column">
@@ -43,7 +53,17 @@
 		</ul>
 	</div>
 	<div class="et_pb_column et_pb_column_1_4 footer-column">
-		<p id="footer-info"><?php printf( __( 'Designed by %1$s | Powered by %2$s', 'Divi' ), '<a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a>', '<a href="http://www.wordpress.org">WordPress</a>' ); ?></p>
+		<div id="footer-info">
+		<p><?php _e( 'Site desenvolvido por:' , 'Divi' ); ?></p>
+			<div class="dev-icons">
+				<a href="http://cardume.art.br"><icon class="cardume"></icon></a>
+				<span>+</span>
+				<a href="http://oniric.ca"><icon class="oniricca"></icon></a>
+			</div>
+			<p>e alguns icones por <a href="http://entypo.com">Entypo</a></p>
+		</div>
+
+
 	</div>
 </div>
 
