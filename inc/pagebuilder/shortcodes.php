@@ -305,7 +305,7 @@ function et_pb_publica_summary($atts) {
 						)
 					));
 					?>
-					<?php publica_summary_item($video_query->posts); ?>
+					<?php publica_summary_item($video_query->posts, true); ?>
 				</div>
 				<div class="summary-content-item" data-summary="currents">
 					<?php
@@ -380,7 +380,11 @@ function publica_summary_item($posts, $use_video = false) {
 					<span class="separator">|</span>
 					<span class="date"><?php echo get_the_date(); ?></span>
 				</p>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+				<?php if($use_video && get_field('video_url')) : ?>
+					<?php echo wp_oembed_get(get_field('video_url')); ?>
+				<?php else : ?>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+				<?php endif; ?>
 			</article>
 
 			<?php

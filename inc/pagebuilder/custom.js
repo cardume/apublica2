@@ -77,6 +77,8 @@
 
 				$summary.find('.summary-content').empty().append($itemsContent[$(this).data('summary')]);
 
+				$summary.fitVids();
+
 				return false;
 
 			});
