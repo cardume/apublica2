@@ -361,7 +361,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 /* * Post - Full * */
 
-.et_full_width_page { font-size:20px; text-align:left; }
+.et_full_width_page .entry-content { font-size:20px; text-align:left; }
 
 .et_full_width_page #left-area { margin-top: 30px; }
 
@@ -401,6 +401,33 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 /* * Quem Somos * */
 
 .et_pb_toggle h3.et_pb_toggle_title { font-family: 'Lato', sans-serif; font-weight: 700; }
+
+
+/* * Footer * */
+
+#footer-bottom {  }
+
+#footer-logo { width: 160px; height: 71px; padding-bottom: 20px;}
+
+.footer-search { height: 71px; margin-right: 0; padding-bottom: 20px;}
+
+.footer-column { border-top: 1px solid #fff; padding-top: 20px; padding-bottom: 20px;}
+
+.footer-column ul { list-style: none; }
+
+.footer-column ul li { text-align:left;}
+
+.footer-column ul li a { color: #FFF; font-family:Georgia, "Times New Roman", Times, serif; font-size: 20px; font-weight: normal; padding: 5px 0 25px; }
+
+#et-social-icons { float: none; text-align: center; margin-top: 0; }
+
+#et-social-icons li { margin: 10px; }
+
+#et-social-icons li a { font-size: 30px }
+
+.et-social-icon a { color: #fff; font-size: 30px; }
+
+
 
 
 
