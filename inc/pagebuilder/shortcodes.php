@@ -201,7 +201,8 @@ function et_pb_publica_summary($atts) {
 
 	extract(shortcode_atts(array(
 		'module_id' => '',
-		'module_class' => ''
+		'module_class' => '',
+		'current_assuntos' => ''
 	), $atts));
 
 	ob_start();
@@ -221,6 +222,52 @@ function et_pb_publica_summary($atts) {
 			<div class="summary-content">
 				<div class="summary-content-item" data-summary="most-recent">
 					<?php publica_summary_item(get_posts(array('posts_per_page' => 5))); ?>
+				</div>
+				<div class="summary-content-item" data-summary="most-shared">
+					<?php
+					$most_shared_query = new WP_Query(array(
+						'posts_per_page' => 5,
+						'orderby' => 'meta_value_num',
+						'order' => 'DESC',
+						'meta_key' => '_share_count_total',
+						'date_query' => array(
+							array(
+								'after' => '1 month ago'
+							)
+						)
+					));
+					?>
+					<?php publica_summary_item($most_shared_query->posts); ?>
+				</div>
+				<div class="summary-content-item" data-summary="videos">
+					<?php
+					$video_query = new WP_Query(array(
+						'posts_per_page' => 5,
+						'meta_query' => array(
+							array(
+								'key' => 'video_url',
+								'value' => '',
+								'compare' => '!='
+							)
+						)
+					));
+					?>
+					<?php publica_summary_item($video_query->posts); ?>
+				</div>
+				<div class="summary-content-item" data-summary="currents">
+					<?php
+					$currents_query = new WP_Query(array(
+						'posts_per_page' => 5,
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'assunto',
+								'field' => 'term_id',
+								'terms' => explode(',', $current_assuntos)
+							)
+						)
+					));
+					?>
+					<?php publica_summary_item($currents_query->posts); ?>
 				</div>
 			</div>
 		</div>
@@ -242,15 +289,16 @@ function et_pb_publica_summary($atts) {
 }
 add_shortcode('et_pb_publica_summary', 'et_pb_publica_summary');
 
-function publica_summary_item($posts) {
+function publica_summary_item($posts, $use_video = false) {
 
 	global $post;
 
-	$i = 0;
+	for($i = 0; $i <= 4; $i++) {
 
-	foreach($posts as $post) {
+		$post = $posts[$i];
 
-		setup_postdata($post);
+		if($post)
+			setup_postdata($post);
 
 		if($i == 0) {
 			?>
@@ -267,14 +315,23 @@ function publica_summary_item($posts) {
 			<?php
 		}
 
-		?>
+		if($post) {
+			?>
 
 			<article <?php post_class(); ?>>
 				<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+				<p class="meta">
+					<span class="category"><?php the_category(', '); ?></span>
+					<span class="separator">|</span>
+					<span class="author">por <?php the_author(); ?></span>
+					<span class="separator">|</span>
+					<span class="date"><?php echo get_the_date(); ?></span>
+				</p>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
 			</article>
 
-		<?php
+			<?php
+		}
 
 		if($i == 2 || $i == 4) {
 			?>
@@ -283,8 +340,6 @@ function publica_summary_item($posts) {
 		}
 
 		wp_reset_postdata();
-
-		$i++;
 
 	}
 

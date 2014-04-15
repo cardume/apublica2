@@ -197,6 +197,10 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
      margin: 40px 0 0;
 }
 
+.publica-summary a {
+     color: #de592c;
+}
+
 .publica-summary .summary-nav {
      display: table;
      width: 100%;
@@ -208,7 +212,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
      text-align: center;
      text-transform: lowercase;
      font-family: "museo700";
-     font-size: 16px;
+     font-size: 18px;
      padding: 0 0 20px 0;
      color: #999;
      position: relative;
@@ -234,13 +238,56 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .publica-summary .summary-content-container {
      background: #efefef;
-     padding: 20px 0;
+     padding: 40px 0;
 }
 
 .publica-summary .summary-content-container .et_pb_column_1_2 {
      margin-right: 30px;
      padding-right: 29px;
      border-right: 1px solid #ccc;
+}
+
+.publica-summary .summary-content-container article h2 a {
+     color: #333;
+}
+
+.publica-summary .summary-content-container article .meta {
+     font-size: 11px;
+     line-height: 14px;
+}
+
+.publica-summary .summary-content-container .et_pb_column_1_2 article h2 {
+     font-size: 34px;
+}
+
+.publica-summary .summary-content-container .et_pb_column_1_2 article .meta {
+     margin: 0 0 20px;
+}
+
+
+.publica-summary .summary-content-container article .meta .category {
+     font-weight: 800;
+}
+
+.publica-summary .summary-content-container .et_pb_column_1_4 article {
+     width: 100%;
+     height: 200px;
+     overflow: hidden;
+     margin-bottom: 20px;
+}
+
+.publica-summary .summary-content-container .et_pb_column_1_4 article h2 {
+     font-size: 18px;
+}
+
+.publica-summary .summary-content-container .et_pb_column_1_4 article .meta {
+     margin-bottom: 10px;
+}
+
+.publica-summary .summary-content-container .et_pb_column_1_4 article .meta .separator,
+.publica-summary .summary-content-container .et_pb_column_1_4 article .meta .author,
+.publica-summary .summary-content-container .et_pb_column_1_4 article .meta .date {
+     display: none;
 }
 
 /* Sidebar */

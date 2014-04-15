@@ -83,8 +83,8 @@ class Share_Counter {
 		$post_id = $this->post_id;
 
 		if($post_id && $shares) {
-			update_post_meta($post_id, '_vlchannel_share_count_total', $shares['total']);
-			update_post_meta($post_id, '_vlchannel_share_count', $shares);
+			update_post_meta($post_id, '_share_count_total', $shares['total']);
+			update_post_meta($post_id, '_share_count', $shares);
 		}
 
 		return $post_id;
