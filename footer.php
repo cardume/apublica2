@@ -53,7 +53,17 @@
 		</ul>
 	</div>
 	<div class="et_pb_column et_pb_column_1_4 footer-column">
-		<p id="footer-info"><?php printf( __( 'Designed by %1$s | Powered by %2$s', 'Divi' ), '<a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a>', '<a href="http://www.wordpress.org">WordPress</a>' ); ?></p>
+		<div id="footer-info">
+		<p><?php _e( 'Site desenvolvido por:' , 'Divi' ); ?></p>
+			<div class="dev-icons">
+				<a href="http://cardume.art.br"><icon class="cardume"></icon></a>
+				<span>+</span>
+				<a href="http://oniric.ca"><icon class="oniricca"></icon></a>
+			</div>
+			<p>e alguns icones por <a href="http://entypo.com">Entypo</a></p>
+		</div>
+
+
 	</div>
 </div>
 
