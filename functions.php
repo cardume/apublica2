@@ -111,10 +111,9 @@ function my_mce_before_init( $settings ) {
     		'classes' => 'big-heading'
     	),
         array(
-        	'title' => 'Quem somos title',
+        	'title' => 'Grey h1 title',
         	'block' => 'h1',
-        	'classes' => 'quem-somos-title',
-        	'wrapper' => true
+        	'classes' => 'grey-h1-title',
         ),
         array(
         	'title' => 'Bold Red Text',

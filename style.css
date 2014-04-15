@@ -461,7 +461,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 /* * Page * */
 
-.single-page-text { font-size:22px; line-height:150%; text-align:left; width: 860px; margin-left: 0 auto;}
+.single-page-text { font-size:22px; line-height:150%; text-align:left; width: 860px; margin: 0 auto;}
 
 .single-page-text p, .excerpt p { font-family: 'Lato', sans-serif; font-weight: 300; text-align: center; line-height: 32px; font-size: 22px; }
 
@@ -537,6 +537,13 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 .big-heading {	font-size: 	100px !important; 	text-transform: uppercase !important; 	color: 	#fff !important; 	
 				text-shadow: 1px 1px 2px #888, -1px -1px 2px #888 !important ;  letter-spacing: 3px; }
 
+.grey-h1-title { font-size: 50px; color: #BBB; text-align: center;}
+
 
 /* * Specific page styles * */
 
+.financiadores-module .et_pb_toggle { border-color: #E15A2D !important;}
+
+.financiadores-module .et_pb_toggle_title:after { content:url(images/financiadores-icon.png); float: left; margin-right: 20px; margin-top: -2px; }
+
+.parceiros-module .et_pb_toggle_title:after { content:url(images/parceiros-icon.png); float: left; margin-right: 20px; margin-top: -2px; }
