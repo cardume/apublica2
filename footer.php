@@ -56,11 +56,11 @@
 		<div id="footer-info">
 		<p><?php _e( 'Site desenvolvido por:' , 'Divi' ); ?></p>
 			<div class="dev-icons">
-				<a href="http://cardume.art.br"><icon class="cardume"></icon></a>
+				<a href="http://cardume.art.br" alt="cardume"><icon class="cardume"></icon></a>
 				<span>+</span>
-				<a href="http://oniric.ca"><icon class="oniricca"></icon></a>
+				<a href="http://oniric.ca" alt="oniricca"><icon class="oniricca"></icon></a>
 			</div>
-			<p>e alguns icones por <a href="http://entypo.com">Entypo</a></p>
+			<p>e alguns icones por <a href="http://entypo.com" alt="Entypo">Entypo</a></p>
 		</div>
 
 
