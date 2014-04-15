@@ -178,16 +178,69 @@ function et_pb_publica_blog( $atts ) {
  * Shortcodes
  */
 
-function et_pb_publica($atts) {
+function et_pb_post($atts) {
 
 	extract(shortcode_atts(array(
 		'module_id' => '',
-		'module_class' => ''
+		'module_class' => '',
+		'post_id' => '',
+		'display_thumbnail' => '',
+		'title' => '',
+		'description' => '',
+		'thumbnail' => ''
 	), $atts));
 
-	$content = '<p>Hello</p>';
+	if($post_id == '')
+		return '';
 
-	$output = sprintf('<div%1$s class="%2$s">%3$s</div>',
+	if(!get_post($post_id))
+		return '';
+
+	global $post;
+	$post = get_post($post_id);
+
+	setup_postdata($post);
+
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url = '';
+	if($thumb_id) {
+		$thumb_url = wp_get_attachment_image_src($thumb_id, 'medium', true);
+		if($thumb_url)
+		$thumb_url = $thumb_url[0];
+	}
+
+	$title = $title ? $title : get_the_title();
+	$description = $description ? $description : get_the_excerpt();
+	$thumbnail = $thumbnail ? $thumbnail : $thumb_url;
+
+	ob_start();
+	?>
+
+	<article <?php post_class(); ?>>
+		<?php if($display_thumbnail == 'on' && $thumbnail) : ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				<img src="<?php echo $thumbnail; ?>" class="wp-post-image" alt="<?php echo $title; ?>" />
+			</a>
+		<?php endif; ?>
+		<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a></h2>
+		<p class="meta">
+			<span class="category"><?php the_category(', '); ?></span>
+			<span class="separator">|</span>
+			<span class="author">por <?php the_author(); ?></span>
+			<span class="separator">|</span>
+			<span class="date"><?php echo get_the_date(); ?></span>
+		</p>
+		<p><?php echo $description; ?></p>
+	</article>
+
+	<?php
+
+	wp_reset_postdata();
+
+	$content = ob_get_contents();
+	ob_end_clean();
+
+	$output = sprintf('<div%1$s class="%2$s post-module">%3$s</div>',
 		('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
 		('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
 		('' !== $content ? $content : '')
@@ -195,7 +248,7 @@ function et_pb_publica($atts) {
 
 	return $output;
 }
-add_shortcode('et_pb_publica', 'et_pb_publica');
+add_shortcode('et_pb_post', 'et_pb_post');
 
 function et_pb_publica_summary($atts) {
 

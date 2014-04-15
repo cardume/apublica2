@@ -49,22 +49,37 @@ function publica_page_builder_regular_inputs() {
 
 function publica_page_builder() {
 	/*
-	 * PUBLICA MODULE
+	 * POST
 	 */
 	?>
-	<script type="text/template" id="et-builder-et_pb_publica-module-template">
-		<h3 class="et-pb-settings-heading">Blog Module Settings</h3>
+	<script type="text/template" id="et-builder-et_pb_post-module-template">
+		<h3 class="et-pb-settings-heading">Post Module Settings</h3>
 
 		<div class="et-pb-main-settings">
+			<?php publica_page_builder_regular_text('post_id', 'Post ID', 'Enter the post ID'); ?>
+
 			<div class="et-pb-option">
-				<label for="et_pb_fullwidth">Layout: </label>
+				<label for="et_pb_display_thumbnail">Display thumbnail: </label>
 				<div class="et-pb-option-container">
-					<select name="et_pb_fullwidth" id="et_pb_fullwidth">
-						<option value="on"<%= typeof( et_pb_fullwidth ) !== 'undefined' && 'on' === et_pb_fullwidth ?  ' selected="selected"' : '' %>>Fullwidth</option>
-						<option value="off"<%= typeof( et_pb_fullwidth ) !== 'undefined' && 'off' === et_pb_fullwidth ?  ' selected="selected"' : '' %>>Grid</option>
+					<select name="et_pb_display_thumbnail" id="et_pb_display_thumbnail">
+						<option value="on"<%= typeof( et_pb_display_thumbnail ) !== 'undefined' && 'on' === et_pb_display_thumbnail ?  ' selected="selected"' : '' %>>Yes</option>
+						<option value="off"<%= typeof( et_pb_display_thumbnail ) !== 'undefined' && 'off' === et_pb_display_thumbnail ?  ' selected="selected"' : '' %>>No</option>
 					</select>
 
-					<p class="description">Toggle between the various blog layout types.</p>
+					<p class="description">This setting will turn on and off the thumbnail display for this post.</p>
+				</div> <!-- .et-pb-option-container -->
+			</div> <!-- .et-pb-option -->
+
+			<?php publica_page_builder_regular_text('title', 'Title', 'Overwrite the original post title'); ?>
+			<?php publica_page_builder_regular_text('description', 'Description', 'Overwrite the original post excerpt'); ?>
+
+			<div class="et-pb-option">
+				<label for="et_pb_thumbnail">Custom thumbnail: </label>
+
+				<div class="et-pb-option-container">
+					<input id="et_pb_thumbnail" type="text" class="regular-text et-pb-upload-field" value="<%= typeof( et_pb_thumbnail ) !== 'undefined' ?  et_pb_thumbnail : '' %>" />
+					<input type='button' class='button button-upload et-pb-upload-button' value='Upload an image' data-choose="Choose a Background Image" data-update="Set As Background" data-type="image" />
+					<p class="description">If defined, this image will replace the original post thumbnail for this module. To remove a background image, simply delete the URL from the settings field.</p>
 				</div> <!-- .et-pb-option-container -->
 			</div> <!-- .et-pb-option -->
 
@@ -104,6 +119,7 @@ function publica_page_builder() {
 		</div>
 	</script>
 	<?php
+
 	/*
 	 * PUBLICA SLIDER
 	 */

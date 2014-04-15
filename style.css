@@ -256,6 +256,10 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
      line-height: 14px;
 }
 
+.publica-summary .summary-content-container .et_pb_column_1_4 {
+     border: 0;
+}
+
 .publica-summary .summary-content-container .et_pb_column_1_2 article h2 {
      font-size: 34px;
 }
@@ -288,6 +292,73 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 .publica-summary .summary-content-container .et_pb_column_1_4 article .meta .author,
 .publica-summary .summary-content-container .et_pb_column_1_4 article .meta .date {
      display: none;
+}
+
+/* Post Module */
+
+.post-module {
+     padding: 0 30px 30px 0;
+     border-bottom: 1px solid #ccc;
+     margin-left: -30px;
+     padding-left: 27px;
+     margin: 0 3px 30px -27px;
+}
+
+.post-module a {
+     color: #e15a2d;
+}
+
+.post-module:last-child {
+     border-bottom: 0;
+}
+
+.post-module .wp-post-image {
+     margin-bottom: 15px;
+}
+
+.post-module h2 {
+     font-family: "museo700";
+     font-size: 24px;
+     line-height: 120%;
+}
+
+.post-module h2 a {
+     color: #333;
+}
+
+.post-module .meta {
+     font-size: 11px;
+     padding-bottom: 15px;
+}
+
+.post-module .meta .category {
+     font-weight: 800;
+}
+
+/* Custom columns for Post Module */
+
+.post-list .et_pb_row {
+     overflow: hidden;
+}
+
+.post-list .et_pb_column {
+     margin-right: 29px;
+     border-right: 1px solid #ccc;
+}
+
+.post-list .et_pb_column:last-child {
+     margin-right: 0;
+     padding-right: 0;
+     border-right: 0;
+}
+
+
+.post-list .et_pb_column:last-child .post-module {
+     padding-right: 0;
+}
+
+.post-list .et_pb_column_1_3 {
+     width: 340px;
 }
 
 /* Sidebar */
