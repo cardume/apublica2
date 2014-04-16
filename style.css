@@ -552,6 +552,9 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_pb_post a[rel~="category"] { color: #E15A2D !important; font-weight: 700;}
 
+.et_pb_post h2 a, .et_pb_portfolio_item h3 a { color: #111111 ;}
+
+.et_pb_post h2 a:hover, .et_pb_portfolio_item h3 a:hover { color: #E15A2D;}
 
 
 
