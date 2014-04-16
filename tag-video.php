@@ -33,7 +33,7 @@ $background_layout = 'light';
 							printf( '<p class="post-meta">%1$s %2$s %3$s</p>',
 								(
 									'on' === $show_author
-										? sprintf( __( 'by %s |', 'Divi' ), et_get_the_author_posts_link() )
+										? sprintf( __( 'por %s |', 'Divi' ), et_get_the_author_posts_link() )
 										: ''
 								),
 								(
@@ -98,7 +98,7 @@ $background_layout = 'light';
 											printf( '<p class="post-meta">%1$s %2$s %3$s</p>',
 												(
 													'on' === $show_author
-														? sprintf( __( 'by %s |', 'Divi' ), et_get_the_author_posts_link() )
+														? sprintf( __( 'por %s |', 'Divi' ), et_get_the_author_posts_link() )
 														: ''
 												),
 												(
