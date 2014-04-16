@@ -10,7 +10,7 @@
 	border-radius: 0 5px 5px 0;
 	padding: 10px;
 	color: #fff;
-	text-align:right;
+	text-align:center;
 	width: 50px;
 	position: relative;
 	z-index: 2;
@@ -37,8 +37,10 @@
 
 #publica-post-tools .tool-list .tool-item {
 	position: relative;
-	text-align: right;
-	padding: 10px;
+	display: block;
+	text-align: center;
+	padding: 5px 10px;
+	cursor: pointer;
 }
 
 #publica-post-tools .tool-list .tool-item .tool-content-container {
@@ -47,6 +49,7 @@
 	top: 0;
 	padding-left: 10px;
 	display: none;
+	width: 100px;
 }
 
 #publica-post-tools .tool-list .tool-item:hover .tool-content-container {
@@ -59,6 +62,7 @@
 	border: 1px solid #cfcfcf;
 	border-radius: 3px;
 	position: relative;
+	height: 20px;
 }
 
 #publica-post-tools .tool-list .tool-item .tool-content-container .tool-content:before {
@@ -88,6 +92,48 @@
 	background: #f5f5f5;
 }
 
+#publica-post-tools .tool-list .tool-item .tool-content ul {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+#publica-post-tools .tool-list .tool-item .tool-content ul li {
+	display: inline;
+	padding-right: 10px;
+}
+
+#publica-post-tools .tool-list .tool-item .tool-content ul li:last-child {
+	padding-right: 0;
+}
+
 #twitter-widget-0 {
 	width: 50px !important;
+}
+
+.entypo {
+	font-size: 50px;
+	line-height: 25px;
+}
+
+#publica-post-tools .tool-list .tool-item .font-size span {
+	text-align: center;
+	font-size: 20px;
+	line-height: 20px;
+	font-family: serif;
+	font-weight: 800;
+}
+
+#publica-post-tools .tool-list .tool-item .font-size .small {
+	font-size: 60% !important;
+}
+
+#publica-post-tools .tool-list .tool-item .increase .font-size span {
+	font-size: 26px;
+	line-height: 20px;
+}
+
+#publica-post-tools .tool-list .tool-item .decrease .font-size span {
+	font-size: 14px;
+	line-height: 20px;
 }

@@ -59,11 +59,22 @@ class Publica_Post_Tools {
 						  })();
 						</script>
 					</li>
-					<li class="tool-item">
-						<span class="tool-item"><?php _e('A', 'publica'); ?></span>
+					<li class="tool-item" onclick="window.print()">
+						<span class="tool-item entypo">&#59158;</span>
 						<div class="tool-content-container">
 							<div class="tool-content">
-								<p>Teste</p>
+								<p>Imprimir</p>
+							</div>
+						</div>
+					</li>
+					<li class="tool-item font-size-adjust">
+						<span class="font-size regular"><span class="big">A<span class="small">A</span></span></span>
+						<div class="tool-content-container">
+							<div class="tool-content">
+								<ul>
+									<li class="decrease"><span class="font-size"><span class="big">A<span class="small">A</span></span></li>
+									<li class="increase"><span class="font-size"><span class="big">A<span class="small">A</span></span></li>
+								</ul>
 							</div>
 						</div>
 					</li>
