@@ -627,7 +627,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 /* * Page * */
 
-.single-page-text { font-size:22px; line-height:150%; text-align:left; margin: 0 auto; width: auto; padding-left: 15%; padding-right: 15%;}
+.single-page-text { font-size:22px; line-height:150%; text-align:left; margin: 0 auto; width: auto; padding-left: 5%; padding-right: 5%;}
 
 .single-page-text p, .excerpt p { font-family: 'Lato', sans-serif; font-weight: 300; text-align: center; line-height: 32px; font-size: 22px; }
 
