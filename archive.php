@@ -39,10 +39,10 @@
 								<?php
 									$thumb = '';
 
-									$width = 'on' === $fullwidth ? 1080 : 400;
+									$width = 400;
 									$width = (int) apply_filters( 'et_pb_blog_image_width', $width );
 
-									$height = 'on' === $fullwidth ? 675 : 250;
+									$height = 250;
 									$height = (int) apply_filters( 'et_pb_blog_image_height', $height );
 									$classtext = 'on' === $fullwidth ? 'et_pb_post_main_image' : '';
 									$titletext = get_the_title();
