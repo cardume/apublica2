@@ -9,13 +9,13 @@
  * PRE DEFINED INPUTS
  */
 
-function publica_page_builder_regular_text($id, $title, $description) {
+function publica_page_builder_regular_text($id, $title, $description, $default_value = '') {
 	?>
 	<div class="et-pb-option">
 		<label for="et_pb_<?php echo $id; ?>"><?php echo $title; ?>: </label>
 
 		<div class="et-pb-option-container">
-			<input id="et_pb_<?php echo $id; ?>" type="text" class="regular-text" value="<%= typeof( et_pb_<?php echo $id; ?> ) !== 'undefined' ?  et_pb_<?php echo $id; ?> : '' %>" />
+			<input id="et_pb_<?php echo $id; ?>" type="text" class="regular-text" value="<%= typeof( et_pb_<?php echo $id; ?> ) !== 'undefined' ?  et_pb_<?php echo $id; ?> : '<?php echo $default_value; ?>' %>" />
 			<?php if($description) : ?>
 				<p class="description"><?php echo $description; ?></p>
 			<?php endif; ?>
@@ -82,6 +82,43 @@ function publica_page_builder() {
 					<p class="description">If defined, this image will replace the original post thumbnail for this module. To remove a background image, simply delete the URL from the settings field.</p>
 				</div> <!-- .et-pb-option-container -->
 			</div> <!-- .et-pb-option -->
+
+			<?php publica_page_builder_regular_inputs(); ?>
+
+		</div>
+	</script>
+	<?php
+	/*
+	 * PUBLICA CATEGORY
+	 */
+	?>
+	<script type="text/template" id="et-builder-et_pb_publica_category-module-template">
+		<h3 class="et-pb-settings-heading">Categoria Module Settings</h3>
+		<div class="et-pb-main-settings">
+
+			<?php publica_page_builder_regular_text('title', 'Title', 'Define a title for this module'); ?>
+
+			<div class="et-pb-option">
+				<label for="et_pb_current_assuntos">Categoria: </label>
+				<div class="et-pb-option-container">
+				<% var et_pb_category_temp = typeof et_pb_category !== 'undefined' ? et_pb_category : ''; %>
+					<?php
+					$cats_array = get_terms( 'category' );
+					foreach ( $cats_array as $categs ) {
+						printf( '<label><input type="radio" name="et_pb_category" value="%1$s"%3$s> %2$s</label><br/>',
+							esc_attr( $categs->term_id ),
+							esc_html( $categs->name ),
+							'<%= et_pb_category_temp == "' . $categs->term_id . '" ? checked="checked" : "" %>'
+						);
+					}
+					?>
+					<p class="description">Selecione a categoria.</p>
+				</div> <!-- .et-pb-option-container -->
+			</div> <!-- .et-pb-option -->
+
+			<?php publica_page_builder_regular_text('amount', 'Amount of posts', 'Define the amount of posts to display', 2); ?>
+
+			<?php publica_page_builder_regular_text('button_label', 'Button label', 'Write a label to the category link button', 'Read more'); ?>
 
 			<?php publica_page_builder_regular_inputs(); ?>
 

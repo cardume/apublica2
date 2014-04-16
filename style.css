@@ -239,6 +239,10 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
      left: 50%;
      margin-left: -8px;
      -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+     transform: rotate(45deg);
      background: #efefef;
 }
 
@@ -298,6 +302,66 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 .publica-summary .summary-content-container .et_pb_column_1_4 article .meta .author,
 .publica-summary .summary-content-container .et_pb_column_1_4 article .meta .date {
      display: none;
+}
+
+/* Category Module */
+
+.bubble-module h2 {
+     text-align: center;
+     color: #999;
+     margin-bottom: 40px;
+     font-size: 32px;
+     line-height: 32px;
+     font-family: "museo500";
+}
+
+.bubble-module .posts-container {
+     background: #efefef;
+     padding: 30px 0;
+     border-radius: 5px;
+     position: relative;
+}
+
+.bubble-module .posts-container:before {
+     content: '';
+     width: 20px;
+     height: 20px;
+     -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+     transform: rotate(45deg);
+     position: absolute;
+     left: 50%;
+     top: 0;
+     margin-top: -10px;
+     background: #efefef;
+}
+
+.bubble-module .posts-container .item {
+     width: 289px;
+     margin: 0 15px 30px;
+     padding: 0 15px;
+     float: left;
+}
+
+.bubble-module .posts-container .item h3 {
+     font-family: "museo700";
+}
+
+.bubble-module .posts-container .item h3 a {
+     color: #111;
+}
+
+.bubble-module .button {
+     background: #e15a2d;
+     color: #fff;
+     font-weight: 600;
+     text-align: center;
+     border-radius: 5px;
+     margin: 0 30px;
+     padding: 10px 0;
+     display: block;
 }
 
 /* Post Module */
@@ -391,6 +455,9 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_pb_all_tabs { padding: 24px 30px; background: #EFEFEF; }
 
+.et_pb_section { padding: 25px 0; }
+
+.et_pb_fullwidth_section { padding: 0;}
 
 
 

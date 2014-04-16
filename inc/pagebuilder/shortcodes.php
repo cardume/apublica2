@@ -484,3 +484,69 @@ function et_pb_publica_slide($atts) {
 
 }
 add_shortcode('et_pb_publica_slide', 'et_pb_publica_slide');
+
+/*
+ * Publica Category
+ */
+
+function et_pb_publica_category($atts) {
+
+	extract(shortcode_atts(array(
+		'category' => false,
+		'title' => '',
+		'amount' => 2,
+		'button_label' => '',
+		'module_id' => '',
+		'module_class' => ''
+	), $atts));
+
+	if(!$category)
+		return '';
+
+	$query = new WP_Query(array(
+		'posts_per_page' => $amount,
+		'category__in' => explode(',', $category)
+	));
+
+	$content = '';
+
+	if($query->have_posts()) {
+		ob_start();
+		?>
+
+		<h2><?php echo $title; ?></h2>
+		<div class="posts-container">
+			<div class="clearfix">
+				<?php while($query->have_posts()) {
+					$query->the_post();
+					?>
+
+					<article <?php post_class('item'); ?>>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<?php the_excerpt(); ?>
+					</article>
+
+					<?php
+				} ?>
+			</div>
+			<?php if($button_label) { ?>
+				<a class="button" href="<?php echo get_category_link($category); ?>"><?php echo $button_label; ?></a>
+			<?php } ?>
+		</div>
+
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
+	}
+
+	wp_reset_query();
+
+	$output = sprintf('<div%1$s class="%2$s publica-category bubble-module clearfix">%3$s</div>',
+		('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
+		('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
+		('' !== $content ? $content : '')
+	);
+
+	return $output;
+}
+add_shortcode('et_pb_publica_category', 'et_pb_publica_category');
