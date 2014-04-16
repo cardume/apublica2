@@ -5,15 +5,7 @@
 		<div class="container">
 			<div class="breadcrumb">
 				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
-				<?php if(is_category()) : ?>
-					<h1><?php echo single_term_title(); ?></h1>
-				<?php if(is_tag()) : ?>
-					tag
-					<h1><?php echo single_term_title(); ?></h1>
-				<?php elseif(is_tax()) : ?>
-					<?php echo get_query_var('taxonomy'); ?>
-					<h1><?php echo single_term_title(); ?></h1>
-				<?php endif; ?>
+				<h1>Vídeos</h1>
 			</div>
 		</div>
 	</div>
