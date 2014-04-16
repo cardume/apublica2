@@ -4,8 +4,13 @@
 	<div class="header-full">
 		<div class="container">
 			<div class="breadcrumb">
-				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span><?php echo get_query_var('taxonomy'); ?>
-				<h1><?php echo single_term_title(); ?></h1>
+				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
+				<?php if(is_category()) : ?>
+					<h1><?php echo single_term_title(); ?></h1>
+				<?php elseif(is_tax()) : ?>
+					<?php echo get_query_var('taxonomy'); ?>
+					<h1><?php echo single_term_title(); ?></h1>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
