@@ -709,6 +709,8 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 .grey-h1-title { font-size: 50px; color: #BBB; text-align: center;}
 
 
+
+
 /* * Specific page styles * */
 
 .financiadores-module .et_pb_toggle { border-color: #E15A2D !important;}
@@ -716,3 +718,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 .financiadores-module .et_pb_toggle_title:after { content:url(images/financiadores-icon.png); float: left; margin-right: 20px; margin-top: -2px; }
 
 .parceiros-module .et_pb_toggle_title:after { content:url(images/parceiros-icon.png); float: left; margin-right: 20px; margin-top: -2px; }
+
+.politica-module:before { content: ''; top: 0; position: absolute; left: 350px; width: 1px; height: 99%; background-color: #D8D8D8; }
+
+.politica-module:after { content: ''; top: 0; position: absolute; left: 730px; width: 1px; height: 99%; background-color: #D8D8D8; } 
