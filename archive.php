@@ -7,7 +7,7 @@
 				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
 				<?php if(is_category()) : ?>
 					<h1><?php echo single_term_title(); ?></h1>
-				<?php if(is_tag()) : ?>
+				<?php elseif(is_tag()) : ?>
 					tag
 					<h1><?php echo single_term_title(); ?></h1>
 				<?php elseif(is_tax()) : ?>
