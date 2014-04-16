@@ -490,6 +490,11 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_pb_fullwidth_section { padding: 0;}
 
+.et_pb_slide {background-color: transparent !important;}
+
+.et_pb_slide p { font-weight: bold; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+
+
 
 
 /* * Page * */
@@ -732,3 +737,5 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 .politica-module .et_pb_row h3 { font-family: 'museo700', 'Times new roman', Serif; margin-bottom: 20px;}
 
 .politica-module .et_pb_row a {font-style: bold;}
+
+.white-box { background-color: rgba(255, 255, 255, 0.7); }
