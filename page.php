@@ -7,7 +7,8 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 <div id="main-content">
 
 <?php if ( !is_home() && !is_front_page() ): ?>
-	<div class="header-full" <?php if(get_field('header_image')) echo 'style="background-image:url(' . get_field('header_image') . ')"'; ?>>
+	<div class="header-full" > 
+	<?php if(get_field('header_image')) echo '<div class="header-image" style="background-image:url(' . get_field('header_image') . ')"> <div class="header-overlay">'; ?>
 		<div class="container">
 			<div class="breadcrumb">
 				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
@@ -22,6 +23,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 				<h1><?php echo get_the_title(); ?></h1>
 			</div>
 		</div>
+		<?php if(get_field('header_image')) echo '</div> </div>'; ?>
 	</div>
 <?php endif; ?>
 
