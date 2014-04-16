@@ -306,6 +306,10 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 /* Category Module */
 
+.bubble-module {
+     margin-bottom: 40px;
+}
+
 .bubble-module h2 {
      text-align: center;
      color: #999;
@@ -336,6 +340,17 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
      top: 0;
      margin-top: -10px;
      background: #efefef;
+}
+
+.et_pb_column_1_3 .bubble-module .posts-container .item {
+     width: 259px;
+     border-bottom: 1px solid #fff;
+     margin: 0 30px 15px;
+     padding: 0 0 15px;
+}
+
+.et_pb_column_1_3 .bubble-module .posts-container .item h3 {
+     font-size: 18px;
 }
 
 .bubble-module .posts-container .item {
@@ -505,7 +520,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 /* * Post - Full * */
 
-.et_full_width_page .entry-content { font-size:20px; text-align:left; }
+.et_full_width_page .entry-content { font-size:20px; text-align:left; margin: 0 60px; }
 
 .et_full_width_page #left-area { margin-top: 30px; }
 

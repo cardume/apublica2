@@ -550,3 +550,70 @@ function et_pb_publica_category($atts) {
 	return $output;
 }
 add_shortcode('et_pb_publica_category', 'et_pb_publica_category');
+
+/*
+ * Publica Delicious
+ */
+
+function et_pb_delicious($atts) {
+
+	extract(shortcode_atts(array(
+		'title' => '',
+		'amount' => 2,
+		'username' => '',
+		'button_label' => '',
+		'module_id' => '',
+		'module_class' => ''
+	), $atts));
+
+	if(!$username)
+		return '';
+
+	$links = get_transient('_et_pb_delicious_' . $username . '_' . $amount);
+
+	if(!$links) {
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, 'http://feeds.delicious.com/v2/json/' . $username . '?count=' . $amount);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$output = curl_exec($ch);
+		curl_close($ch);
+
+		$links = json_decode($output, true);
+
+		set_transient('et_pb_delicious_' . $username, $links, 60 * 30);
+
+	}
+
+	ob_start();
+	?>
+
+	<h2><?php echo $title; ?></h2>
+	<div class="posts-container">
+		<div class="clearfix">
+			<?php foreach($links as $link) { ?>
+
+				<div class="item">
+					<h3><a href="<?php echo $link['u']; ?>" title="<?php echo $link['d']; ?>" target="_blank" rel="external"><?php echo $link['d']; ?></a></h3>
+				</div>
+
+			<?php } ?>
+		</div>
+		<?php if($button_label) { ?>
+			<a class="button" rel="external" target="_blank" href="https://delicious.com/<?php echo $username; ?>"><?php echo $button_label; ?></a>
+		<?php } ?>
+	</div>
+
+	<?php
+	$content = ob_get_contents();
+	ob_end_clean();
+
+	$output = sprintf('<div%1$s class="%2$s publica-category bubble-module clearfix">%3$s</div>',
+		('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
+		('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
+		('' !== $content ? $content : '')
+	);
+
+	return $output;
+}
+add_shortcode('et_pb_delicious', 'et_pb_delicious');

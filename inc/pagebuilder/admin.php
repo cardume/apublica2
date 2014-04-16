@@ -126,6 +126,27 @@ function publica_page_builder() {
 	</script>
 	<?php
 	/*
+	 * PUBLICA DELICIOUS
+	 */
+	?>
+	<script type="text/template" id="et-builder-et_pb_delicious-module-template">
+		<h3 class="et-pb-settings-heading">Delicious Module Settings</h3>
+		<div class="et-pb-main-settings">
+
+			<?php publica_page_builder_regular_text('title', 'Title', 'Define a title for this module'); ?>
+
+			<?php publica_page_builder_regular_text('amount', 'Amount', 'Define the amount of links to display', 2); ?>
+
+			<?php publica_page_builder_regular_text('username', 'Username', 'Your Delicious username'); ?>
+
+			<?php publica_page_builder_regular_text('button_label', 'Button label', 'Write a label to the Declious username link button', 'Read more'); ?>
+
+			<?php publica_page_builder_regular_inputs(); ?>
+
+		</div>
+	</script>
+	<?php
+	/*
 	 * PUBLICA SUMMARY
 	 */
 	?>
