@@ -25,6 +25,7 @@
 							$meta_date = 'M j, Y';
 							$show_thumbnail = 'on';
 							$show_content = 'off';
+							$show_author = 'on';
 							$show_categories = 'on';
 							$show_pagination = 'on';
 							$background_layout = 'light';
