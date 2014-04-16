@@ -533,7 +533,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_pb_blog_grid .et_pb_post { padding-left: 0; padding-right: 0; width: 318px; margin-bottom: 10px; }
 
-.et_pb_blog_grid .et_pb_image_container { margin: 0; }
+.et_pb_blog_grid .et_pb_image_container { height: 205px; overflow: hidden; margin: 0; }
 
 .et_pb_post p, .et_pb_post .post-meta { font-family: 'Lato', sans-serif; font-weight: 500; }
 
