@@ -569,7 +569,9 @@ function et_pb_delicious($atts) {
 	if(!$username)
 		return '';
 
-	$links = get_transient('_et_pb_delicious_' . $username . '_' . $amount);
+	$transient_name = '_et_pb_delicious_' . $username . '_' . $amount;
+
+	$links = get_transient($transient_name);
 
 	if(!$links) {
 
@@ -581,7 +583,7 @@ function et_pb_delicious($atts) {
 
 		$links = json_decode($output, true);
 
-		set_transient('et_pb_delicious_' . $username, $links, 60 * 30);
+		set_transient($transient_name, $links, 60 * 30);
 
 	}
 

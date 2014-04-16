@@ -530,7 +530,59 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_full_width_page #left-area .post-meta { font-family: 'Lato', sans-serif; font-weight: 400;  font-size: 14px; text-align: center; }
 
+/* Highlight Share */
 
+.highlight-share {
+     background: #e15a2d;
+     margin-top: 40px;
+     margin-left: -50px;
+     padding: 10px;
+     border-radius: 5px;
+     box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+}
+
+.highlight-share p {
+     background: #e15a2d;
+     color: #fff;
+     padding: 10px;
+     margin: -1px -1px 7px;
+     border-radius: 5px 5px 0 0;
+     font-family: "museo500";
+     text-transform: lowercase;
+     position: relative;
+}
+
+.highlight-share:before {
+     content: '';
+     position: absolute;
+     top: -5px;
+     left: 50%;
+     margin-left: -5px;
+     right: 10px;
+     width: 10px;
+     height: 10px;
+     background: #e15a2d;
+     -webkit-transform: rotate(45deg);
+}
+
+.highlight-share ul {
+     width: 100%;
+     display: table;
+}
+
+.highlight-share ul li {
+     display: table-cell;
+     text-align: center;
+}
+
+.highlight-share ul li a {
+     color: rgba(255,255,255,0.8);
+     font-size: 22px;
+}
+
+.highlight-share ul li a:hover {
+     color: #fff;
+}
 
 /* * Single * */
 

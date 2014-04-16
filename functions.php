@@ -81,6 +81,9 @@ include_once(STYLESHEETPATH . '/inc/pagebuilder/shortcodes.php');
 // Shares
 include_once(STYLESHEETPATH . '/inc/shares.php');
 
+// Highlight share
+include_once(STYLESHEETPATH . '/inc/highlight-share/highlight-share.php');
+
 // Update shares on post view
 function publica_update_shares() {
 	if(is_single()) {
