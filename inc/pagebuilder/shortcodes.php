@@ -204,7 +204,7 @@ function et_pb_post($atts) {
 	$thumb_id = get_post_thumbnail_id();
 	$thumb_url = '';
 	if($thumb_id) {
-		$thumb_url = wp_get_attachment_image_src($thumb_id, 'medium', true);
+		$thumb_url = wp_get_attachment_image_src($thumb_id, 'large', true);
 		if($thumb_url)
 		$thumb_url = $thumb_url[0];
 	}
