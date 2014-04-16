@@ -8,17 +8,19 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() ); ?>
 
 <?php if ( !is_home() && !is_front_page() ): ?>
 	<div class="header-full" <?php if(get_field('header_image')) echo 'style="background-image:url(' . get_field('header_image') . ')"'; ?>>
-		<div class="breadcrumb">
-			<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
-				<?php
-					$category = get_the_category();
-					if ( $category ) {
-						$catlink = get_category_link( $category[0]->cat_ID );
-						echo ('<a href="'.esc_url($catlink).'">'.esc_html($category[0]->cat_name).'</a> ');
-					}
-				?>
-			</p>
-			<h1><?php echo get_the_title(); ?></h1>
+		<div class="container">
+			<div class="breadcrumb">
+				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
+					<?php
+						$category = get_the_category();
+						if ( $category ) {
+							$catlink = get_category_link( $category[0]->cat_ID );
+							echo ('<a href="'.esc_url($catlink).'">'.esc_html($category[0]->cat_name).'</a> ');
+						}
+					?>
+				</p>
+				<h1><?php echo get_the_title(); ?></h1>
+			</div>
 		</div>
 	</div>
 <?php endif; ?>

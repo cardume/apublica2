@@ -4,7 +4,7 @@
 	<div class="header-full">
 		<div class="container">
 			<div class="breadcrumb">
-				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
+				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span><?php echo get_query_var('taxonomy'); ?>
 				<h1><?php echo single_term_title(); ?></h1>
 			</div>
 		</div>

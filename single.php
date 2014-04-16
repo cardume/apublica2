@@ -2,17 +2,27 @@
 
 <div id="main-content">
 	<div class="header-full">
-		<div class="breadcrumb">
-			<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
+		<div class="container">
+			<div class="breadcrumb">
+				<p><span><a href="<?php echo home_URL() ?>">home/ </a></span>
+					<?php
+						$category = get_the_category();
+						if ( $category ) {
+							$catlink = get_category_link( $category[0]->cat_ID );
+							echo ('<a href="'.esc_url($catlink).'">'.esc_html($category[0]->cat_name).'</a> ');
+						}
+					?>
+				</p>
 				<?php
-					$category = get_the_category();
-					if ( $category ) {
-						$catlink = get_category_link( $category[0]->cat_ID );
-						echo ('<a href="'.esc_url($catlink).'">'.esc_html($category[0]->cat_name).'</a> ');
-					}
+				$assunto = get_the_terms($post->ID, 'assunto');
+				if($assunto) {
+					$assunto = array_shift($assunto);
+					?>
+					<h2><a href="<?php echo get_term_link($assunto, 'assunto'); ?>"><?php echo $assunto->name; ?></a></h2>
+					<?php
+				}
 				?>
-			</p>
-			<h1><?php echo get_the_title(); ?></h1>
+			</div>
 		</div>
 	</div>
 	<div class="container">
