@@ -16,6 +16,8 @@
 
 				var run;
 
+				var href;
+
 				var openNext = function() {
 
 					var next = $slider.find('.slide-item.active').next();
@@ -29,16 +31,23 @@
 
 				$slider.on('click', '.slide-item', function() {
 
-					$slider.find('.active-content').empty();
+					href = $(this).find('a').attr('href');
 
-					$slider.find('.slide-item').removeClass('active');
+					if($(this).is('.active')) {
+						window.location = href;
+					} else {
 
-					$(this).addClass('active').find('.slide-content').clone().appendTo('.active-content');
+						$slider.find('.active-content').empty();
 
-					if(typeof run !== 'undefined')
-						clearInterval(run);
+						$slider.find('.slide-item').removeClass('active');
 
-					run = setInterval(openNext, 6000);
+						$(this).addClass('active').find('.slide-content').clone().appendTo('.active-content');
+
+						if(typeof run !== 'undefined')
+							clearInterval(run);
+
+						run = setInterval(openNext, 6000);
+					}
 
 				});
 
