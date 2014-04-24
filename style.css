@@ -490,11 +490,16 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_pb_fullwidth_section { padding: 0;}
 
+.et_pb_slide {background-color: transparent !important;}
+
+.et_pb_slide p { font-weight: bold; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+
+
 
 
 /* * Page * */
 
-.header-full { background-color: #FFBF00; position: relative; background-size: cover; z-index: 999; }
+.header-full { background-color: #FFBF00; position: relative; z-index: 999; }
 
 .header-full .container { padding-top: 0 !important; }
 
@@ -513,6 +518,12 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .breadcrumb,
 .breadcrumb a { font-weight: 700; text-decoration: none; color: rgba(68, 68, 68, 0.5); z-index: 999; position: relative; }
+
+.header-overlay {background-color: rgba(0, 0, 0, 0.5); }
+
+.header-image { background-size:cover; background-position: 50% 50%; }
+
+.header-overlay a, .header-overlay h1 { color: #fff; }
 
 
 
@@ -541,6 +552,9 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_pb_post a[rel~="category"] { color: #E15A2D !important; font-weight: 700;}
 
+.et_pb_post h2 a, .et_pb_portfolio_item h3 a { color: #111111 ;}
+
+.et_pb_post h2 a:hover, .et_pb_portfolio_item h3 a:hover { color: #E15A2D;}
 
 
 
@@ -719,12 +733,12 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 .parceiros-module .et_pb_toggle_title:after { content:url(images/parceiros-icon.png); float: left; margin-right: 20px; margin-top: -2px; }
 
-.politica-module { background-color: #EFEFEF;}
+.politica-module { background-color: #EFEFEF; position: relative;}
 
-.politica-module:before { content: ''; top: 0; position: absolute; left: 350px; width: 1px; height: 99%; background-color: #D8D8D8; }
-
-.politica-module:after { content: ''; top: 0; position: absolute; left: 730px; width: 1px; height: 99%; background-color: #D8D8D8; } 
+.politica-module .et_pb_column_1_3:after { content: ''; top: 0; position: absolute; left: 350px; width: 1px; height: 99%; background-color: #D8D8D8; } 
 
 .politica-module .et_pb_row h3 { font-family: 'museo700', 'Times new roman', Serif; margin-bottom: 20px;}
 
 .politica-module .et_pb_row a {font-style: bold;}
+
+.white-box { background-color: rgba(255, 255, 255, 0.7); }
