@@ -217,7 +217,6 @@ function publica_page_builder() {
 			</div> <!-- .et-pb-option -->
 
 			<?php publica_page_builder_regular_text('heading', 'Heading', 'Define the title text for your slide'); ?>
-			<?php publica_page_builder_regular_text('assunto', 'Assunto', 'Escreva um assunto referente a esse conteúdo.'); ?>
 			<?php publica_page_builder_regular_text('description', 'Description', 'Write a small description for the slide.'); ?>
 			<?php publica_page_builder_regular_text('url', 'URL', 'Define the slide URL.'); ?>
 

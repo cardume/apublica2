@@ -411,7 +411,6 @@ function et_pb_publica_slide($atts) {
 	extract(shortcode_atts(array(
 		'post_id' => false,
 		'heading' => '',
-		'assunto' => '',
 		'description' => '',
 		'url' => '',
 		'background_image' => ''
@@ -437,7 +436,7 @@ function et_pb_publica_slide($atts) {
 			}
 
 			$heading = $heading ? $heading: get_the_title();
-			$assunto = $assunto ? $assunto : ($assunto_term ? $assunto_term->name : '');
+			$author = get_the_author();
 			$description = $description ? $description : get_the_excerpt();
 			$url = $url ? $url : get_permalink();
 			$background_image = $background_image ? $background_image : $thumb_url;
@@ -451,7 +450,9 @@ function et_pb_publica_slide($atts) {
 	<div class="slide-item">
 
 		<h2><?php echo $heading; ?></h2>
-		<p class="assunto"><?php echo $assunto; ?></p>
+		<?php if($author) { ?>
+			<p class="author">por <?php echo $author; ?></p>
+		<?php } ?>
 
 		<div class="slide-content" <?php if($background_image) echo 'style="background-image:url(' . $background_image . ');"'; ?>>
 			<a class="main-link" href="<?php echo $url; ?>" title="<?php echo $heading; ?>"></a>
