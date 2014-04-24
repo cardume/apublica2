@@ -27,9 +27,7 @@
 
 #publica-post-tools .tool-list {
 	display: block;
-	background: #f5f5f5;
-	border: 1px solid #cfcfcf;
-	border-radius: 0 5px 5px 0;
+	background: #fff;
 	float: right;
 	margin-top: -5px;
 	padding-top: 5px;

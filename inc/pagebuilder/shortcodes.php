@@ -254,8 +254,7 @@ function et_pb_publica_summary($atts) {
 
 	extract(shortcode_atts(array(
 		'module_id' => '',
-		'module_class' => '',
-		'current_assuntos' => ''
+		'module_class' => ''
 	), $atts));
 
 	ob_start();
@@ -267,7 +266,6 @@ function et_pb_publica_summary($atts) {
 			<a href="#" data-summary="most-recent">Mais recentes</a>
 			<a href="#" data-summary="most-shared">Mais compartilhadas</a>
 			<a href="#" data-summary="videos">Vídeos</a>
-			<a href="#" data-summary="currents">Temas do momento</a>
 		</div>
 	</div>
 	<div class="summary-content-container">
@@ -306,21 +304,6 @@ function et_pb_publica_summary($atts) {
 					));
 					?>
 					<?php publica_summary_item($video_query->posts, true); ?>
-				</div>
-				<div class="summary-content-item" data-summary="currents">
-					<?php
-					$currents_query = new WP_Query(array(
-						'posts_per_page' => 5,
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'assunto',
-								'field' => 'term_id',
-								'terms' => explode(',', $current_assuntos)
-							)
-						)
-					));
-					?>
-					<?php publica_summary_item($currents_query->posts); ?>
 				</div>
 			</div>
 		</div>

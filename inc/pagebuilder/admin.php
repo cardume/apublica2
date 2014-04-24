@@ -154,24 +154,6 @@ function publica_page_builder() {
 		<h3 class="et-pb-settings-heading">Publica Summary Module Settings</h3>
 		<div class="et-pb-main-settings">
 
-			<div class="et-pb-option">
-				<label for="et_pb_current_assuntos">Temas do momento: </label>
-				<div class="et-pb-option-container">
-				<% var et_pb_current_assuntos_temp = typeof et_pb_current_assuntos !== 'undefined' ? et_pb_current_assuntos.split( ',' ) : []; %>
-					<?php
-					$cats_array = get_terms( 'assunto' );
-					foreach ( $cats_array as $categs ) {
-						printf( '<label><input type="checkbox" name="et_pb_current_assuntos" value="%1$s"%3$s> %2$s</label><br/>',
-							esc_attr( $categs->term_id ),
-							esc_html( $categs->name ),
-							'<%= _.contains( et_pb_current_assuntos_temp, "' . $categs->term_id . '" ) ? checked="checked" : "" %>'
-						);
-					}
-					?>
-					<p class="description">Selecione os assuntos para incluir a aba "Temas do momento".</p>
-				</div> <!-- .et-pb-option-container -->
-			</div> <!-- .et-pb-option -->
-
 			<?php publica_page_builder_regular_inputs(); ?>
 
 		</div>

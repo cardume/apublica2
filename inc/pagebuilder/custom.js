@@ -14,6 +14,19 @@
 
 			if($slider.length) {
 
+				var run;
+
+				var openNext = function() {
+
+					var next = $slider.find('.slide-item.active').next();
+
+					if(!next.length)
+						next = $slider.find('.slide-item:first-child');
+
+					next.click();
+
+				};
+
 				$slider.on('click', '.slide-item', function() {
 
 					$slider.find('.active-content').empty();
@@ -21,6 +34,11 @@
 					$slider.find('.slide-item').removeClass('active');
 
 					$(this).addClass('active').find('.slide-content').clone().appendTo('.active-content');
+
+					if(typeof run !== 'undefined')
+						clearInterval(run);
+
+					run = setInterval(openNext, 6000);
 
 				});
 
