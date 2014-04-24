@@ -252,4 +252,4 @@ function publica_page_builder() {
 	</script>
 	<?php
 }
-add_action('et_pb_before_page_builder', 'publica_page_builder');
+add_action('et_pb_after_page_builder', 'publica_page_builder');
