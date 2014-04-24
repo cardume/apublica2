@@ -395,7 +395,7 @@ function et_pb_publica_slider($atts, $content = '') {
 
 	$content = do_shortcode(et_pb_fix_shortcodes($content));
 
-	$output = sprintf('<div%1$s class="%2$s publica-slider clearfix" style="%4$s"><div class=""><div class="active-content">&nbsp;</div><div class="slides">%3$s</div></div></div>',
+	$output = sprintf('<div%1$s class="%2$s publica-slider clearfix" style="%4$s"><div class="et_pb_row"><div class="active-content">&nbsp;</div><div class="slides">%3$s</div></div></div>',
 		('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
 		('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
 		('' !== $content ? $content : ''),
