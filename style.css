@@ -662,6 +662,8 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 #footer-logo { width: 160px; height: 71px; padding-bottom: 20px;}
 
+.footer-site-desc { height: 71px; margin: auto; font-family: Bitter; font-size: 20px; color: #fff; vertical-align: middle; display: table-cell; }
+
 .footer-search { height: 71px; margin-right: 0; padding-bottom: 20px;}
 
 .footer-column { border-top: 1px solid #fff; padding-top: 20px; padding-bottom: 20px;}
