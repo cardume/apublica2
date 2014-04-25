@@ -22,41 +22,9 @@ Author URI: http://www.cardume.art.br
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
-@font-face {
-font-family: 'museo300';
-src: url('fonts/museo-300-webfont.eot');
-src: url('fonts/museo-300-webfont.eot?#iefix') format('embedded-opentype'),
-     url('fonts/museo-300-webfont.woff') format('woff'),
-     url('fonts/museo-300-webfont.ttf') format('truetype'),
-     url('fonts/museo-300-webfont.svg#museo300') format('svg');
-font-weight: normal;
-font-style: normal;
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,500,600,700,300,800);
 
-}
-
-@font-face {
-font-family: 'museo500';
-src: url('fonts/museo-500-webfont.eot');
-src: url('fonts/museo-500-webfont.eot?#iefix') format('embedded-opentype'),
-     url('fonts/museo-500-webfont.woff') format('woff'),
-     url('fonts/museo-500-webfont.ttf') format('truetype'),
-     url('fonts/museo-500-webfont.svg#museo500') format('svg');
-font-weight: normal;
-font-style: normal;
-
-}
-
-@font-face {
-font-family: 'museo700';
-src: url('fonts/museo-700-webfont.eot');
-src: url('fonts/museo-700-webfont.eot?#iefix') format('embedded-opentype'),
-     url('fonts/museo-700-webfont.woff') format('woff'),
-     url('fonts/museo-700-webfont.ttf') format('truetype'),
-     url('fonts/museo-700-webfont.svg#museo700') format('svg');
-font-weight: normal;
-font-style: normal;
-
-}
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
 
 @font-face {
 font-family: 'entypo';
@@ -76,7 +44,7 @@ font-style: normal;
 
 /* Universal */
 
-h1, h2, h3, h4, h5, h6{ font-family: 'museo500', 'Times new roman', Serif; }
+h1, h2, h3, h4, h5, h6{ font-family: 'Bitter', 'Times new roman', Serif; font-weight: 700;}
 
 ::selection { background: #FFBF00; /* Safari */	}
 
@@ -250,7 +218,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
      width: 1%;
      text-align: center;
      text-transform: lowercase;
-     font-family: "museo700";
+     font-family: Bitter;
      font-size: 18px;
      padding: 0 0 20px 0;
      color: #999;
@@ -394,7 +362,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 }
 
 .bubble-module .posts-container .item h3 {
-     font-family: "museo700";
+     font-family: Bitter;
 }
 
 .bubble-module .posts-container .item h3 a {
@@ -435,7 +403,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 }
 
 .post-module h2 {
-     font-family: "museo700";
+     font-family: Bitter;
      font-size: 24px;
      line-height: 120%;
 }
@@ -754,7 +722,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 .politica-module .et_pb_column_1_3:after { content: ''; top: 0; position: absolute; left: 350px; width: 1px; height: 99%; background-color: #D8D8D8; } 
 
-.politica-module .et_pb_row h3 { font-family: 'museo700', 'Times new roman', Serif; margin-bottom: 20px;}
+.politica-module .et_pb_row h3 { font-family: Bitter, 'Times new roman', Serif; margin-bottom: 20px;}
 
 .politica-module .et_pb_row a {font-style: bold;}
 
