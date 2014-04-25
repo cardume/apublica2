@@ -53,6 +53,13 @@
 								</a>
 							</li>
 						<?php endif; ?>
+						<?php if ( 'on' === et_get_option( 'divi_show_rss_icon', 'on' ) ) : ?>
+								<li class="et-social-icon et-social-rss">
+									<a href="<?php echo esc_url( $et_rss_url ); ?>">
+										<span><?php esc_html_e( 'RSS', 'Divi' ); ?></span>
+									</a>
+								</li>
+							<?php endif; ?>
 					</ul>
 				</div>
 				<div class="et_pb_column et_pb_column_1_4 footer-column">

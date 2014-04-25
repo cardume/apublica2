@@ -678,9 +678,17 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 #et-social-icons li { margin: 10px; }
 
-#et-social-icons li a { font-size: 30px }
+.et-social-icon a { display: inline-block; width: 32px; height: 32px; position: relative; top: 0; left: 0; text-align: center; text-decoration: none; }
 
-.et-social-icon a { color: #fff; font-size: 30px; }
+.et-social-icon span { display: none; }
+
+.et-social-facebook a:before { display: inline-block; width: 32px; height: 32px; position: relative; top: 0; left: 0;  content: ''; background-image: url('images/icon-facebook.png'); background-position: center; background-repeat: no-repeat; }
+
+.et-social-twitter a:before { display: inline-block; width: 32px; height: 32px; position: relative; top: 0; left: 0;  content: ''; background-image: url('images/icon-twitter.png'); background-position: center; background-repeat: no-repeat;  }
+
+.et-social-google a:before { display: inline-block; width: 32px; height: 32px; position: relative; top: 0; left: 0;  content: ''; background-image: url('images/icon-youtube.png'); background-position: center; background-repeat: no-repeat;  }
+
+.et-social-rss a:before { display: inline-block; width: 32px; height: 32px; position: relative; top: 0; left: 0;  content: ''; background-image: url('images/icon-instagram.png'); background-position: center; background-repeat: no-repeat; }
 
 #footer-bottom input[type="search"] { padding: 7px 10px; font-family:Georgia, "Times New Roman", Times, serif; font-size: 20px; border: 0;}
 
@@ -700,7 +708,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 #footer-info:after { clear: both; }
 
-.et-social-google a:before { content: '\77'; }
+
 
 
 
