@@ -555,6 +555,8 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_full_width_page #left-area .post-meta { font-family: 'Lato', sans-serif; font-weight: 400;  font-size: 14px; text-align: center; }
 
+#left-area h1 { font-weight: 300;  }
+
 /* Highlight Share */
 
 .highlight-share {
