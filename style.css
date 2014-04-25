@@ -78,11 +78,11 @@ nav#top-menu-nav { padding: 0; }
 
 nav#top-menu-nav li { padding-right: 1px; }
 
-nav#top-menu-nav li > a { padding: 30px 10px; display:block; font-size: 14px; line-height: 22px; text-transform: lowercase; font-weight: 600; }
+nav#top-menu-nav li > a { padding: 30px 10px; display:block; font-size: 14px; line-height: 22px; text-transform: lowercase; font-weight: normal; }
 
 nav#top-menu-nav li > a:hover { color: #aaa; }
 
-nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; font-weight: 600; }
+nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; font-weight: 500; }
 
 .et-fixed-header #et_top_search { margin-top: 27px; }
 
