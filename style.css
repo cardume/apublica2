@@ -461,7 +461,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .et_pb_tabs {border: 0;	}
 
-.et_pb_tabs_controls li { font-family: 'museo500', 'Times new roman', Serif; font-size: 18px; font-weight: normal; padding: 5px 0 25px; width: 25%;	background-color: #FFF; border: 0; text-align: center; }
+.et_pb_tabs_controls li { font-family: Bitter; font-size: 18px; font-weight: normal; padding: 5px 0 25px; width: 25%;	background-color: #FFF; border: 0; text-align: center; }
 
 .et_pb_tabs_controls li.et_pb_tab_active { 	padding: 5px 0 25px; color: #BBBBBB !important; bottom: 0; position: relative;}
 
@@ -670,7 +670,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .footer-column ul li { text-align:left;}
 
-.footer-column ul li a { color: #FFF; font-family:Georgia, "Times New Roman", Times, serif; font-size: 20px; font-weight: normal; padding: 5px 0 25px; }
+.footer-column ul li a { color: #FFF; font-family: Bitter; font-size: 20px; font-weight: normal; padding: 5px 0 25px; }
 
 #et-social-icons { float: none; text-align: center; margin-top: 0; }
 
@@ -698,6 +698,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 #footer-info:after { clear: both; }
 
+.et-social-google a:before { content: '\77'; }
 
 
 
