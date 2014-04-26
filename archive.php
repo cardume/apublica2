@@ -8,7 +8,8 @@
 				<?php if(is_category()) : ?>
 					<h1><?php echo single_term_title(); ?></h1>
 				<?php elseif(is_author()) : ?>
-					<h1><?php echo get_the_author_meta( 'user_nicename' ); ?></h1>
+					autor
+					<h1><?php echo get_the_author_meta( 'display_name' ); ?></h1>
 				<?php elseif(is_tag()) : ?>
 					tag
 					<h1><?php echo single_term_title(); ?></h1>

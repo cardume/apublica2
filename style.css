@@ -125,6 +125,39 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 
 #mail-icon { float: right; margin-top: 6px; position: relative; display: block; width: 20px; margin: 0 10px;}
 
+#et_top_search .site-areas {
+     margin-top: 10px;
+}
+
+#et_top_search .site-areas .area-list {
+     display: table;
+     width: 100%;
+     margin-bottom: 10px;
+}
+
+#et_top_search .site-areas .area-list li {
+     display: table-cell;
+     width: 1%;
+     text-align: center;
+     cursor: pointer;
+     padding-bottom: 10px;
+     border-bottom: 1px solid #eee;
+     font-family: "Bitter";
+     font-size: 12px;
+     font-weight: 600;
+     text-transform: uppercase;
+}
+
+#et_top_search .site-areas .area-list li.active,
+#et_top_search .site-areas .area-list li:hover {
+     border-color: #e15a2d;
+     color: #e15a2d;
+}
+
+#et_top_search .site-areas .area-content ul li {
+     width: 50%;
+     float: left;
+}
 
 #mail-icon span:before { width: 20px; height: 13px; content: ''; position: absolute; top: 35px; background-image: url('images/icon-mail.png'); background-repeat: no-repeat; background-position: center; }
 .et-fixed-header #mail-icon span:before { top: 20px;}

@@ -1,5 +1,31 @@
 (function($) {
 
+	// Site areas (inside search form)
+	$(document).ready(function() {
+
+		var $siteAreas = $('#et_top_search .site-areas');
+
+		if($siteAreas.length) {
+
+			$siteAreas.find('.area-content > *').hide();
+
+			$siteAreas.find('.area-list li').click(function() {
+
+				$siteAreas.find('.area-content > *').hide();
+				$siteAreas.find('.area-list li').removeClass('active');
+
+				$(this).addClass('active');
+
+				var area = $(this).data('area');
+
+				$siteAreas.find('.area-content .' + area).show();
+
+			});
+
+		}
+
+	});
+
 	// Fitvid
 
 	$(document).ready(function() {

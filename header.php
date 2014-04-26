@@ -90,13 +90,33 @@
 				<div id="et_top_search">
 					<span id="et_search_icon"></span>
 					<form role="search" method="get" class="et-search-form et-hidden" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<?php
-						printf( '<input type="search" class="et-search-field" placeholder="%1$s" value="%2$s" name="s" title="%3$s" />',
-							esc_attr_x( 'Search &hellip;', 'placeholder', 'Divi' ),
-							get_search_query(),
-							esc_attr_x( 'Search for:', 'label', 'Divi' )
-						);
-					?>
+						<?php
+							printf( '<input type="search" class="et-search-field" placeholder="%1$s" value="%2$s" name="s" title="%3$s" />',
+								esc_attr_x( 'Search &hellip;', 'placeholder', 'Divi' ),
+								get_search_query(),
+								esc_attr_x( 'Search for:', 'label', 'Divi' )
+							);
+						?>
+						<div class="site-areas">
+							<ul class="area-list">
+								<li class="authors" data-area="authors">Autores</li>
+								<li class="assuntos" data-area="assuntos">Assuntos</li>
+								<li class="tags" data-area="tags">Tags</li>
+							</ul>
+							<div class="area-content">
+								<div class="authors">
+									<ul>
+										<?php wp_list_authors(array('orderby' => 'name', 'order' => 'ASC')); ?>
+									</ul>
+								</div>
+								<div class="assuntos">
+									<?php wp_tag_cloud(array('taxonomy' => 'assunto')); ?>
+								</div>
+								<div class="tags">
+									<?php wp_tag_cloud(array('taxonomy' => 'post_tag')); ?>
+								</div>
+							</div>
+						</div>
 					</form>
 				</div>
 				<div id="mail-icon"><a href=""><span></span></a></div>
