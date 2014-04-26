@@ -46,7 +46,7 @@
 			<div class="clearfix">
 				<div id="left-area">
 
-					<div class="entry-content">
+					<div class="entry-content clearfix">
 					<?php
 						the_content();
 
