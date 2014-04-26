@@ -314,7 +314,7 @@ function et_pb_publica_summary($atts) {
 	$content = ob_get_contents();
 	ob_end_clean();
 
-	$output = sprintf('<div%1$s class="%2$s publica-summary clearfix">%3$s</div>',
+	$output = sprintf('<div%1$s class="%2$s publica-summary post-list clearfix">%3$s</div>',
 		('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
 		('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
 		('' !== $content ? $content : '')
@@ -333,53 +333,79 @@ function publica_summary_item($posts, $use_video = false) {
 
 		$post = $posts[$i];
 
-		if($post)
-			setup_postdata($post);
+		if($use_video) {
 
-		if($i == 0) {
-			?>
-			<div class="et_pb_column et_pb_column_1_2">
-			<?php
-		} elseif($i == 1 || $i == 3) {
-			if($i == 1) {
+			if($post)
+				setup_postdata($post);
+
+			if($i == 0) {
+				?>
+				<div class="et_pb_column et_pb_column_1_2">
+				<?php
+			} elseif($i == 1 || $i == 3) {
+				if($i == 1) {
+					?>
+					</div>
+					<?php
+				}
+				?>
+				<div class="et_pb_column et_pb_column_1_4">
+				<?php
+			}
+
+			if($post) {
+				?>
+
+				<article <?php post_class(); ?>>
+					<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+					<p class="meta">
+						<span class="category"><?php the_category(', '); ?></span>
+						<span class="separator">|</span>
+						<span class="author">por <?php the_author(); ?></span>
+						<span class="separator">|</span>
+						<span class="date"><?php echo get_the_date(); ?></span>
+					</p>
+					<?php if($use_video && get_field('video_url')) : ?>
+						<?php echo wp_oembed_get(get_field('video_url')); ?>
+					<?php else : ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
+					<?php endif; ?>
+				</article>
+
+				<?php
+			}
+
+			if($i == 2 || $i == 4) {
 				?>
 				</div>
 				<?php
 			}
-			?>
-			<div class="et_pb_column et_pb_column_1_4">
-			<?php
+
+			wp_reset_postdata();
+
+		} else {
+
+			if($i == 0 || $i == 1 || $i == 4) {
+				?>
+				<div class="et_pb_column et_pb_column_1_3">
+				<?php
+			}
+
+			if($post) {
+				$display_thumbnail = ($i == 0 || $i == 4) ? 'display_thumbnail="on"' : '';
+				echo do_shortcode('[et_pb_post post_id="' . $post->ID . '" ' . $display_thumbnail . ']');
+				?>
+
+				<?php
+			}
+
+			if($i == 0 || $i == 3 || $i == 4) {
+				?>
+				</div>
+				<?php
+			}
+
 		}
-
-		if($post) {
-			?>
-
-			<article <?php post_class(); ?>>
-				<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-				<p class="meta">
-					<span class="category"><?php the_category(', '); ?></span>
-					<span class="separator">|</span>
-					<span class="author">por <?php the_author(); ?></span>
-					<span class="separator">|</span>
-					<span class="date"><?php echo get_the_date(); ?></span>
-				</p>
-				<?php if($use_video && get_field('video_url')) : ?>
-					<?php echo wp_oembed_get(get_field('video_url')); ?>
-				<?php else : ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
-				<?php endif; ?>
-			</article>
-
-			<?php
-		}
-
-		if($i == 2 || $i == 4) {
-			?>
-			</div>
-			<?php
-		}
-
-		wp_reset_postdata();
 
 	}
 
@@ -395,7 +421,7 @@ function et_pb_publica_slider($atts, $content = '') {
 
 	$content = do_shortcode(et_pb_fix_shortcodes($content));
 
-	$output = sprintf('<div%1$s class="%2$s publica-slider clearfix" style="%4$s"><div class="et_pb_row"><div class="active-content">&nbsp;</div><div class="slides">%3$s</div></div></div>',
+	$output = sprintf('<div%1$s class="%2$s publica-slider clearfix" style="%4$s"><div class=""><div class="active-content">&nbsp;</div><div class="slides">%3$s</div></div></div>',
 		('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
 		('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
 		('' !== $content ? $content : ''),
