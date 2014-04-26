@@ -83,6 +83,7 @@
 
 		</article> <!-- .et_pb_post -->
 	<?php endwhile; ?>
+	<?php echo do_shortcode('[et_pb_publica_summary]'); ?>
 </div> <!-- #main-content -->
 
 <?php get_footer(); ?>
