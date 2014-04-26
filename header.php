@@ -109,10 +109,10 @@
 										<?php wp_list_authors(array('orderby' => 'name', 'order' => 'ASC')); ?>
 									</ul>
 								</div>
-								<div class="assuntos">
+								<div class="assuntos tag-cloud">
 									<?php wp_tag_cloud(array('taxonomy' => 'assunto', 'number' => 15)); ?>
 								</div>
-								<div class="tags">
+								<div class="tags tag-cloud">
 									<?php wp_tag_cloud(array('taxonomy' => 'post_tag', 'number' => 15)); ?>
 								</div>
 							</div>

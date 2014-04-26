@@ -154,6 +154,10 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      color: #e15a2d;
 }
 
+#et_top_search .site-areas .area-content .tag-cloud {
+     text-align: center;
+}
+
 #et_top_search .site-areas .area-content ul li {
      width: 50%;
      float: left;
