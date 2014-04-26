@@ -66,9 +66,9 @@ body { padding:0 !important; }
 
 body.et-fixed-header { margin-top: 0px !important;}
 
-.et-fixed-header { margin-top: 0;}
+.et-fixed-header { margin-top: 0; }
 
-#main-header .above { height: 50px; padding: 20px 0 0; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
+#main-header .above { height: 30px; padding: 10px 0 0; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
 
 #main-header .above h2 { font-size: 16px; color: #ddd; font-weight: normal; line-height: 48px; }
 
@@ -78,15 +78,15 @@ body.et-fixed-header { margin-top: 0px !important;}
 
 #main-header .above .et-social-icon:hover { zoom: 1; filter: alpha(opacity=90); opacity: 0.9;}
 
-.et-fixed-header #main-header .above { height: 0; overflow: hidden; padding-bottom: 0; padding: 0; }
+.et-fixed-header#main-header .above { height: 0; overflow: hidden; padding-bottom: 0; padding: 0; }
 
-#main-header { height: 160px; padding: 0 !important; background: #111; padding: 0; }
+#main-header { height: 150px; padding: 0 !important; background: #111; padding: 0; }
 
 #main-header #logo { max-height: 63px; }
 
-.et-fixed-header #main-header { margin-top: 0; padding: 0 !important; height: 52px  !important; box-shadow: 0 0 7px rgba(0, 0, 0, 0.1) !important; -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1) !important; -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1) !important;  }
+.et-fixed-header#main-header { margin-top: 0; padding: 0 !important; height: 52px  !important; box-shadow: 0 0 7px rgba(0, 0, 0, 0.1) !important; -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1) !important; -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1) !important;  }
 
-.et-fixed-header #main-header #logo { max-height: 43px;}
+.et-fixed-header#main-header #logo { max-height: 43px;}
 
 .et-fixed-header nav#top-menu-nav { padding: 0; }
 
@@ -495,11 +495,11 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 
 /* Body */
 
-#main-content { margin-top:132px; }
+#main-content { margin-top:150px; }
 
-.et-fixed-header #main-content { margin-top:132px; }
+.et-fixed-header #main-content { margin-top:150px; }
 
-#main-content:before {content: ''; height: 132px; width: 100%; background-color: #000; position: absolute; top: 10px; left: 0;}
+#main-content:before {content: ''; height: 150px; width: 100%; background-color: #000; position: absolute; top: 10px; left: 0;}
 
 
 /* * Home * */
