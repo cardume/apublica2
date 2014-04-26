@@ -49,8 +49,8 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
-	<?php include (STYLESHEETPATH . '/header-above.php'); ?>
 	<header id="main-header">
+		<?php include (STYLESHEETPATH . '/header-above.php'); ?>
 		<div class="container clearfix">
 		<?php
 			$logo = ( $user_logo = et_get_option( 'divi_logo' ) ) && '' != $user_logo
