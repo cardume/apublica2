@@ -119,7 +119,7 @@
 						</div>
 					</form>
 				</div>
-				<div id="mail-icon"><a href=""><span></span></a></div>
+				<div id="mail-icon"><a href="<?php echo esc_url( home_url( '/' ) ); ?>quem-somos#contato"><span></span></a></div>
 
 				<?php do_action( 'et_header_top' ); ?>
 			</div> <!-- #et-top-navigation -->
