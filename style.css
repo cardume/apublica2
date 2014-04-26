@@ -666,7 +666,7 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 .et_full_width_page .entry-content .alignleft,
 .et_full_width_page .entry-content img.alignleft { margin: 10px 40px 40px -80px; }
 
-.et_full_width_page .entry-content blockquote { float:right; width: 40%; margin: 10px -80px 40px 40px; background: #eee; padding: 20px; color: #333; }
+.et_full_width_page .entry-content blockquote { margin: 0 0 40px; background: #eee; padding: 20px; color: #333; }
 
 .et_full_width_page .entry-content .alignright,
 .et_full_width_page .entry-content img.alignright { margin: 10px -80px 40px 40px; }
