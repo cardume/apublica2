@@ -169,6 +169,12 @@ header#above { display: block; width: 100%; height: 50px; background-color: #000
 
 .publica-slider .slides .slide-item h2 {
      color: #666;
+     line-height: 32px;
+}
+
+.publica-slider .slides .slide-item p {
+     font-family: "Lato";
+     font-weight: 600;
 }
 
 .publica-slider .slides .slide-item.active {
