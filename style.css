@@ -68,17 +68,17 @@ body.et-fixed-header { margin-top: 0px !important;}
 
 .et-fixed-header { margin-top: 0;}
 
-header#above { overflow:visible; position: fixed; display: block; width: 100%; height: 50px; background-color: #000; top:0; z-index: 9999; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
+#above { overflow:visible; position: fixed; display: block; width: 100%; height: 50px; background-color: #000; top:0; z-index: 9999; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
 
-header#above h2 { font-size: 16px; color: #ddd; font-weight: normal; line-height: 48px; }
+#above h2 { font-size: 16px; color: #ddd; font-weight: normal; line-height: 48px; }
 
-header#above .et_pb_row {padding-top: 0;}
+#above .et_pb_row {padding-top: 0;}
 
-header#above .et-social-icon { zoom: 1; filter: alpha(opacity=60); opacity: 0.6;}
+#above .et-social-icon { zoom: 1; filter: alpha(opacity=60); opacity: 0.6;}
 
-header#above .et-social-icon:hover { zoom: 1; filter: alpha(opacity=90); opacity: 0.9;}
+#above .et-social-icon:hover { zoom: 1; filter: alpha(opacity=90); opacity: 0.9;}
 
-.et-fixed-header header#above { height: 0; overflow: hidden; padding-bottom: 0;}
+.et-fixed-header #above { height: 0; overflow: hidden; padding-bottom: 0;}
 
 #main-header { margin-top: 50px; padding: 0 !important; background: #111; padding: 0; height: 82px; }
 

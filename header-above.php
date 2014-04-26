@@ -1,4 +1,4 @@
-<header id="above">
+<div id="above">
 	<div class="et_pb_row">
 		<div class="et_pb_column et_pb_column_3_4">
 			<h2 class="header-site-desc"><?php bloginfo( 'description'); ?></h2>
@@ -36,4 +36,4 @@
 			</ul>
 		</div>
 	</div>
-</header>
+</div>
