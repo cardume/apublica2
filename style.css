@@ -427,6 +427,16 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 
 /* Post Module */
 
+.light-bg .grey-h1-title,
+.light-bg p,
+.light-bg .post-module,
+.light-bg .post-module a,
+.light-bg .post-module h2 a,
+.light-bg .post-module .meta,
+.light-bg .post-module .meta {
+     color: #111;
+}
+
 .post-module {
      padding: 0 30px 15px 0;
      border-bottom: 1px solid #ccc;
