@@ -26,6 +26,24 @@
 
 	});
 
+	// Making of
+	$(document).ready(function() {
+		var $makingOf = $('.making-of');
+
+		if($makingOf.length) {
+
+			$makingOf.find('.making-of-content');
+
+			$makingOf.find('h3').click(function() {
+				if($makingOf.is('.active'))
+					$makingOf.removeClass('active');
+				else
+					$makingOf.addClass('active');
+			})
+
+		}
+	})
+
 	// Fitvid
 
 	$(document).ready(function() {

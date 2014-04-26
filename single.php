@@ -65,7 +65,9 @@
 				<div class="making-of clearfix">
 					<div class="container secondary-container">
 						<h3>Veja o making of</h3>
-						<?php the_field('making_of'); ?>
+						<div class="making-of-content">
+							<?php the_field('making_of'); ?>
+						</div>
 					</div>
 				</div>
 			<?php endif; ?>
