@@ -71,6 +71,7 @@ function publica_assunto_tax() {
 		'labels'            => $labels,
 		'show_ui'           => true,
 		'show_admin_column' => true,
+		'show_in_nav_menus' => true,
 		'query_var'         => true,
 		'rewrite'           => array('slug' => 'assunto'),
 	);
