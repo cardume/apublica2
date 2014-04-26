@@ -60,6 +60,8 @@ object {
 
 .et_color_scheme_orange a { color: #e15a2d; }
 
+#et_search_icon:hover, .mobile_menu_bar:before, .footer-widget h4, .et-social-icon a:hover, .et_pb_sum, .et_pb_pricing li a, .et_overlay:before, .entry-summary p.price ins, .woocommerce div.product span.price, .woocommerce-page div.product span.price, .woocommerce #content div.product span.price, .woocommerce-page #content div.product span.price, .woocommerce div.product p.price, .woocommerce-page div.product p.price, .woocommerce #content div.product p.price, .woocommerce-page #content div.product p.price { color: #E15A2D !important; }
+
 
 /* Header */
 
@@ -166,6 +168,9 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 #mail-icon span:before { width: 20px; height: 13px; content: ''; position: absolute; top: 35px; background-image: url('images/icon-mail.png'); background-repeat: no-repeat; background-position: center; }
 .et-fixed-header #mail-icon span:before { top: 20px;}
 #mail-icon span:hover { color: #7EBEC5; cursor: pointer; }
+
+
+.mobile_menu_bar:before, .et_overlay:before { color: #E15A2D !important; }
 
 
 /* Slider */
@@ -892,13 +897,29 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 /*---[960px]--*/
 @media only screen and ( min-width: 981px ) and ( max-width: 1100px ) {
-
-
+     #main-header .above .et-social-icon { margin: 5px 0 0 10px; }
 }
 
 /*---[768px]--*/
 @media only screen and ( max-width: 980px ) {
+     #main-header { height: 80px; }
+     #main-header .above { display: none;}
+     #et-top-navigation { margin-right: 64px; }
+     .et-fixed-header #main-header { height: 90px; }
+     .et-fixed-header .mobile_menu_bar:before { top: 4px; }
+     .mobile_menu_bar:before { margin-left: 25px; top: 19px; }  
+     .et-fixed-header .et_mobile_menu { top: 52px; padding: 0; left: 70px; }
 
+     #main-content:before { height: 90px; }
+     #main-content{ margin-top: 80px; }
+     .et-fixed-header #main-content{ margin-top: 50px; }
+     .et_full_width_page #left-area h1 { font-size: 42px; }
+     .et_pb_row, .container, .et_pb_container { width: 80%; }
+     .single-page-text p, .excerpt p { font-size: 18px; line-height: 21px}
+
+     .et_full_width_page .entry-content { padding: 0;  font-size: 16px; }
+     #main-footer .et_pb_column { text-align:center !important;}
+     .footer-column ul li { text-align: center; }
 }
 
 
@@ -908,6 +929,23 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 
 @media screen and ( max-width: 782px ) {
+     #et-top-navigation { margin-right: 10px; }
+     #et_top_search { margin-right: 5px;  }
+     .mobile_menu_bar:before { margin-left: 5px; }
+     .header-full h2, .header-full h1 { font-size: 24px; }
+
+     #main-content .container { padding-top: 0px; }
+     .et_full_width_page #left-area { margin-top: 30px; }
+     #left-area { padding-bottom: 0px; }
+     .et_full_width_page #left-area h1 { font-size: 30px;}
+     .et_full_width_page #left-area .post-meta { font-size: 13px; }
+     .excerpt { padding: 30px 8%; }
+     .single-page-text p, .excerpt p { font-size: 16px; }
+     #publica-post-tools { display: none;}
+     .footer-column { padding-top: 10px; padding-bottom: 10px; }
+     .footer-column ul li a { padding: 5px 0 0;  }
+     .footer-search { display: none; }
+     #footer-bottom .et_pb_column { padding-bottom: 10px;}
 
 }
 
