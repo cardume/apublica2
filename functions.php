@@ -27,6 +27,7 @@ require_once(STYLESHEETPATH . '/inc/acf-fields.php');
  * Publica setup
  */
 
+
 function publica_scripts() {
 
 	wp_enqueue_script('jquery-masonry');
@@ -38,7 +39,7 @@ function publica_scripts() {
 	wp_enqueue_script('publica-pagebuilder', get_stylesheet_directory_uri() . '/inc/pagebuilder/custom.js', array('jquery', 'fitvids'));
 
 	wp_enqueue_script('publica-main', get_stylesheet_directory_uri() . '/js/main.js', array('jquery', 'fitvids'));
-	wp_enqueue_script('publica-main', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script('publica-custom-script', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
 
 
 }
