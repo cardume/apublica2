@@ -21,7 +21,7 @@
 		})
 
 		if(after)
-			$yarpp.insertAfter('.entry-content p:nth-child(4)');
+			$yarpp.insertAfter($('.entry-content p:nth-child(4)').eq(0));
 
 	});
 
