@@ -709,15 +709,43 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 .et_full_width_page .entry-content .alignright,
 .et_full_width_page .entry-content img.alignright { margin: 10px -80px 40px 40px; }
 
-.et_full_width_page #left-area { margin-top: 30px; }
+#main-content .container.secondary-container {
+     padding-top: 0;
+}
 
-.et_full_width_page #left-area p { font-family:Georgia, "Times New Roman", Times, serif; color: #111; line-height:160%;}
+.full-area {
+     margin-bottom: 60px;
+}
 
-.et_full_width_page #left-area h1 { font-size: 50px; text-align: center; }
+.et_full_width_page #left-area,
+.et_full_width_page .full-area { margin-top: 30px; }
 
-.et_full_width_page #left-area .post-meta { font-family: 'Lato', sans-serif; font-weight: 400;  font-size: 14px; text-align: center; }
+.et_full_width_page #left-area p,
+.et_full_width_page .full-area p { font-family:Georgia, "Times New Roman", Times, serif; color: #111; line-height:160%;}
 
-#left-area h1 { font-weight: 300;  }
+.et_full_width_page #left-area h1,
+.et_full_width_page .full-area h1 { font-size: 50px; text-align: center; }
+
+.et_full_width_page #left-area .post-meta,
+.et_full_width_page .full-area .post-meta { font-family: 'Lato', sans-serif; font-weight: 400;  font-size: 14px; text-align: center; }
+
+#left-area h1,
+.full-area h1 { font-weight: 300;  }
+
+.making-of {
+     background: #f0f0f0;
+     padding: 40px 0;
+     font-family:Georgia, "Times New Roman", Times, serif; color: #666; font-size: 16px; line-height:160%;
+}
+
+.making-of h3 {
+     text-align: center;
+     font-family: "Bitter";
+     font-size: 16px;
+     font-weight: 600;
+     margin: 0 0 40px;
+     padding: 0;
+}
 
 
 

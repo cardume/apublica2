@@ -25,48 +25,62 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div id="content-area" class="clearfix">
-			<div id="left-area">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
-					<h1><?php the_title(); ?></h1>
-					<?php et_divi_post_meta(); ?>
-				</article>
+
+	<?php while ( have_posts() ) : the_post(); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="container">
+				<div id="content-area" class="clearfix">
+					<div class="full-area">
+						<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
+						<h1><?php the_title(); ?></h1>
+						<?php et_divi_post_meta(); ?>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<div class="excerpt-full"> 
-		<div class="excerpt">
-			<?php the_excerpt(); ?>
-		</div>
-	</div>
-	<div class="container single-post-container">
-			<div class="clearfix">
-				<div id="left-area">
+			<div class="excerpt-full"> 
+				<div class="excerpt">
+					<?php the_excerpt(); ?>
+				</div>
+			</div>
+			<div class="container single-post-container">
+				<div class="clearfix">
+					<div id="left-area">
 
-					<div class="entry-content clearfix">
-					<?php
-						the_content();
+						<div class="entry-content clearfix">
+						<?php
+							the_content();
 
-						wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'Divi' ), 'after' => '</div>' ) );
-					?>
-					</div> <!-- .entry-content -->
+							wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'Divi' ), 'after' => '</div>' ) );
+						?>
+						</div> <!-- .entry-content -->
+
+					<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
+					</div> <!-- #left-area -->
+				</div> <!-- #content-area -->
+			</div> <!-- .container -->
 
 
+
+			<?php if(get_field('making_of')) : ?>
+				<div class="making-of clearfix">
+					<div class="container secondary-container">
+						<h3>Veja o making of</h3>
+						<?php the_field('making_of'); ?>
+					</div>
+				</div>
+			<?php endif; ?>
+
+			<div class="container secondary-container">
+				<div class="clearfix">
 					<?php
 						if ( comments_open() && 'on' == et_get_option( 'divi_show_postcomments', 'on' ) )
 							comments_template( '', true );
 					?>
-				</article> <!-- .et_pb_post -->
+				</div>
+			</div>
 
-				<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
-			<?php endwhile; ?>
-			</div> <!-- #left-area -->
-			<?php get_sidebar(); ?>
-		</div> <!-- #content-area -->
-	</div> <!-- .container -->
+		</article> <!-- .et_pb_post -->
+	<?php endwhile; ?>
 </div> <!-- #main-content -->
 
 <?php get_footer(); ?>

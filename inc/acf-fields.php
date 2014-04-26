@@ -78,5 +78,42 @@ if(function_exists("register_field_group"))
 	));
 }
 
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_making-of',
+		'title' => 'Making of',
+		'fields' => array (
+			array (
+				'key' => 'field_535c3352a28c3',
+				'label' => 'Making of',
+				'name' => 'making_of',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'basic',
+				'media_upload' => 'no',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
 
 ?>
