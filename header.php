@@ -110,10 +110,10 @@
 									</ul>
 								</div>
 								<div class="assuntos">
-									<?php wp_tag_cloud(array('taxonomy' => 'assunto')); ?>
+									<?php wp_tag_cloud(array('taxonomy' => 'assunto', 'number' => 15)); ?>
 								</div>
 								<div class="tags">
-									<?php wp_tag_cloud(array('taxonomy' => 'post_tag')); ?>
+									<?php wp_tag_cloud(array('taxonomy' => 'post_tag', 'number' => 15)); ?>
 								</div>
 							</div>
 						</div>
