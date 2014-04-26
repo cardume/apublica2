@@ -58,6 +58,7 @@ object {
      max-width: 100%;
 }
 
+.et_color_scheme_orange a { color: #e15a2d; }
 
 
 /* Header */
@@ -759,7 +760,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 .white-box { background-color: rgba(255, 255, 255, 0.7); }
 
-.single-post-container h3 { background-color: #fff; text-align: center; position: relative; border-bottom: 1px solid #FFBF00; display: block; margin: 20px 0 10px; margin-bottom: 16px; font-size: 28px; padding: 10px 0; }
+.single-post-container h3 { background-color: #fff; text-align: center; position: relative; display: block; margin: 20px 0 10px; margin-bottom: 18px; font-size: 28px; padding: 10px 0; }
 
 .single-post-container h3:after {content: '';  width: 100%; height: 3px; background-color: #E7E7E7; position: relative; top: 14px; left: 0; display: block;}
 
