@@ -491,6 +491,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 .header-full .container:before { width: 0 !important; }
 
 .header-full h2,
+
 .header-full h1 { font-family: "Lato", sans-serif; font-weight: 300; font-size: 40px; color: #000; padding: 0 0 20px; }
 
 .header-full h2 a { color: #000; font-weight: 300; }
@@ -502,6 +503,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 .breadcrumb h1 { padding: 0 0 20px; font-size: 40px; font-family: 'Lato', sans-serif; font-weight: 300; z-index: 999; position: relative; }
 
 .breadcrumb,
+
 .breadcrumb a { font-weight: 700; text-decoration: none; color: rgba(68, 68, 68, 0.5); z-index: 999; position: relative; }
 
 .header-overlay {background-color: rgba(0, 0, 0, 0.5); }
@@ -557,59 +559,27 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 #left-area h1 { font-weight: 300;  }
 
+
+
+
 /* Highlight Share */
 
-.highlight-share {
-     background: #e15a2d;
-     margin-top: 40px;
-     margin-left: -50px;
-     padding: 10px;
-     border-radius: 5px;
-     box-shadow: 0 2px 3px rgba(0,0,0,0.5);
-}
+.highlight-share {background: #e15a2d; margin-top: 40px; margin-left: -50px; padding: 10px; border-radius: 5px; box-shadow: 0 2px 3px rgba(0,0,0,0.5); }
 
-.highlight-share p {
-     background: #e15a2d;
-     color: #fff;
-     padding: 10px;
-     margin: -1px -1px 7px;
-     border-radius: 5px 5px 0 0;
-     font-family: "museo500";
-     text-transform: lowercase;
-     position: relative;
-}
+.highlight-share p { background: #e15a2d;color: #fff; padding: 10px; margin: -1px -1px 7px; border-radius: 5px 5px 0 0; font-family: "museo500"; text-transform: lowercase; position: relative; }
 
-.highlight-share:before {
-     content: '';
-     position: absolute;
-     top: -5px;
-     left: 50%;
-     margin-left: -5px;
-     right: 10px;
-     width: 10px;
-     height: 10px;
-     background: #e15a2d;
-     -webkit-transform: rotate(45deg);
-}
+.highlight-share:before { content: ''; position: absolute; top: -5px; left: 50%; margin-left: -5px; right: 10px; width: 10px; height: 10px; background: #e15a2d; -webkit-transform: rotate(45deg); }
 
-.highlight-share ul {
-     width: 100%;
-     display: table;
-}
+.highlight-share ul { width: 100%; display: table; }
 
-.highlight-share ul li {
-     display: table-cell;
-     text-align: center;
-}
+.highlight-share ul li { display: table-cell; text-align: center; }
 
-.highlight-share ul li a {
-     color: rgba(255,255,255,0.8);
-     font-size: 22px;
-}
+.highlight-share ul li a { color: rgba(255,255,255,0.8); font-size: 22px;}
 
-.highlight-share ul li a:hover {
-     color: #fff;
-}
+.highlight-share ul li a:hover { color: #fff; }
+
+
+
 
 /* * Single * */
 
@@ -672,7 +642,7 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .footer-column ul li { text-align:left;}
 
-.footer-column ul li a { color: #FFF; font-family: Bitter; font-size: 20px; font-weight: normal; padding: 5px 0 25px; }
+.footer-column ul li a { color: #FFF; font-family: Bitter; font-size: 18px; font-weight: normal; padding: 5px 0 25px; }
 
 #et-social-icons { float: none; text-align: center; margin-top: 0; }
 
@@ -715,8 +685,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 /* Custom Styles in tinyMCE editor */
 
-.big-heading {	font-size: 	100px !important; 	text-transform: uppercase !important; 	color: 	#fff !important; 	
-				text-shadow: 1px 1px 2px #888, -1px -1px 2px #888 !important ;  letter-spacing: 3px; }
+.big-heading {	font-size: 100px !important; 	text-transform: uppercase !important; color: #fff !important; text-shadow: 1px 1px 2px #888, -1px -1px 2px #888 !important ; letter-spacing: 3px; }
 
 .grey-h1-title { font-size: 50px; color: #BBB; text-align: center;}
 
