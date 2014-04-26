@@ -613,6 +613,8 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      float: right;
      width: 30%;
      margin: 10px -80px 40px 40px;
+     position: relative;
+     z-index: 3;
 }
 
 .et_full_width_page .entry-content .yarpp-related h3 {
