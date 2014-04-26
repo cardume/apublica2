@@ -495,11 +495,11 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 
 /* Body */
 
-#main-content { margin-top:150px; }
+#main-content { margin-top:150px; position: relative;}
 
 .et-fixed-header #main-content { margin-top:150px; }
 
-#main-content:before {content: ''; height: 150px; width: 100%; background-color: #000; position: absolute; top: 10px; left: 0;}
+#main-content:before {content: ''; height: 150px; width: 100%; background-color: #111; position: absolute; top: -150px; left: 0;}
 
 
 /* * Home * */
