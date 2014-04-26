@@ -1,4 +1,4 @@
-<div class="et_pb_row above">
+<div class="et_pb_row above clearfix">
 	<div class="et_pb_column et_pb_column_3_4">
 		<h2 class="header-site-desc"><?php bloginfo( 'description'); ?></h2>
 	</div>
