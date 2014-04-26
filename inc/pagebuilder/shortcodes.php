@@ -224,7 +224,7 @@ function et_pb_post($atts) {
 		<?php endif; ?>
 		<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a></h2>
 		<p class="meta">
-			<span class="category"><?php the_category(', '); ?></span>
+			<span class="category"><?php the_terms($post->ID, 'assunto'); ?></span>
 			<span class="separator">|</span>
 			<span class="author">por <?php the_author(); ?></span>
 			<span class="separator">|</span>
