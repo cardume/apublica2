@@ -301,6 +301,7 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      text-align: center;
      text-transform: lowercase;
      font-family: Bitter;
+     font-weight: 600;
      font-size: 18px;
      padding: 0 0 20px 0;
      color: #999;
@@ -505,7 +506,7 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 }
 
 .post-module .meta {
-     font-size: 11px;
+     font-size: 12px;
      padding-bottom: 15px;
 }
 
