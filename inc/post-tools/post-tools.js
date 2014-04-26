@@ -34,7 +34,7 @@
 			var defaultFontSize = parseInt($target.css('font-size').replace('px', ''));
 
 			var min = 8;
-			var max = 24;
+			var max = 30;
 
 			$fontsize.on('click', '.regular', function() {
 				$target.css('font-size', defaultFontSize);
