@@ -1,7 +1,11 @@
 #publica-post-tools {
 	position: fixed;
-	top: 250px;
+	bottom: 40px;
 	left: 0;
+}
+
+#publica-post-tools iframe {
+	max-width: none;
 }
 
 #publica-post-tools .toggle-tools {
@@ -103,10 +107,6 @@
 
 #publica-post-tools .tool-list .tool-item .tool-content ul li:last-child {
 	padding-right: 0;
-}
-
-#twitter-widget-0 {
-	width: 50px !important;
 }
 
 .entypo {
