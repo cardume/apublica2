@@ -962,6 +962,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      .et-fixed-header .mobile_menu_bar:before { top: 4px; }
      .mobile_menu_bar:before { margin-left: 25px; top: 19px; }  
      .et-fixed-header .et_mobile_menu { top: 52px; padding: 0; left: 70px; }
+     .et_mobile_menu { top: 80px;  padding: 10px 0; left: 70px; }
 
      #main-content:before { height: 90px; }
      #main-content{ margin-top: 80px; }
@@ -969,10 +970,12 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      .et_full_width_page #left-area h1 { font-size: 42px; }
      .et_pb_row, .container, .et_pb_container { width: 80%; }
      .single-page-text p, .excerpt p { font-size: 18px; line-height: 21px}
-
      .et_full_width_page .entry-content { padding: 0;  font-size: 16px; }
+
      #main-footer .et_pb_column { text-align:center !important;}
-     .footer-column ul li { text-align: center; }
+     #main-footer .footer-site-desc { display: block;  height: 50px;  }
+     #main-footer #footer-logo { margin-bottom: 0;  }
+     #main-footer .footer-column ul li { text-align: center; }
 
      .et_pb_column_1_3 .bubble-module .posts-container .item,
      .bubble-module .posts-container .item { width: auto; }
