@@ -105,7 +105,7 @@ nav#top-menu-nav li > a,
 nav#top-menu-nav li ul,
 #et_top_search, #mail-icon span:before { -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-nav#top-menu-nav li > a { padding: 30px 15px; display:block; font-size: 14px; color: #999; line-height: 22px; text-transform: lowercase; font-weight: 600; }
+nav#top-menu-nav li > a { padding: 30px 15px; display:block; font-size: 14px; color: #999; line-height: 22px; text-transform: lowercase; font-weight: 400; }
 
 nav#top-menu-nav li:hover > a { background: #e15a2d; color: #fff; }
 
@@ -895,7 +895,7 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 
 #footer-logo { width: 160px; height: 71px; padding-bottom: 20px;}
 
-.footer-site-desc { height: 71px; margin: auto; font-family: Bitter; font-size: 20px; color: #fff; vertical-align: middle; display: table-cell; }
+.footer-site-desc { height: 71px; margin: auto; font-family: Bitter; font-size: 16px; color: #fff; vertical-align: middle; display: table-cell; }
 
 .footer-search { height: 71px; margin-right: 0; padding-bottom: 20px;}
 
