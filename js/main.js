@@ -27,10 +27,10 @@
 	});
 
 	// Sum cmm counts
-	window.fbAsyncInit = function() {
-		FB.Event.subscribe('xfbml.render', function() {
 
-			setTimeout(function() {
+	$(document).ready(function() {
+		window.fbAsyncInit = function() {
+			FB.Event.subscribe('xfbml.render', function() {
 
 				$smcmm = $('.cmm-sum');
 
@@ -57,13 +57,8 @@
 
 				}
 
-			}, 200);
-
-		});
-	};
-
-	$(document).ready(function() {
-
+			});
+		};
 	});
 
 	// Making of
