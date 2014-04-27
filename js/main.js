@@ -30,31 +30,35 @@
 	window.fbAsyncInit = function() {
 		FB.Event.subscribe('xfbml.render', function() {
 
-			$smcmm = $('.cmm-sum');
+			setTimeout(function() {
 
-			if($smcmm.length) {
+				$smcmm = $('.cmm-sum');
 
-				$smcmm.each(function() {
+				if($smcmm.length) {
 
-					var $fb = $(this).find('.fb_comments_count');
+					$smcmm.each(function() {
 
-					var fb = parseInt($fb.text());
+						var $fb = $(this).find('.fb_comments_count');
 
-					var $regular = $(this).find('.cmm-cnt');
+						var fb = parseInt($fb.text());
 
-					var total = fb + parseInt($regular.text());
+						var $regular = $(this).find('.cmm-cnt');
 
-					$regular.text(total);
-					$fb.remove();
+						var total = fb + parseInt($regular.text());
 
-					if(total < 2) {
-						$(this).hide();
-					}
+						$regular.text(total);
+						$fb.remove();
 
-				});
+						if(total < 2) {
+							$(this).hide();
+						}
 
-			}
-			
+					});
+
+				}
+
+			}, 200);
+
 		});
 	};
 
