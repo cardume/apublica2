@@ -903,9 +903,9 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 .mc4wp-form {  }
 
-.mc4wp-form input { font-family: Lato; font-weight: 100; border: 0; padding: 15px; }
+.mc4wp-form input { font-family: Lato !important; font-weight: 100 !important; border: 0 !important; padding: 15px !important; }
 
-.mc4wp-form input[type="submit"], .mc4wp-form button, .mc4wp-form input[type="button"] { border: 0; padding: 15px 30px; float: right }
+.mc4wp-form input[type="submit"], .mc4wp-form button, .mc4wp-form input[type="button"] { border: 0 !important; padding: 15px 30px !important; float: right !important; }
 
 
 
