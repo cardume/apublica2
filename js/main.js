@@ -28,38 +28,36 @@
 
 	// Sum cmm counts
 
-	$(document).ready(function() {
-		window.fbAsyncInit = function() {
-			FB.Event.subscribe('xfbml.render', function() {
+	window.fbAsyncInit = function() {
+		FB.Event.subscribe('xfbml.render', function() {
 
-				$smcmm = $('.cmm-sum');
+			$smcmm = $('.cmm-sum');
 
-				if($smcmm.length) {
+			if($smcmm.length) {
 
-					$smcmm.each(function() {
+				$smcmm.each(function() {
 
-						var $fb = $(this).find('.fb_comments_count');
+					var $fb = $(this).find('.fb_comments_count');
 
-						var fb = parseInt($fb.text());
+					var fb = parseInt($fb.text());
 
-						var $regular = $(this).find('.cmm-cnt');
+					var $regular = $(this).find('.cmm-cnt');
 
-						var total = fb + parseInt($regular.text());
+					var total = fb + parseInt($regular.text());
 
-						$regular.text(total);
-						$fb.remove();
+					$regular.text(total);
+					$fb.remove();
 
-						if(total < 2) {
-							$(this).hide();
-						}
+					if(total < 2) {
+						$(this).hide();
+					}
 
-					});
+				});
 
-				}
+			}
 
-			});
-		};
-	});
+		});
+	};
 
 	// Making of
 	$(document).ready(function() {

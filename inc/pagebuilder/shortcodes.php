@@ -225,7 +225,7 @@ function et_pb_post($atts) {
 		<h2>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a>
 			<span class="cmm cmm-sum">
-				<a href="<?php the_permalink(); ?>#comments"><span class="entypo">&#59160;</span><span class="cmm-cnt"><?php echo get_comments_number(); ?></span></a>
+				<a href="<?php the_permalink(); ?>#comments"><span class="cmm-cnt"><?php echo get_comments_number(); ?></span></a>
 				<fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count>
 			</span>
 		</h2>
