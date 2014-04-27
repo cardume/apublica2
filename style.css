@@ -984,6 +984,10 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 @media only screen and ( min-width: 768px ) and ( max-width: 980px ) {
 
+     .et_pb_blog_grid_wrapper:before { left: 334px; }
+     .et_pb_blog_grid_wrapper:after { display: none; }
+     .et_pb_blog_grid .et_pb_post:after { left: -15px; width: 350px; }
+
 }
 
 
