@@ -514,28 +514,32 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      position: relative;
      color: #fff;
      font-size: 10px;
-     line-height: 24px;
-     display: inline-block;
+     line-height: 25px;
      width: 25px;
      height: 25px;
      text-align: center;
+     display: inline-block;
+}
+
+.post-module h2 .cmm a {
+     display: inline-block;
+     width: 25px;
 }
 
 .post-module h2 .cmm .entypo {
-     position: absolute;
-     left: 0;
-     top: 6px;
      color: #e15a2d;
      font-size: 50px;
+     line-height: 25px;
+     position: absolute;
+     top: 0;
+     left: 0;
 }
 
 .post-module h2 .cmm .cmm-cnt {
-     position: absolute;
-     left: 0;
-     right: 0;
-     top: 4px;
+     position: relative;
      z-index: 1;
      color: #fff;
+     top: -2px;
 }
 
 .post-module .meta {
