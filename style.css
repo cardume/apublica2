@@ -1004,7 +1004,8 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      #footer-bottom .et_pb_column { padding-bottom: 10px;}
 
      .alignleft,
-     .alignright { margin: 0 0 20px !important; float: none !important; border: 0 !important; }
+     .alignright,
+     .et_full_width_page .entry-content .yarpp-related { margin: 0 0 20px !important; float: none !important; border: 0 !important; }
 
 
      .publica-slider .active-content { width: auto; float: none; height: 400px !important; }
