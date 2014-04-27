@@ -812,7 +812,7 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 
 .et_full_width_page .entry-content blockquote:before { content:''; background-color: #FFBF00; width: 5px; height: 100%; position: absolute; left: -5px; top: 0;  }
 
-
+.wp-caption { background-color: transparent; border: 0; }
 
 
 /* * Page * */
