@@ -1060,7 +1060,6 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      .alignright,
      .et_full_width_page .entry-content .yarpp-related { width: auto !important; margin: 0 0 20px !important; float: none !important; border: 0 !important; }
 
-
      .publica-slider .active-content { width: auto; float: none; height: 400px !important; }
      .publica-slider .active-content .slide-content p { font-size: 16px; line-height: 20px; }
      .publica-slider .slides { width: auto; float: none; display: table; }
@@ -1077,12 +1076,18 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 /*---[480px]--*/
 @media only screen and ( max-width: 767px ) {
-     .et_pb_column {margin-bottom: 0;hg}
+     .et_pb_column {margin-bottom: 0;}
+     .et_pb_blog_grid .et_pb_post { margin: 0 0 10px; width: 100%; border-bottom: 1px solid #ddd; }
+     .et_pb_image_container img { width: 100%;}
+     .et_pb_blog_grid h2 { font-size: 20px; }
+     .et_pb_post .post-meta { padding: 10px 0;}
+     .et_pb_blog_grid .et_pb_post:after, .et_pb_blog_grid_wrapper:before { display: none;}
 }
 
 
 /*--[320px]--*/
 @media only screen and ( max-width: 479px ) {
      .grey-h1-title { font-size: 40px; }
-
+     .et_pb_blog_grid_wrapper:before { display: none;}
+     .et_pb_blog_grid .et_pb_post { position: static; margin: 0 auto;}
 }
