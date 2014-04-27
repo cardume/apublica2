@@ -1005,9 +1005,12 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 @media screen and ( max-width: 782px ) {
      #et-top-navigation { margin-right: 10px; }
      #et_top_search { margin-right: 5px;  }
+     .et_mobile_menu { left: 0; top: 80px; }
      .mobile_menu_bar:before { margin-left: 5px; }
      .header-full h2, .header-full h1 { font-size: 24px; }
+     .et_mobile_menu li a { padding: 2px 5%; }
 
+     .et-fixed-header #main-content { margin-top: 52px; }
      #main-content .container { padding-top: 0px; }
      .et_full_width_page #left-area { margin-top: 30px; }
      #left-area { padding-bottom: 0px; }
@@ -1042,11 +1045,12 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 /*---[480px]--*/
 @media only screen and ( max-width: 767px ) {
-
+     .et_pb_column {margin-bottom: 0;hg}
 }
 
 
 /*--[320px]--*/
 @media only screen and ( max-width: 479px ) {
+     .grey-h1-title { font-size: 40px; }
 
 }
