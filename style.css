@@ -481,11 +481,11 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 }
 
 .post-module {
-     padding: 0 30px 15px 0;
+     padding: 0 40px 15px 0;
      border-bottom: 1px solid #ccc;
-     margin-left: -30px;
-     padding-left: 27px;
-     margin: 0 3px 15px -27px;
+     margin-left: -40px;
+     padding-left: 37px;
+     margin: 0 3px 15px -37px;
 }
 
 .post-module a {
@@ -519,14 +519,14 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      font-weight: 800;
 }
 
-/* Custom columns for Post Module */
+/* Custom columns for Post List */
 
 .post-list .et_pb_row {
      overflow: hidden;
 }
 
 .post-list .et_pb_column {
-     margin-right: 29px;
+     margin-right: 39px;
      border-right: 1px solid #ccc;
 }
 
@@ -542,7 +542,6 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 }
 
 .post-list .et_pb_column_1_3 {
-     width: 340px;
 }
 
 /* Sidebar */
@@ -949,6 +948,9 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 /*---[960px]--*/
 @media only screen and ( min-width: 981px ) and ( max-width: 1100px ) {
      #main-header .above .et-social-icon { margin: 5px 0 0 10px; }
+
+     .et_pb_column_1_3 .bubble-module .posts-container .item,
+     .bubble-module .posts-container .item { width: auto; }
 }
 
 /*---[768px]--*/
@@ -971,6 +973,9 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      .et_full_width_page .entry-content { padding: 0;  font-size: 16px; }
      #main-footer .et_pb_column { text-align:center !important;}
      .footer-column ul li { text-align: center; }
+
+     .et_pb_column_1_3 .bubble-module .posts-container .item,
+     .bubble-module .posts-container .item { width: auto; }
 }
 
 
@@ -997,6 +1002,18 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      .footer-column ul li a { padding: 5px 0 0;  }
      .footer-search { display: none; }
      #footer-bottom .et_pb_column { padding-bottom: 10px;}
+
+
+     .publica-slider .active-content { width: auto; float: none; height: 400px !important; }
+     .publica-slider .slides { width: auto; float: none; display: table; }
+     .publica-slider .slides .slide-item { width: 1%; display: table-cell; padding: 20px; }
+     .publica-slider .slides .slide-item.active { width: 1%; display: table-cell; padding: 20px; }
+     .publica-slider .slides .slide-item h2 { font-size: 14px; line-height: 18px; }
+     .publica-slider .slides .slide-item .author { font-size: 12px; line-height: 18px; }
+     .publica-slider .slides .slide-item.active:before { top: 5px; margin-left: -10px; left: 50%; }
+
+
+     .publica-summary .summary-nav a { font-size: 12px; }
 
 }
 
