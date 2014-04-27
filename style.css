@@ -533,6 +533,18 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      position: absolute;
      top: 0;
      left: 0;
+     display: none;
+}
+
+.post-module h2 .cmm:after {
+     content: '\E718';
+     font-family: "entypo";
+     color: #e15a2d;
+     font-size: 50px;
+     line-height: 25px;
+     position: absolute;
+     top: 0;
+     left: 0;
 }
 
 .post-module h2 .cmm .cmm-cnt {
