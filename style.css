@@ -1012,7 +1012,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      .publica-slider .slides { width: auto; float: none; display: table; }
      .publica-slider .slides .slide-item { width: 1%; display: table-cell; padding: 10px; }
      .publica-slider .slides .slide-item.active { width: 1%; display: table-cell; padding: 10px; }
-     .publica-slider .slides .slide-item h2 { font-size: 12px; line-height: 18px; }
+     .publica-slider .slides .slide-item h2 { font-size: 12px; line-height: 18px; position:relative; z-index: 2; }
      .publica-slider .slides .slide-item .author { font-size: 12px; line-height: 18px; font-weight: 400; }
      .publica-slider .slides .slide-item.active:before { top: 5px; margin-left: -10px; left: 50%; }
 
