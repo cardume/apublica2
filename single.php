@@ -72,7 +72,7 @@
 				</div>
 			<?php endif; ?>
 
-			<div class="container secondary-container">
+			<div id="comments" class="container secondary-container">
 				<div class="clearfix">
 					<?php
 						if ( comments_open() && 'on' == et_get_option( 'divi_show_postcomments', 'on' ) )

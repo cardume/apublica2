@@ -510,6 +510,34 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      color: #333;
 }
 
+.post-module h2 .cmm {
+     position: relative;
+     color: #fff;
+     font-size: 10px;
+     line-height: 24px;
+     display: inline-block;
+     width: 25px;
+     height: 25px;
+     text-align: center;
+}
+
+.post-module h2 .cmm .entypo {
+     position: absolute;
+     left: 0;
+     top: 6px;
+     color: #e15a2d;
+     font-size: 50px;
+}
+
+.post-module h2 .cmm .cmm-cnt {
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 4px;
+     z-index: 1;
+     color: #fff;
+}
+
 .post-module .meta {
      font-size: 12px;
      padding-bottom: 15px;

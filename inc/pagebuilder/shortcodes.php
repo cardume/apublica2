@@ -222,7 +222,17 @@ function et_pb_post($atts) {
 				<img src="<?php echo $thumbnail; ?>" class="wp-post-image" alt="<?php echo $title; ?>" />
 			</a>
 		<?php endif; ?>
-		<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a></h2>
+		<h2>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a>
+			<?php 
+			$comments_number = get_comments_number();
+			if($comments_number > 1) {
+				?>
+				<span class="cmm"><a href="<?php the_permalink(); ?>#comments"><span class="entypo">&#59160;</span><span class="cmm-cnt"><?php echo $comments_number; ?></span></a></span>
+				<?php
+			}
+			?>
+		</h2>
 		<p class="meta">
 			<span class="category"><?php the_terms($post->ID, 'assunto'); ?></span>
 			<span class="separator">|</span>
