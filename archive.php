@@ -40,7 +40,7 @@
 								while ( have_posts() ) {
 									the_post(); ?>
 
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
+									<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post post-module' ); ?>>
 
 								<?php
 									$thumb = '';
@@ -65,7 +65,13 @@
 									endif;
 								?>
 
-										<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+										<h2>
+											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											<span class="cmm cmm-sum">
+												<a href="<?php the_permalink(); ?>#comments"><span class="entypo">&#59160;</span><span class="cmm-cnt"><?php echo get_comments_number(); ?></span></a>
+												<fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count>
+											</span>
+										</h2>
 
 									<?php
 										if ( 'on' === $show_author || 'on' === $show_date || 'on' === $show_tags ) {
