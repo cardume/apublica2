@@ -836,7 +836,11 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 
 .excerpt { margin: 0 auto; padding: 30px 25%;}
 
+.et_full_width_page .entry-content blockquote { position: relative; padding: 30px 30px 30px 40px;}
 
+.et_full_width_page .entry-content blockquote:before { content:''; background-color: #FFBF00; width: 5px; height: 100%; position: absolute; left: -5px; top: 0;  }
+
+.wp-caption { background-color: transparent; border: 0; }
 
 
 /* * Page * */
@@ -923,6 +927,13 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 
 
+/*----Mailchimp----*/
+
+.mc4wp-form {  }
+
+.mc4wp-form input { font-family: Lato !important; font-weight: 100 !important; border: 0 !important; padding: 15px !important; }
+
+.mc4wp-form input[type="submit"], .mc4wp-form button, .mc4wp-form input[type="button"] { border: 0 !important; padding: 15px 30px !important; float: right !important; }
 
 
 
@@ -990,6 +1001,7 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      .et-fixed-header .mobile_menu_bar:before { top: 4px; }
      .mobile_menu_bar:before { margin-left: 25px; top: 19px; }  
      .et-fixed-header .et_mobile_menu { top: 52px; padding: 0; left: 70px; }
+     .et_mobile_menu { top: 80px;  padding: 10px 0; left: 70px; }
 
      #main-content:before { height: 90px; }
      #main-content{ margin-top: 80px; }
@@ -997,10 +1009,12 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
      .et_full_width_page #left-area h1 { font-size: 42px; }
      .et_pb_row, .container, .et_pb_container { width: 80%; }
      .single-page-text p, .excerpt p { font-size: 18px; line-height: 21px}
-
      .et_full_width_page .entry-content { padding: 0;  font-size: 16px; }
+
      #main-footer .et_pb_column { text-align:center !important;}
-     .footer-column ul li { text-align: center; }
+     #main-footer .footer-site-desc { display: block;  height: 50px;  }
+     #main-footer #footer-logo { margin-bottom: 0;  }
+     #main-footer .footer-column ul li { text-align: center; }
 
      .et_pb_column_1_3 .bubble-module .posts-container .item,
      .bubble-module .posts-container .item { width: auto; }
@@ -1009,15 +1023,22 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 @media only screen and ( min-width: 768px ) and ( max-width: 980px ) {
 
+     .et_pb_blog_grid_wrapper:before { left: 334px; }
+     .et_pb_blog_grid_wrapper:after { display: none; }
+     .et_pb_blog_grid .et_pb_post:after { left: -15px; width: 350px; }
+
 }
 
 
 @media screen and ( max-width: 782px ) {
      #et-top-navigation { margin-right: 10px; }
      #et_top_search { margin-right: 5px;  }
+     .et_mobile_menu { left: 0; top: 80px; }
      .mobile_menu_bar:before { margin-left: 5px; }
      .header-full h2, .header-full h1 { font-size: 24px; }
+     .et_mobile_menu li a { padding: 2px 5%; }
 
+     .et-fixed-header #main-content { margin-top: 52px; }
      #main-content .container { padding-top: 0px; }
      .et_full_width_page #left-area { margin-top: 30px; }
      #left-area { padding-bottom: 0px; }
@@ -1052,11 +1073,12 @@ icon.oniricca { background-image: url(images/oniricca-icon.png); width: 40px; he
 
 /*---[480px]--*/
 @media only screen and ( max-width: 767px ) {
-
+     .et_pb_column {margin-bottom: 0;hg}
 }
 
 
 /*--[320px]--*/
 @media only screen and ( max-width: 479px ) {
+     .grey-h1-title { font-size: 40px; }
 
 }
