@@ -103,7 +103,7 @@ function publica_get_shares($url = false) {
 
 function publica_hook_fb_comments($count, $post_id) {
 	$shares = new Share_Counter(get_permalink($post_id));
-	$count = $shares->get_count();
-	return intval($count) + intval($count['fb_comments']);
+	$social_count = $shares->get_count();
+	return intval($count) + intval($social_count['fb_comments']);
 }
 add_filter('get_comments_number', 'publica_hook_fb_comments', 100, 2);
