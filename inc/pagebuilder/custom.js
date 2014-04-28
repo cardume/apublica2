@@ -86,13 +86,7 @@
 
 			if($summary.length) {
 
-				$summary.find('.summary-content-item').each(function() {
-
-					$itemsContent[$(this).data('summary')] = $(this).clone();
-
-					$(this).remove();
-
-				});
+				$summary.find('.summary-content-item').hide();
 
 			}
 
@@ -100,9 +94,11 @@
 
 				$summary.find('.summary-nav a').removeClass('active');
 
+				$summary.find('.summary-content-item').hide();
+
 				$(this).addClass('active');
 
-				$summary.find('.summary-content').empty().append($itemsContent[$(this).data('summary')]);
+				$summary.find('[data-summary="' + $(this).data('summary') + '"]').show();
 
 				$summary.fitVids();
 
