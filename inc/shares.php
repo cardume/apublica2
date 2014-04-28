@@ -39,6 +39,8 @@ class Share_Counter {
 			$fb = json_decode(file_get_contents('http://graph.facebook.com/?ids=' . $url), true);
 			$shares['facebook'] = intval($fb[$url]['shares']);
 
+			$shares['fb_comments'] = intval($fb[$url]['comments']);
+
 			$shares['total'] = $shares['total'] + $shares['facebook'];
 
 			/*
@@ -66,7 +68,7 @@ class Share_Counter {
 
 			$shares['total'] = $shares['total'] + $shares['gplus'];
 
-			$shares = apply_filters('vlchannel_share_count', $shares, $post_id, $url);
+			$shares = apply_filters('publica_share_count', $shares, $post_id, $url);
 
 			$this->update_post($shares);
 
@@ -85,6 +87,7 @@ class Share_Counter {
 		if($post_id && $shares) {
 			update_post_meta($post_id, '_share_count_total', $shares['total']);
 			update_post_meta($post_id, '_share_count', $shares);
+			update_post_meta($post_id, '_fb_cmm_count', $shares['fb_comments']);
 		}
 
 		return $post_id;
@@ -97,3 +100,9 @@ function publica_get_shares($url = false) {
 	$shares = new Share_Counter($url);
 	return $shares->get_count();
 }
+
+function publica_hook_fb_comments($count, $post_id) {
+	$shares = new Share_Counter(get_permalink($post_id));
+	return $count + $shares->get_count()['fb_comments'];
+}
+add_filter('get_comments_number', 'publica_hook_fb_comments', 10, 2);

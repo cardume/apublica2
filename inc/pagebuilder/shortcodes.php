@@ -224,10 +224,11 @@ function et_pb_post($atts) {
 		<?php endif; ?>
 		<h2>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a>
-			<span class="cmm cmm-sum">
-				<a href="<?php the_permalink(); ?>#comments"><span class="cmm-cnt"><?php echo get_comments_number(); ?></span></a>
-				<fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count>
-			</span>
+			<?php if(get_comments_number() >= 2) : ?>
+				<span class="cmm">
+					<a href="<?php the_permalink(); ?>#comments"><span class="cmm-cnt"><?php echo get_comments_number(); ?></span></a>
+				</span>
+			<?php endif; ?>
 		</h2>
 		<p class="meta">
 			<span class="category"><?php the_terms($post->ID, 'assunto'); ?></span>

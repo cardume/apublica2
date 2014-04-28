@@ -26,39 +26,6 @@
 
 	});
 
-	// Sum cmm counts
-
-	window.fbAsyncInit = function() {
-		FB.Event.subscribe('xfbml.render', function() {
-
-			$smcmm = $('.cmm-sum');
-
-			if($smcmm.length) {
-
-				$smcmm.each(function() {
-
-					var $fb = $(this).find('.fb_comments_count');
-
-					var fb = parseInt($fb.text());
-
-					var $regular = $(this).find('.cmm-cnt');
-
-					var total = fb + parseInt($regular.text());
-
-					$regular.text(total);
-					$fb.remove();
-
-					if(total < 2) {
-						$(this).hide();
-					}
-
-				});
-
-			}
-
-		});
-	};
-
 	// Making of
 	$(document).ready(function() {
 		var $makingOf = $('.making-of');
