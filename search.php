@@ -30,7 +30,7 @@
 								while ( have_posts() ) {
 									the_post(); ?>
 
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
+									<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post post-module' ); ?>>
 
 								<?php
 									$thumb = '';
