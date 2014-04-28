@@ -73,11 +73,22 @@
 			<?php endif; ?>
 
 			<div id="comments" class="container secondary-container">
-				<div class="clearfix">
-					<?php
-						if ( comments_open() && 'on' == et_get_option( 'divi_show_postcomments', 'on' ) )
-							comments_template( '', true );
-					?>
+				<div class="comment-area">
+					<h2><?php _e('Comentários', 'Divi') ?></h2>
+					<p> <?php _e('Opte por Disqus ou Facebook', 'Divi') ?></p>
+					<div class="clearfix">
+						<div class="et_pb_row">
+							<div class="et_pb_column et_pb_column_1_2">
+								<?php
+									if ( comments_open() && 'on' == et_get_option( 'divi_show_postcomments', 'on' ) )
+										comments_template( '', true );
+								?>
+							</div>
+							<div class="et_pb_column et_pb_column_1_2">
+								<?php echo do_shortcode('[fbcomments]'); ?>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
