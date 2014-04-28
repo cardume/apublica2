@@ -117,6 +117,8 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .nav li ul li { width: 50%; padding: 0 !important; margin: 0 !important; float: left; }
 
+.nav .strong { font-weight: 600; }
+
 nav#top-menu-nav li ul li a { padding: 5px !important; color: rgba(255,255,255,0.6); }
 
 nav#top-menu-nav li ul li:hover a { color: #fff; }
