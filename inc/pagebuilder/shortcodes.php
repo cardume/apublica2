@@ -278,18 +278,18 @@ function et_pb_publica_summary($atts) {
 		<div class="et_pb_row">
 			<div class="summary-content">
 				<div class="summary-content-item" data-summary="most-recent">
-					<?php publica_summary_item(get_posts(array('posts_per_page' => 5))); ?>
+					<?php publica_summary_item(get_posts(array('posts_per_page' => 4))); ?>
 				</div>
 				<div class="summary-content-item" data-summary="most-shared">
 					<?php
 					$most_shared_query = new WP_Query(array(
-						'posts_per_page' => 5,
+						'posts_per_page' => 4,
 						'orderby' => 'meta_value_num',
 						'order' => 'DESC',
 						'meta_key' => '_share_count_total',
 						'date_query' => array(
 							array(
-								'after' => '1 month ago'
+								'after' => '2 months ago'
 							)
 						)
 					));
@@ -391,21 +391,21 @@ function publica_summary_item($posts, $use_video = false) {
 
 		} else {
 
-			if($i == 0 || $i == 1 || $i == 4) {
+			if($i == 0 || $i == 1 || $i == 3) {
 				?>
 				<div class="et_pb_column et_pb_column_1_3">
 				<?php
 			}
 
 			if($post) {
-				$display_thumbnail = ($i == 0 || $i == 4) ? 'display_thumbnail="on"' : '';
+				$display_thumbnail = ($i == 0 || $i == 3) ? 'display_thumbnail="on"' : '';
 				echo do_shortcode('[et_pb_post post_id="' . $post->ID . '" ' . $display_thumbnail . ']');
 				?>
 
 				<?php
 			}
 
-			if($i == 0 || $i == 3 || $i == 4) {
+			if($i == 0 || $i == 2 || $i == 3) {
 				?>
 				</div>
 				<?php
