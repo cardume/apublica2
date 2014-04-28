@@ -55,6 +55,21 @@
 			});
 
 		})();
+
+
+		// Total shares
+
+		var $shareCount = $('.total-shares .share-count');
+
+		if($shareCount.length) {
+			var count = parseInt($shareCount.text());
+			$shareCount.text(kFormatter(count));
+		}
+		
+		function kFormatter(num) {
+			return num > 999 ? (num/1000).toFixed(1) + 'K' : num
+		}
+
 	});
 
 })(jQuery);

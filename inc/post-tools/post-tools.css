@@ -1,6 +1,6 @@
 #publica-post-tools {
 	position: fixed;
-	bottom: 40px;
+	bottom: 20px;
 	left: 0;
 }
 
@@ -43,6 +43,10 @@
 	text-align: center;
 	padding: 5px 10px;
 	cursor: pointer;
+}
+
+#publica-post-tools .tool-list .tool-item.not-interactive {
+	cursor: default;
 }
 
 #publica-post-tools .tool-list .tool-item .tool-content-container {
@@ -134,4 +138,20 @@
 #publica-post-tools .tool-list .tool-item .decrease .font-size span {
 	font-size: 14px;
 	line-height: 20px;
+}
+
+#publica-post-tools .tool-list .tool-item .total-shares {
+	padding-left: 10px;
+}
+
+#publica-post-tools .tool-list .tool-item .total-shares .heart {
+	color: #e15a2d;
+	font-size: 26px;
+	line-height: 26px;
+	float: left;
+}
+
+#publica-post-tools .tool-list .tool-item .total-shares .share-count {
+	font-size: 18px;
+	font-weight: 800;
 }

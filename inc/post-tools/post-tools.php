@@ -37,6 +37,17 @@ class Publica_Post_Tools {
 			<div id="publica-post-tools">
 				<a href="#" class="toggle-tools"><?php _e('Tools', 'publica'); ?></a>
 				<ul class="tool-list">
+					<li class="tool-item not-interactive">
+						<div class="total-shares">
+							<span class="heart entypo">&hearts;</span>
+							<span class="share-count">
+							<?php
+							$shares = publica_get_shares();
+							echo $shares['total'];
+							?>
+							</span>
+						</div>
+					</li>
 					<li class="tool-item">
 						<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
 					</li>
