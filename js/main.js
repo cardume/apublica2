@@ -31,6 +31,8 @@
 	window.fbAsyncInit = function() {
 		FB.Event.subscribe('xfbml.render', function() {
 
+			alert('rendered');
+
 			$smcmm = $('.cmm-sum');
 
 			if($smcmm.length) {
