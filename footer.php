@@ -19,17 +19,17 @@
 					<form role="search" method="get" class="et-search-form-footer" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<?php
 							printf( '<input type="search" class="et-search-field" placeholder="%1$s" value="%2$s" name="s" title="%3$s" />',
-								esc_attr_x( 'Search &hellip;', 'placeholder', 'Divi' ),
+								esc_attr_x( 'Busque &hellip;', 'placeholder', 'Divi' ),
 								get_search_query(),
-								esc_attr_x( 'Search for:', 'label', 'Divi' )
+								esc_attr_x( 'Busque por:', 'label', 'Divi' )
 							);
 						?>
 					</form>
 				</div>
 			</div>
 			<div class="et_pb_row">
-				<div class="et_pb_column et_pb_column_1_4 footer-column"><?php wp_nav_menu( array('menu' => 'Footer menu 1' )); ?></div>
-				<div class="et_pb_column et_pb_column_1_4 footer-column"><?php wp_nav_menu( array('menu' => 'Footer menu 2' )); ?></div>
+				<div class="et_pb_column et_pb_column_1_4 footer-column"><?php wp_nav_menu( array( 'theme_location' => 'footer_menu_1' ) ); ?></div>
+				<div class="et_pb_column et_pb_column_1_4 footer-column"><?php wp_nav_menu( array( 'theme_location' => 'footer_menu_2' ) ); ?></div>
 				<div class="et_pb_column et_pb_column_1_4 footer-column">
 					<ul id="et-social-icons">
 						<?php if ( 'on' === et_get_option( 'divi_show_facebook_icon', 'on' ) ) : ?>

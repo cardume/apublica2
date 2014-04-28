@@ -169,7 +169,13 @@ function publica_post_fixed_layout($metadata, $object_id, $meta_key, $single) {
 }
 add_filter('get_post_metadata', 'publica_post_fixed_layout', 10, 4);
 
-register_nav_menus( array(
-	'footer_menu_1' => 'Menu do footer 1',
-	'footer_menu_2' => 'Menu do footer 2'
-) );
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'footer_menu_1' => 'Menu do footer 1',
+      'footer_menu_2' => 'Menu do footer 2',
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
