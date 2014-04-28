@@ -106,4 +106,4 @@ function publica_hook_fb_comments($count, $post_id) {
 	$count = $shares->get_count();
 	return intval($count) + intval($count['fb_comments']);
 }
-add_filter('get_comments_number', 'publica_hook_fb_comments', 10, 2);
+add_filter('get_comments_number', 'publica_hook_fb_comments', 100, 2);
