@@ -91,7 +91,12 @@ $background_layout = 'light';
 									endif;
 								?>
 
-										<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+										<h2>
+											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											<span class="cmm">
+												<a href="<?php the_permalink(); ?>#comments"><span class="cmm-cnt"><?php echo get_comments_number(); ?></span></a>
+											</span>
+										</h2>
 
 									<?php
 										if ( 'on' === $show_author || 'on' === $show_date || 'on' === $show_tags ) {

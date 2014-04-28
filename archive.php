@@ -67,9 +67,8 @@
 
 										<h2>
 											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-											<span class="cmm cmm-sum">
+											<span class="cmm">
 												<a href="<?php the_permalink(); ?>#comments"><span class="cmm-cnt"><?php echo get_comments_number(); ?></span></a>
-												<fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count>
 											</span>
 										</h2>
 
