@@ -85,7 +85,10 @@
 								?>
 							</div>
 							<div class="et_pb_column et_pb_column_1_2">
-								<?php echo do_shortcode('[fbcomments url="' . get_permalink() . '" count="off"]'); ?>
+								<?php
+								if(function_exists('fbcommentbox'))
+									echo fbcommentbox('');
+								?>
 							</div>
 						</div>
 					</div>
