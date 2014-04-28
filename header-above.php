@@ -27,7 +27,7 @@
 			<?php endif; ?>
 			<?php if ( 'on' === et_get_option( 'divi_show_rss_icon', 'on' ) ) : ?>
 				<li class="et-social-icon et-social-rss">
-					<a href="<?php echo esc_url( $et_rss_url ); ?>" target="_blank">
+					<a href="<?php echo esc_url( et_get_option( 'divi_rss_url', '#' ) ); ?>" target="_blank">
 						<span><?php esc_html_e( 'RSS', 'Divi' ); ?></span>
 					</a>
 				</li>
