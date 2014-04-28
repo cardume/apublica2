@@ -85,7 +85,7 @@
 								?>
 							</div>
 							<div class="et_pb_column et_pb_column_1_2">
-								<?php echo do_shortcode('[fbcomments]'); ?>
+								<?php echo do_shortcode('[fbcomments url="' . get_permalink() . '" count="off"]'); ?>
 							</div>
 						</div>
 					</div>
