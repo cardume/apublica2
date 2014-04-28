@@ -85,10 +85,7 @@
 								?>
 							</div>
 							<div class="et_pb_column et_pb_column_1_2">
-								<?php
-								if(function_exists('fbcommentbox'))
-									echo fbcommentbox('');
-								?>
+								<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-num-posts="10"></div>
 							</div>
 						</div>
 					</div>
