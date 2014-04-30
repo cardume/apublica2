@@ -80,6 +80,37 @@ function publica_assunto_tax() {
 }
 add_action('init', 'publica_assunto_tax');
 
+function publica_author_tax() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x('Autores', 'taxonomy general name'),
+		'singular_name'     => _x('Autor', 'taxonomy singular name'),
+		'search_items'      => __('Buscar autores'),
+		'all_items'         => __('Todos os autores'),
+		'parent_item'       => __('Autor pai'),
+		'parent_item_colon' => __('Autor pai:'),
+		'edit_item'         => __('Editar autor'),
+		'update_item'       => __('Atualizar autor'),
+		'add_new_item'      => __('Adicionar novo autor'),
+		'new_item_name'     => __('Novo nome de autor'),
+		'menu_name'         => __('autor'),
+	);
+
+	$args = array(
+		'public'			=> true,
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'show_in_nav_menus' => true,
+		'query_var'         => true,
+		'rewrite'           => array('slug' => 'autor'),
+	);
+
+	register_taxonomy('author', array('post'), $args);
+}
+add_action('init', 'publica_author_tax');
+
 // Page builder
 include_once(STYLESHEETPATH . '/inc/pagebuilder/admin.php');
 include_once(STYLESHEETPATH . '/inc/pagebuilder/shortcodes.php');
