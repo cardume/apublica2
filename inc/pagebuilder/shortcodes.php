@@ -261,7 +261,8 @@ function et_pb_publica_summary($atts) {
 
 	extract(shortcode_atts(array(
 		'module_id' => '',
-		'module_class' => ''
+		'module_class' => '',
+		'exclude_posts' => ''
 	), $atts));
 
 	ob_start();
@@ -279,7 +280,14 @@ function et_pb_publica_summary($atts) {
 		<div class="et_pb_row">
 			<div class="summary-content">
 				<div class="summary-content-item" data-summary="most-recent">
-					<?php publica_summary_item(get_posts(array('posts_per_page' => 4))); ?>
+					<?php
+					$most_recent_query = new WP_Query(array(
+						'posts_per_page' => 4,
+						'category_name' => 'reportagens',
+						'post__not_in' => explode(',', $exclude_posts)
+					));
+					publica_summary_item($most_recent_query->posts);
+					?>
 				</div>
 				<div class="summary-content-item" data-summary="most-shared">
 					<?php
@@ -294,8 +302,8 @@ function et_pb_publica_summary($atts) {
 							)
 						)
 					));
+					publica_summary_item($most_shared_query->posts);
 					?>
-					<?php publica_summary_item($most_shared_query->posts); ?>
 				</div>
 				<div class="summary-content-item" data-summary="videos">
 					<?php

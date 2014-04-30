@@ -156,6 +156,8 @@ function publica_page_builder() {
 
 			<?php publica_page_builder_regular_inputs(); ?>
 
+			<?php publica_page_builder_regular_text('exclude_posts', 'Excluir posts', 'Separe por vírgula IDs de post a excluir. Exemplo: 924,582,2954'); ?>
+
 		</div>
 	</script>
 	<?php
