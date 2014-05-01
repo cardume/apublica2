@@ -33,7 +33,7 @@
 					<div class="full-area">
 						<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
 						<h1><?php the_title(); ?></h1>
-						<p class="post-meta">por <?php the_author_posts_link(); ?> | <?php the_date(); ?></p>
+						<p class="post-meta">por <?php publica_authors(); ?> | <?php the_date(); ?></p>
 					</div>
 				</div>
 			</div>

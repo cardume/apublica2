@@ -99,7 +99,7 @@ function et_pb_publica_blog( $atts ) {
 					printf( '<p class="post-meta">%1$s %2$s %3$s</p>',
 						(
 							'on' === $show_author
-								? sprintf( __( 'por %s |', 'Divi' ), et_get_the_author_posts_link() )
+								? sprintf( __( 'por %s |', 'Divi' ), get_publica_authors() )
 								: ''
 						),
 						(
@@ -109,7 +109,7 @@ function et_pb_publica_blog( $atts ) {
 						),
 						(
 							'on' === $show_categories
-								? get_the_category_list(', ')
+								? get_the_term_list($post->ID, 'assunto', '', ', ')
 								: ''
 						)
 					);
@@ -233,7 +233,7 @@ function et_pb_post($atts) {
 		<p class="meta">
 			<span class="category"><?php the_terms($post->ID, 'assunto'); ?></span>
 			<span class="separator">|</span>
-			<span class="author">por <?php the_author(); ?></span>
+			<span class="author">por <?php publica_authors(); ?></span>
 			<span class="separator">|</span>
 			<span class="date"><?php echo get_the_date(); ?></span>
 		</p>
@@ -374,9 +374,9 @@ function publica_summary_item($posts, $use_video = false) {
 				<article <?php post_class(); ?>>
 					<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 					<p class="meta">
-						<span class="category"><?php the_category(', '); ?></span>
+						<span class="category"><?php the_terms($post->ID, 'assunto'); ?></span>
 						<span class="separator">|</span>
-						<span class="author">por <?php the_author(); ?></span>
+						<span class="author">por <?php publica_authors(); ?></span>
 						<span class="separator">|</span>
 						<span class="date"><?php echo get_the_date(); ?></span>
 					</p>
@@ -477,7 +477,7 @@ function et_pb_publica_slide($atts) {
 			}
 
 			$heading = $heading ? $heading: get_the_title();
-			$author = get_the_author();
+			$author = get_publica_authors();
 			$description = $description ? $description : get_the_excerpt();
 			$url = $url ? $url : get_permalink();
 			$background_image = $background_image ? $background_image : $thumb_url;

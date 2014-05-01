@@ -210,3 +210,18 @@ function register_my_menus() {
   );
 }
 add_action( 'init', 'register_my_menus' );
+
+function publica_authors() {
+	global $post;
+	if(get_the_terms($post->ID, 'author')) {
+		the_terms($post->ID, 'author');
+	} else {
+		the_author_posts_link();
+	}
+}
+
+function get_publica_authors() {
+	ob_start();
+	publica_authors();
+	return ob_get_clean();
+}

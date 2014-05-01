@@ -51,6 +51,10 @@
 
 				});
 
+				$slider.find('.slide-item a').on('click', function() {
+					return false;
+				});
+
 				$slider.find('.slide-item:first-child').click();
 
 				$(window).resize(function() {

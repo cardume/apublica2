@@ -250,6 +250,10 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      font-weight: 600;
 }
 
+.publica-slider .slides .slide-item p a {
+     color: #666;
+}
+
 .publica-slider .slides .slide-item.active {
      position: relative;
      background: #e15a2d;
@@ -279,7 +283,8 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
 }
 
 .publica-slider .slides .slide-item.active h2,
-.publica-slider .slides .slide-item.active p {
+.publica-slider .slides .slide-item.active p, 
+.publica-slider .slides .slide-item.active p a {
      color: #fff;
 }
 
