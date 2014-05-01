@@ -51,6 +51,8 @@
 							the_content();
 
 							wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'Divi' ), 'after' => '</div>' ) );
+
+							the_tags('<p>Tags: ', ', ', '</p>');
 						?>
 						</div> <!-- .entry-content -->
 
@@ -64,7 +66,7 @@
 			<?php if(get_field('making_of')) : ?>
 				<div class="making-of clearfix">
 					<div class="container secondary-container">
-						<h3>Veja o making of</h3>
+						<h3>Veja o making of da reportagem</h3>
 						<div class="making-of-content">
 							<?php the_field('making_of'); ?>
 						</div>

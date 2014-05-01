@@ -70,7 +70,7 @@ class Publica_Post_Tools {
 						  })();
 						</script>
 					</li>
-					<li class="tool-item" onclick="window.print()">
+					<li class="tool-item secondary" onclick="window.print()">
 						<span class="tool-item entypo">&#59158;</span>
 						<div class="tool-content-container">
 							<div class="tool-content">
@@ -78,7 +78,7 @@ class Publica_Post_Tools {
 							</div>
 						</div>
 					</li>
-					<li class="tool-item font-size-adjust">
+					<li class="tool-item secondary font-size-adjust">
 						<span class="font-size regular"><span class="big">A<span class="small">A</span></span></span>
 						<div class="tool-content-container">
 							<div class="tool-content">

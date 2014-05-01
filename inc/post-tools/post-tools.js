@@ -24,6 +24,61 @@
 				showList();
 		});
 
+		// Scroll behaviour
+		$tools.addClass('steady');
+		$tools.find('.secondary').hide();
+
+		$(window).scroll(function() {
+
+			var top = getTopOffset();
+
+			if(top <= 100) {
+				lock();
+				if(isAtBottom()) {
+					release();
+				}
+			} else {
+				release();
+			}
+
+		});
+
+		function lock() {
+			$tools.removeClass('steady').addClass('fixed').css({
+				'top': 100,
+				'bottom': 'auto'
+			});
+			$tools.find('.secondary').show();
+		}
+
+		function release() {
+			$tools.removeClass('fixed').addClass('steady').css({
+				'top': 'auto',
+				'bottom': 20
+			});
+			$tools.find('.secondary').hide();
+		}
+
+		function getTopOffset() {
+
+			var documentOffset = $tools.offset().top;
+
+			var windowOffset = documentOffset - $(window).scrollTop();
+
+			return windowOffset;
+
+		}
+
+		function isAtBottom() {
+
+			var height = $tools.height();
+			var top = $tools.offset().top;
+			var windowHeight = $(window).height();
+
+			return ((height + top) <= windowHeight);
+
+		}
+
 		// Font sizing
 		(function() {
 

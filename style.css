@@ -782,6 +782,7 @@ nav#top-menu-nav li ul li:hover a { color: #fff; }
      height: 0;
      overflow: hidden;
      -moz-transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out;
+     padding: 0 80px;
 }
 
 .making-of.active .making-of-content {

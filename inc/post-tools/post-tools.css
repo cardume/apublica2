@@ -4,6 +4,14 @@
 	left: 0;
 }
 
+#publica-post-tools.steady {
+	position: absolute;
+}
+
+#publica-post-tools.fixed {
+	position: fixed;
+}
+
 #publica-post-tools iframe {
 	max-width: none;
 }
