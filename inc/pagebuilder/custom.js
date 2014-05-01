@@ -31,7 +31,7 @@
 
 				$slider.on('click', '.slide-item', function() {
 
-					href = $(this).find('a').attr('href');
+					href = $(this).find('a.main-link').attr('href');
 
 					if($(this).is('.active')) {
 						window.location = href;
