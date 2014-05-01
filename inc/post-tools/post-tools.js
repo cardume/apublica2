@@ -24,24 +24,28 @@
 				showList();
 		});
 
-		// Scroll behaviour
-		$tools.addClass('steady');
-		$tools.find('.secondary').hide();
+		if($tools.length) {
 
-		$(window).scroll(function() {
+			// Scroll behaviour
+			$tools.addClass('steady');
+			$tools.find('.secondary').hide();
 
-			var top = getTopOffset();
+			$(window).scroll(function() {
 
-			if(top <= 100) {
-				lock();
-				if(isAtBottom()) {
+				var top = getTopOffset();
+
+				if(top <= 100) {
+					lock();
+					if(isAtBottom()) {
+						release();
+					}
+				} else {
 					release();
 				}
-			} else {
-				release();
-			}
 
-		});
+			});
+
+		}
 
 		function lock() {
 			$tools.removeClass('steady').addClass('fixed').css({
