@@ -93,7 +93,7 @@ function publica_author_tax() {
 		'update_item'       => __('Atualizar autor'),
 		'add_new_item'      => __('Adicionar novo autor'),
 		'new_item_name'     => __('Novo nome de autor'),
-		'menu_name'         => __('autor'),
+		'menu_name'         => __('Autor'),
 	);
 
 	$args = array(
@@ -107,7 +107,7 @@ function publica_author_tax() {
 		'rewrite'           => array('slug' => 'autor'),
 	);
 
-	register_taxonomy('author', array('post'), $args);
+	register_taxonomy('autor', array('post'), $args);
 }
 add_action('init', 'publica_author_tax');
 
@@ -213,8 +213,8 @@ add_action( 'init', 'register_my_menus' );
 
 function publica_authors() {
 	global $post;
-	if(get_the_terms($post->ID, 'author')) {
-		the_terms($post->ID, 'author');
+	if(get_the_terms($post->ID, 'autor')) {
+		the_terms($post->ID, 'autor');
 	} else {
 		the_author_posts_link();
 	}
