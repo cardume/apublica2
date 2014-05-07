@@ -115,6 +115,8 @@ nav#top-menu-nav li.current-menu-item > a { background: #e15a2d; color: #fff; fo
 
 .nav li ul { width: 350px; top: 82px; left: 0; border: 0; background: #e15a2d; padding: 10px; }
 
+.nav li:last-child ul { left: -256px; }
+
 .nav li ul li { width: 50%; padding: 0 !important; margin: 0 !important; float: left; }
 
 .nav .strong { font-weight: 600; }
